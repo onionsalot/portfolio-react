@@ -1,9 +1,14 @@
+import TopBanner from "../../Components/TopBanner/TopBanner";
+import AboutSection from "../../Components/AboutSection/AboutSection";
+
 export default function IndexPage() {
 
     return (
         <>
-            <h1>INDEX</h1>
+            <TopBanner />
+
+
+            <AboutSection />
         </>
     );
-
 }
