@@ -1,26 +1,40 @@
 .AboutSection {
+    display:flex;
+    flex-direction: column;
     width: 100vw;
-    height: 100vh;
+    height: 800px;
     margin: 0 auto;
     background-color:grey;
     position: relative;
-    overflow-x: hidden;
-}
+    // overflow-x: hidden;
+    main {
+        display:flex;
+        flex-direction: column;
+        background-color: pink;
+        vertical-align: middle;
+        height:100%;
+        // padding: 10%;
+    }
+    .about-text {
+        background-color: aqua;
+        vertical-align: center;
+        margin: auto 10%;
+        position:relative;
 
-.about-text {
-    background-color: aqua;
-    margin: 20% 10%;
+        .parallax-top {
+            position:absolute;
+            opacity: 0;
+            top: -200px;
+        }
+    }
 }
 
 .endpoint {
     position: absolute;
-    bottom: 60px;
+    bottom: 0px;
 }
 
 .halfpoint {
     background-color: green;
 }
 
-.parallax-top {
-    position:absolute;
-}
