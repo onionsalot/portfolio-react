@@ -1,0 +1,26 @@
+.AboutSection {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    background-color:grey;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.about-text {
+    background-color: aqua;
+    margin: 20% 10%;
+}
+
+.endpoint {
+    position: absolute;
+    bottom: 60px;
+}
+
+.halfpoint {
+    background-color: green;
+}
+
+.parallax-top {
+    position:absolute;
+}
