@@ -225,9 +225,8 @@ export default function AboutSection() {
     // ]
     return (
         <div className="AboutSection">
-            <hr />
-            <h1>ABOUT ME</h1>
-            <hr />
+            <hr class="hr-text" data-content="ABOUT ME" />
+
 
                 <main>
                     <div className="about-text">
@@ -235,17 +234,21 @@ export default function AboutSection() {
                     {parallaxDataTop.map((data,idx) => <Plx className="parallax-top" parallaxData={ data } >
                         <img src={iconTop[idx]} alt="" />
                     </Plx>)}
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur amet perspiciatis velit repellendus, est distinctio eaque asperiores nisi, quisquam consequuntur, facere numquam libero tempore! Amet repellat eos quos odio aspernatur.</p>
-
-
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur amet perspiciatis velit repellendus, est distinctio eaque asperiores nisi, quisquam consequuntur, facere numquam libero tempore! Amet repellat eos quos odio aspernatur.</p>
-                            <div className="halfpoint">test</div>
-                        {parallaxDataBot.map((data,idx) => <Plx className="parallax-bot" parallaxData={ data } >
+                    <div class="sketchy">
+                            <p>
+                                I am a full stack developer residing in NYC, New York - unwavering in my quest to be the best me that could possibly be! After graduating Lehman College with a degree in Computer science, I went into medicine with an interest in nonclinical administration. I quickly realized that I've always been a programmer at heart, frequently learning new technologies and developing small apps to make my life easier at work.
+                            </p>
+                            <p>
+                                In 2021, I committed to General Assembly's bootcamp program and haven't looked back. Since graduating GA's SEI program, I strive to better my craft each and every day. 
+                            </p>
+                    </div>
+                            <div className="halfpoint"></div>
+                        {parallaxDataBot.map((data,idx) => <Plx className="" parallaxData={ data } >
                         <img src={iconBot[idx]} alt="" />
                     </Plx>)}
                     </div>
                 </main>
-                        <div className="endpoint" >test</div>
+                        <div className="endpoint" ></div>
         </div>
     );
 }
