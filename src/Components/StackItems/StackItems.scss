@@ -1,0 +1,98 @@
+.parallax-top:hover>div>img {
+    animation        : bounce 2.5s infinite; //other browsers
+    -webkit-animation: bounce 2.5s infinite; //webkit browsers
+    -moz-animation   : bounce 2.5s infinite; //firefox
+    -o-animation     : bounce 2.5s infinite; //opera
+}
+
+// .IconDj img{
+//     opacity: 1;
+//     -webkit-transition: opacity .5s;
+//     -moz-transition: opacity .5s;
+//     transition: opacity .5s;
+// }
+// .IconDj:hover > img {
+//     opacity: 0.3;
+//  }
+// .Plx:hover > img{
+//     animation: bounce 2.5s infinite;
+//     -webkit-animation: bounce 2.5s infinite;
+//     -moz-animation: bounce 2.5s infinite;
+//     -o-animation: bounce 2.5s infinite;
+//     opacity: 1;
+//     -webkit-transition: opacity .5s;
+//     -moz-transition: opacity .5s;
+//     transition: opacity .5s;
+//  }
+
+
+.img-container {
+    position: relative;
+
+    .text {
+        position    : absolute;
+        bottom      : 0;
+        left        : 0;
+        padding-left: 40%;
+        opacity     : 0;
+
+    }
+
+}
+
+.img-container:hover {
+    .text {
+        opacity           : 1;
+        -webkit-transition: opacity .5s;
+        -moz-transition   : opacity .5s;
+        transition        : opacity .5s;
+    }
+}
+
+@-webkit-keyframes bounce {
+
+    0%,
+    100% {
+        -webkit-transform: translateY(0);
+    }
+
+    50% {
+        -webkit-transform: translateY(-10px);
+    }
+}
+
+@-moz-keyframes bounce {
+
+    0%,
+    100% {
+        -moz-transform: translateY(0);
+    }
+
+    50% {
+        -moz-transform: translateY(-10px);
+    }
+}
+
+@-o-keyframes bounce {
+
+    0%,
+    100% {
+        -o-transform: translateY(0);
+    }
+
+    50% {
+        -o-transform: translateY(-10px);
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}

@@ -12,13 +12,14 @@ import IconPostgresql from '../../images/icons/postgresql.png';
 import IconPython from '../../images/icons/python.png';
 import IconReact from '../../images/icons/react.png';
 import IconSass from '../../images/icons/sass.png';
+import StackItems from '../StackItems/StackItems'
 
 export default function AboutSection() {
     const [parallaxDataTop, setParallaxDataTop] = useState([]);
     const [parallaxDataBot, setParallaxDataBot] = useState([]);
     const [distance, setDistance] = useState(convertVWToPx('100vw')*0.8/5)
-    const [iconTop, setIconTop] = useState([ IconCss, IconDj, IconGit, IconHtml, IconJs, IconMongo ])
-    const [iconBot, setIconBot] = useState([ IconNodejs, IconPostgresql, IconPython, IconReact, IconSass ])
+    const [iconTop, setIconTop] = useState([ {"IconCss": IconCss}, {"IconDj":IconDj}, {"IconGit":IconGit}, {"IconHtml":IconHtml}, {"IconJs":IconJs}, {"IconMongo":IconMongo} ])
+    const [iconBot, setIconBot] = useState([ {"IconNodejs":IconNodejs}, {"IconPostgresql":IconPostgresql}, {"IconPython":IconPython}, {"IconReact":IconReact}, {"IconSass":IconSass} ])
     function convertVWToPx(value) {
         var parts = value.match(/([0-9\.]+)(vh|vw)/) 
         var q = Number(parts[1])
@@ -51,7 +52,7 @@ export default function AboutSection() {
                         properties: [
                             {
                                 startValue:0,
-                                endValue:1,
+                                endValue:.6,
                                 property:'opacity'
                             }
                         ]
@@ -80,7 +81,7 @@ export default function AboutSection() {
                         properties: [
                             {
                                 startValue:0,
-                                endValue:1,
+                                endValue:.6,
                                 property:'opacity'
                             }
                         ]
@@ -231,9 +232,8 @@ export default function AboutSection() {
                 <main>
                     <div className="about-text">
 
-                    {parallaxDataTop.map((data,idx) => <Plx className="parallax-top" parallaxData={ data } >
-                        <img src={iconTop[idx]} alt="" />
-                    </Plx>)}
+                    {parallaxDataTop.map((data,idx) => 
+                        <StackItems index={ idx } data={ data } image={ iconTop[idx] } pos={"top"}/>)}
                     <div class="sketchy">
                             <p>
                                 I am a full stack developer residing in NYC, New York - unwavering in my quest to be the best me that could possibly be! After graduating Lehman College with a degree in Computer science, I went into medicine with an interest in nonclinical administration. I quickly realized that I've always been a programmer at heart, frequently learning new technologies and developing small apps to make my life easier at work.
@@ -243,9 +243,8 @@ export default function AboutSection() {
                             </p>
                     </div>
                             <div className="halfpoint"></div>
-                        {parallaxDataBot.map((data,idx) => <Plx className="" parallaxData={ data } >
-                        <img src={iconBot[idx]} alt="" />
-                    </Plx>)}
+                        {parallaxDataBot.map((data,idx) => 
+                            <StackItems index={ idx } data={ data } image={ iconBot[idx] } pos={"bot"}/>)}
                     </div>
                 </main>
                         <div className="endpoint" ></div>
