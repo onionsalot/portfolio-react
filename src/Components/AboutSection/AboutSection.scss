@@ -1,45 +1,89 @@
+@import "../../styles/variables";
+
 .AboutSection {
-    display:flex;
-    flex-direction: column;
-    width: 100vw;
-    height: 800px;
-    margin: 0 auto;
-    background-color:grey;
-    position: relative;
+    display         : flex;
+    flex-direction  : column;
+    width           : 100vw;
+    height          : 800px;
+    margin          : 0 auto;
+    background-color: grey;
+    position        : relative;
+
     // overflow-x: hidden;
     main {
-        display:flex;
-        flex-direction: column;
+        display         : flex;
+        flex-direction  : column;
         background-color: pink;
-        vertical-align: middle;
-        height:100%;
+        vertical-align  : middle;
+        height          : 100%;
         // padding: 10%;
     }
+
     .about-text {
         background-color: aqua;
-        vertical-align: center;
-        margin: auto 10%;
-        position:relative;
+        vertical-align  : center;
+        margin          : auto 10%;
+        position        : relative;
 
         .parallax-top {
-            position:absolute;
-            opacity: 0;
-            top: -200px;
+            position: absolute;
+            opacity : 0;
+            top     : -180px;
+
+            @media screen and (max-width: $width-md) {
+                top  : -160px;
+            }
+            @media screen and (max-width: $width-sm) {
+                top  : -130px;
+            }
+            @media screen and (max-width: $width-xs) {
+                top  : -100px;
+            }
         }
+
         .parallax-bot {
-            position:absolute;
-            opacity: 0;
-            bottom: -200px;
+            position: absolute;
+            opacity : 0;
+            bottom  : -180;
+
+            @media screen and (max-width: $width-md) {
+                bottom  : -160px;
+            }
+            @media screen and (max-width: $width-sm) {
+                bottom  : -130px;
+            }
+            @media screen and (max-width: $width-xs) {
+                bottom  : -100px;
+            }
+        }
+    }
+
+    img {
+        width : 160px;
+        height: 160px;
+
+        //some CSS
+        @media screen and (max-width: $width-md) {
+            width : 140px;
+            height: 140px;
+        }
+        @media screen and (max-width: $width-sm) {
+            width : 120px;
+            height: 120px;
+        }
+        @media screen and (max-width: $width-xs) {
+            //do Smth
+            width : 80px;
+            height: 80px;
         }
     }
 }
 
 .endpoint {
     position: absolute;
-    bottom: 0px;
+    bottom  : 0px;
 }
 
 .halfpoint {
     background-color: green;
 }
-
