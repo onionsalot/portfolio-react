@@ -1,7 +1,7 @@
 @import "../../styles/variables";
 @import "../../styles/globals";
 
-.parallax-top:hover>div>img {
+.parallax-items:hover>img {
     animation        : bounce 2.5s infinite; //other browsers
     -webkit-animation: bounce 2.5s infinite; //webkit browsers
     -moz-animation   : bounce 2.5s infinite; //firefox
@@ -99,4 +99,8 @@
     50% {
         transform: translateY(-10px);
     }
+}
+
+.parallax-items {
+    opacity:0;
 }
