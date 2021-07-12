@@ -1,4 +1,11 @@
+@font-face {
+    font-family: 'kgsecondchancessketch-kpap-webfont';
+    src: url('../font/kgsecondchancessketch-kpap-webfont.woff2') format('woff2'),
+         url('../font/kgsecondchancessketch-kpap-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
+}
 
 $color-black: #000000;
 $color-white: #ffffff;
@@ -24,3 +31,4 @@ $width-sm: 768px;
 $width-md: 1100px;
 $width-lg: 1440px;
 
+$sketch-font: 'kgsecondchancessketch-kpap-webfont', Arial, sans-serif;
