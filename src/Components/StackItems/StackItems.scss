@@ -1,3 +1,6 @@
+@import "../../styles/variables";
+@import "../../styles/globals";
+
 .parallax-top:hover>div>img {
     animation        : bounce 2.5s infinite; //other browsers
     -webkit-animation: bounce 2.5s infinite; //webkit browsers
@@ -33,7 +36,8 @@
         position    : absolute;
         bottom      : 0;
         left        : 0;
-        padding-left: 40%;
+        padding-left: 0 auto;
+        width       : 70%;
         opacity     : 0;
 
     }
@@ -42,7 +46,7 @@
 
 .img-container:hover {
     .text {
-        opacity           : 1;
+        opacity           : .7;
         -webkit-transition: opacity .5s;
         -moz-transition   : opacity .5s;
         transition        : opacity .5s;

@@ -11,7 +11,7 @@ export default function StackItems({index, data, image, pos} ) {
         <Plx className={styleInfo} parallaxData={ data } >
             <div className="img-container">
                 <img src={ imageValue[0]} alt="" className="items"/>
-                <span className="text">BLEH</span>
+                <span className="text sketchy">BLEH</span>
             </div>
         </Plx>
     )

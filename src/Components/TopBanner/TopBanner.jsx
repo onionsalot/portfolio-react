@@ -1,4 +1,4 @@
-import { Parallax, Background } from 'react-parallax';
+import { Parallax } from 'react-parallax';
 import foreground from '../../images/foreground.png';
 import middle from '../../images/middle.png';
 import background from '../../images/background.png';

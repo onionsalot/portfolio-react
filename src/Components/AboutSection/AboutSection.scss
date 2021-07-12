@@ -1,4 +1,5 @@
 @import "../../styles/variables";
+@import "../../styles/globals";
 
 .AboutSection {
     display         : flex;
@@ -8,78 +9,101 @@
     margin          : 0 auto;
     background-color: grey;
     position        : relative;
+
     @media screen and (max-width: $width-xs) {
-        height          : 850px;
+        height: 850px;
     }
 
     // overflow-x: hidden;
     main {
         display         : flex;
-        flex-direction  : column;
+        flex-direction  : row;
         background-color: pink;
         vertical-align  : middle;
         height          : 100%;
         // padding: 10%;
+
+        @media screen and (max-width: $width-sm) {
+            flex-direction  : row;
+        }
+
+        @media screen and (max-width: $width-xs) {
+            flex-direction  : column;
+        }
     }
 
     .about-text {
-        background-color: aqua;
-        vertical-align  : center;
-        margin          : auto 10%;
-        position        : relative;
+        vertical-align: center;
+        margin        : auto 10%;
+        position      : relative;
 
-        .parallax-top {
-            position: absolute;
-            opacity : 0;
-            top     : -180px;
-
-            @media screen and (max-width: $width-md) {
-                top  : -160px;
-            }
-            @media screen and (max-width: $width-sm) {
-                top  : -130px;
-            }
-            @media screen and (max-width: $width-xs) {
-                top  : -100px;
-            }
-        }
-
-        .parallax-bot {
-            position: absolute;
-            opacity : 0;
-            bottom  : -180;
-
-            @media screen and (max-width: $width-md) {
-                bottom  : -160px;
-            }
-            @media screen and (max-width: $width-sm) {
-                bottom  : -130px;
-            }
-            @media screen and (max-width: $width-xs) {
-                bottom  : -100px;
-            }
-        }
-    }
-
-    img {
-        width : 160px;
-        height: 160px;
-
-        //some CSS
         @media screen and (max-width: $width-md) {
-            width : 140px;
-            height: 140px;
+            margin        : auto 5%;
         }
+
         @media screen and (max-width: $width-sm) {
-            width : 120px;
-            height: 120px;
+            margin        : auto 3%;
         }
+
         @media screen and (max-width: $width-xs) {
-            //do Smth
-            width : 70px;
-            height: 70px;
+            margin        : auto 2%;
         }
     }
+
+    .pfp-area {
+        display       : flex;
+        flex-direction: column;
+        height        : 100%;
+        vertical-align: center;
+        margin        : auto 10%;
+        position      : relative;
+        @media screen and (max-width: $width-md) {
+            margin        : auto 5%;
+        }
+
+        @media screen and (max-width: $width-sm) {
+            margin        : auto 2%;
+        }
+
+        @media screen and (max-width: $width-xs) {
+            margin        : 10px 10%;
+        }
+        .arrow {
+            align-self: flex-start;
+
+            img {
+                height: 100px;
+                width : 200px;
+            }
+        }
+
+        .pfp {
+            height: 200px;
+            width : 200px;
+        }
+    }
+
+    //     img {
+    //         width : 160px;
+    //         height: 160px;
+
+    //         //some CSS
+    //         @media screen and (max-width: $width-md) {
+    //             width : 140px;
+    //             height: 140px;
+    //         }
+
+    //         @media screen and (max-width: $width-sm) {
+    //             width : 120px;
+    //             height: 120px;
+    //         }
+
+    //         @media screen and (max-width: $width-xs) {
+    //             //do Smth
+    //             width : 70px;
+    //             height: 70px;
+    //         }
+    //     }
 }
 
 .endpoint {
@@ -91,56 +115,79 @@
     background-color: green;
 }
 
-hr {
-    width: 60%;
-    font-size: 32px;
-    position: relative;
-    border: 0;
-    height: 1.5em;
-    &:before {
-      content: '';
-      background: linear-gradient(to right, transparent, black, transparent);
-      position: absolute;
-      left: 0;
-      top: 50%;
-      width: 100%;
-      height: 1px;
-    }
-    &:after {
-      content: attr(data-content);
-      position: relative;
-      display: inline-block;
-      color: white;
-
-      padding: 0 .5em;
-      line-height: 1.5em;
-      color: white;
-      background-color: grey;
-    }
-  }
+.AboutSection span {
+    display: inline;
+}
 
 
-  .sketchy {
-    padding: 1rem 1rem;
-    display: inline-block;
-    border: 3px solid #333333;
-    font-size: 15px;
-    border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
-    // text-transform: uppercase;
-    letter-spacing: 0.3ch;
-    background: #ffffff;
-    position: relative;
-    
-    &::before {
-        content: '';
-        border: 2px solid #353535;
-        display: block;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate3d(-50%, -50%, 0) scale(1.015) rotate(0.5deg);
-        border-radius: 1% 1% 2% 4% / 2% 6% 5% 4%;
+
+
+.heading {
+    display       : flex;
+    flex-direction: row;
+    align-items   : center;
+    padding       : 0 40px;
+
+    h1 {
+        flex-grow: 0;
+        font-size: 50px;
     }
+
+    .divider {
+        flex-grow       : 1;
+        height          : 1px;
+        margin          : 5%;
+        background-color: transparent;
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), transparent);
+    }
+
+}
+
+
+
+.bleh {
+    height  : 60px;
+    width   : 90px;
+    position: absolute;
+    margin  : auto 10px;
+
+    box-shadow      : 0 20px 35px rgba(0, 0, 0, 0.3);
+    border-radius   : 5px;
+    overflow        : hidden;
+    background-color: #1c1b29;
+}
+
+.bleh:before {
+    content: "";
+    background-image: conic-gradient(#04b0ee 20deg,
+            transparent 120deg);
+    height   : 190%;
+    width    : 190%;
+    position : absolute;
+    left     : -50%;
+    top      : -50%;
+    animation: rotate 2s infinite linear;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.bleh:after {
+    font-family     : 'kgsecondchancessketch-kpap-webfont';
+    content         : "ME";
+    height          : 94%;
+    width           : 94%;
+    position        : absolute;
+    background-color: #1c1b29;
+    border-radius   : 5px;
+    top             : 3%;
+    left            : 3%;
+    color           : #04b0ee;
+    display         : grid;
+    place-items     : center;
+    font-size       : 50px;
+    letter-spacing  : 6px;
 }
