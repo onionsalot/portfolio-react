@@ -16,7 +16,8 @@ import StackItems from "../StackItems/StackItems";
 
 export default function TechSection() {
   const [parallaxData, setParallaxData] = useState([]);
-  const [hover, setHover] = useState();
+  const [hoverItem, setHoverItem] = useState("");
+  const [hoverState, setHoverState] = useState(false);
   const [icon] = useState([
     { IconCss: IconCss },
     { IconDj: IconDj },
@@ -41,14 +42,14 @@ export default function TechSection() {
       data.push([
         {
           start: ".stack-container",
-            end: ".end-row",
+            // end: ".end-row",
           //   startOffset: 100,
           startOffset: 30 * i,
-        //   duration: 400,
+          duration: 400 - i*20,
           properties: [
             {
               startValue: 0,
-              endValue: 1,
+              endValue: .7,
               property: "opacity",
             },
             {
@@ -66,6 +67,15 @@ export default function TechSection() {
     // console.log(parallaxData)
   }, []);
 
+  function onMouseEnter(e) {
+    console.log(e.target.className)
+    setHoverItem(e.target.classList[0])
+  }
+  function onMouseLeave(e) {
+    console.log(e)
+    setHoverItem("")
+  }
+  
   return (
     <div className="TechSection">
       <div className="heading">
@@ -76,7 +86,7 @@ export default function TechSection() {
       </div>
       <div className="stack-container">
         {parallaxData.map((data,idx) => 
-                        <StackItems index={ idx } data={ data } image={ icon[idx] } />)}
+                        <StackItems index={ idx } data={ data } image={ icon[idx] } hoverItem={ hoverItem } hoverState={ hoverState } onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}/>)}
         {/* <div className="item">
           <Plx className="" parallaxData={parallaxData[0]}>
             <img src={IconCss} alt="" />

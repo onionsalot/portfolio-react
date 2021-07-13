@@ -8,6 +8,40 @@
     -o-animation     : bounce 2.5s infinite; //opera
 }
 
+.item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    img{
+        width: 130px;
+        height:130px;
+    }
+    span {
+        position: absolute;
+        margin: 0 auto;
+        align-self: center;
+        bottom: 0;
+        width: 80%;
+        border: 1px solid black;
+        background-color: white;
+        border-radius: 10%;
+    }
+    .smaller {
+        transform: scale(0.7);
+        opacity: .4;
+        transition-duration: .5s;
+    }
+    .larger {
+        transform: scale(1.1);
+        transition-duration: .5s;
+    }
+    .neutral {
+        transform: scale(1);
+        transition-duration: .5s;
+
+    }
+}
+
 // .IconDj img{
 //     opacity: 1;
 //     -webkit-transition: opacity .5s;
