@@ -1,7 +1,7 @@
 @import "../../styles/variables";
 @import "../../styles/globals";
 
-.TechSection {
+.ProjectSection {
     display         : flex;
     flex-direction  : column;
     width           : 100vw;
@@ -10,46 +10,61 @@
     background-color: grey;
     position        : relative;
 
+    @media screen and (max-width: $width-xs) {
+        height: 850px;
+    }
+
+    // overflow-x: hidden;
+    main {
+        display         : flex;
+        flex-direction  : row;
+        background-color: pink;
+        vertical-align  : middle;
+        height          : 100%;
+        // padding: 10%;
+
+        @media screen and (max-width: $width-sm) {
+            flex-direction  : row;
+        }
+
+        @media screen and (max-width: $width-xs) {
+            flex-direction  : column;
+        }
+    }
 
     .heading {
         display       : flex;
         flex-direction: row;
         align-items   : center;
         padding       : 0 40px;
-
+    
         h1 {
             flex-grow: 0;
             font-size: 50px;
-            position : relative;
-
-            span {
-                position: absolute;
-                left    : -170px;
-            }
         }
-
+    
         .divider {
             flex-grow       : 1;
             height          : 5px;
-            margin          : 0 0 0 0;
+            margin          : 5%;
             background-color: transparent;
-            background-image: linear-gradient(to left, rgba(0, 0, 0, 0.75), transparent);
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), transparent);
         }
-
+    
     }
-
+    
     .special {
         height  : 60px;
-        width   : 160px;
+        width   : 200px;
         position: absolute;
         margin  : auto 10px;
-
+    
         box-shadow      : 0 20px 35px rgba(0, 0, 0, 0.3);
         border-radius   : 5px;
         overflow        : hidden;
         background-color: #1c1b29;
     }
-
+    
     .special:before {
         content: "";
         background-image: conic-gradient(#04b0ee 20deg,
@@ -61,18 +76,18 @@
         top      : -90%;
         animation: rotate 2s infinite linear;
     }
-
+    
     @keyframes rotate {
         100% {
             transform: rotate(360deg);
         }
     }
-
+    
     .special:after {
         font-family     : 'kgsecondchancessketch-kpap-webfont';
-        content         : "Tech";
-        height          : 95%;
-        width           : 96%;
+        content         : "WORK";
+        height          : 94%;
+        width           : 94%;
         position        : absolute;
         background-color: #1c1b29;
         border-radius   : 5px;
@@ -86,58 +101,17 @@
     }
 }
 
+// .endpoint {
+//     position: absolute;
+//     bottom  : 0px;
+// }
 
-.TechSection span {
+// .halfpoint {
+//     background-color: green;
+// }
+
+.AboutSection span {
     display: inline;
 }
 
 
-.stack-container {
-    display        : inline-flex;
-    flex-wrap      : wrap;
-    border         : 1px solid black;
-    flex-direction : row;
-    margin         : 0 auto;
-    width          : 70%;
-    justify-content: center;
-
-    @media screen and (max-width: $width-xs) {
-        width: 90%;
-    }
-
-    .parallax-items {
-        opacity: 0;
-    }
-
-    .item {
-        margin          : 5px 5px;
-        // border-right    : 1px solid black;
-        // background-color: #727272;
-        width           : 180px;
-        height          : 132px;
-
-        @media screen and (max-width: $width-md) {
-            width : 165px;
-            height: 100px;
-        }
-
-        @media screen and (max-width: $width-sm) {
-            width : 124px;
-            height: 100px;
-        }
-
-        @media screen and (max-width: $width-xs) {
-            width : 100px;
-            height: 100px;
-        }
-    }
-
-    .start-row {
-        background-color: green;
-    }
-
-    .end-row {
-        background-color: green;
-    }
-
-}

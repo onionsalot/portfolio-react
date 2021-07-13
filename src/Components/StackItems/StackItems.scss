@@ -9,46 +9,66 @@
 }
 
 .item {
-    display: flex;
+    display       : flex;
     flex-direction: column;
-    position: relative;
-    img{
-        width: 130px;
-        height:130px;
+    position      : relative;
+
+    img {
+        width : 130px;
+        height: 130px;
+        @media screen and (max-width: $width-md) {
+            width : 120px;
+            height: 120px;
+        }
+
+        @media screen and (max-width: $width-sm) {
+            width : 110px;
+            height: 110px;
+        }
+
+        @media screen and (max-width: $width-xs) {
+            width : 100px;
+            height: 100px;
+        }
     }
+
     span {
-        position: absolute;
-        margin: 0 auto;
-        align-self: center;
-        bottom: 0;
-        width: 80%;
-        border: 1px solid black;
+        position        : absolute;
+        margin          : 0 auto;
+        align-self      : center;
+        bottom          : 0;
+        width           : 80%;
+        border          : 1px solid black;
         background-color: white;
-        border-radius: 10%;
-        opacity: 0;
-        pointer-events: none;
+        border-radius   : 10%;
+        opacity         : 0;
+        pointer-events  : none;
     }
+
     span::after {
-        content         : attr(data-content);
+        content       : attr(data-content);
         text-transform: uppercase;
-        
+
     }
+
     .smaller {
-        transform: scale(0.7);
-        opacity: .4;
+        transform          : scale(0.7);
+        opacity            : .4;
         transition-duration: .5s;
     }
-    .larger {
-    }
+
+    .larger {}
+
     .neutral {
-        transform: scale(1);
+        transform          : scale(1);
         transition-duration: .5s;
 
     }
 }
+
 .item:hover {
-    span{
-        opacity: 1;
+    span {
+        opacity            : 1;
         transition-duration: .5s;
     }
 }
@@ -73,30 +93,6 @@
 //     transition: opacity .5s;
 //  }
 
-
-.img-container {
-    position: relative;
-
-    .text {
-        position    : absolute;
-        bottom      : 0;
-        left        : 0;
-        padding-left: 0 auto;
-        width       : 70%;
-        opacity     : 0;
-
-    }
-
-}
-
-.img-container:hover {
-    .text {
-        opacity           : .7;
-        -webkit-transition: opacity .5s;
-        -moz-transition   : opacity .5s;
-        transition        : opacity .5s;
-    }
-}
 
 @-webkit-keyframes bounce {
 
@@ -147,5 +143,5 @@
 }
 
 .parallax-items {
-    opacity:0;
+    opacity: 0;
 }
