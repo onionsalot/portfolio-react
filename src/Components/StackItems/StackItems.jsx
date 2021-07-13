@@ -15,6 +15,7 @@ export default function StackItems({
   const imageValue = Object.values(image);
   const styleInfo = `parallax-items`;
   const [hover,setHover] = useState("neutral")
+  const dataContent = keyName[0].replace(/Icon/g, '');
   useEffect(() => {
       if(hoverItem === keyName[0]) {
           console.log("set larger for", keyName[0])
@@ -39,7 +40,7 @@ export default function StackItems({
           onMouseLeave={onMouseLeave}
         />
       </Plx>
-      <span>BLEH</span>
+      <span data-content={dataContent}></span>
     </div>
   );
 }

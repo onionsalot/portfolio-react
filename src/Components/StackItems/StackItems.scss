@@ -25,6 +25,12 @@
         border: 1px solid black;
         background-color: white;
         border-radius: 10%;
+        opacity: 0;
+    }
+    span::after {
+        content         : attr(data-content);
+        text-transform: uppercase;
+        
     }
     .smaller {
         transform: scale(0.7);
@@ -32,13 +38,17 @@
         transition-duration: .5s;
     }
     .larger {
-        transform: scale(1.1);
-        transition-duration: .5s;
     }
     .neutral {
         transform: scale(1);
         transition-duration: .5s;
 
+    }
+}
+.item:hover {
+    span{
+        opacity: 1;
+        transition-duration: .5s;
     }
 }
 

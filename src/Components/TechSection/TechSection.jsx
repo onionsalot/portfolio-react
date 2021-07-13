@@ -1,9 +1,9 @@
 import "./TechSection.scss";
 import IconCss from "../../images/icons/css.png";
-import IconDj from "../../images/icons/dj.png";
+import IconDjango from "../../images/icons/dj.png";
 import IconGit from "../../images/icons/git.png";
 import IconHtml from "../../images/icons/html.png";
-import IconJs from "../../images/icons/js.png";
+import IconJavascript from "../../images/icons/js.png";
 import IconMongo from "../../images/icons/mongo.png";
 import IconNodejs from "../../images/icons/nodejs.png";
 import IconPostgresql from "../../images/icons/postgresql.png";
@@ -20,10 +20,10 @@ export default function TechSection() {
   const [hoverState, setHoverState] = useState(false);
   const [icon] = useState([
     { IconCss: IconCss },
-    { IconDj: IconDj },
+    { IconDjango: IconDjango },
     { IconGit: IconGit },
     { IconHtml: IconHtml },
-    { IconJs: IconJs },
+    { IconJavascript: IconJavascript },
     { IconMongo: IconMongo },
     { IconNodejs: IconNodejs },
     { IconPostgresql: IconPostgresql },
