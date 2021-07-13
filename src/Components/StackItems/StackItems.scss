@@ -1,11 +1,56 @@
 @import "../../styles/variables";
 @import "../../styles/globals";
 
-.parallax-top:hover>div>img {
+.parallax-items:hover>img {
     animation        : bounce 2.5s infinite; //other browsers
     -webkit-animation: bounce 2.5s infinite; //webkit browsers
     -moz-animation   : bounce 2.5s infinite; //firefox
     -o-animation     : bounce 2.5s infinite; //opera
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    img{
+        width: 130px;
+        height:130px;
+    }
+    span {
+        position: absolute;
+        margin: 0 auto;
+        align-self: center;
+        bottom: 0;
+        width: 80%;
+        border: 1px solid black;
+        background-color: white;
+        border-radius: 10%;
+        opacity: 0;
+        pointer-events: none;
+    }
+    span::after {
+        content         : attr(data-content);
+        text-transform: uppercase;
+        
+    }
+    .smaller {
+        transform: scale(0.7);
+        opacity: .4;
+        transition-duration: .5s;
+    }
+    .larger {
+    }
+    .neutral {
+        transform: scale(1);
+        transition-duration: .5s;
+
+    }
+}
+.item:hover {
+    span{
+        opacity: 1;
+        transition-duration: .5s;
+    }
 }
 
 // .IconDj img{
@@ -99,4 +144,8 @@
     50% {
         transform: translateY(-10px);
     }
+}
+
+.parallax-items {
+    opacity:0;
 }

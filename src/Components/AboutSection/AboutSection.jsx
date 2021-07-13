@@ -116,7 +116,7 @@ export default function AboutSection() {
       {/* <hr class="hr-text" data-content="ABOUT ME" /> */}
       <div className="heading">
         <h1>
-            About <span className="bleh"></span>
+            About <span className="special"></span>
         </h1>
         <div class="divider"></div>
 

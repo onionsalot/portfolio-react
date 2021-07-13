@@ -1,18 +1,46 @@
-import Plx from 'react-plx';
-import './StackItems.scss';
+import { useEffect, useState } from "react";
+import Plx from "react-plx";
+import "./StackItems.scss";
 
-export default function StackItems({index, data, image, pos} ) {
-    const keyName = Object.keys(image)
-    const imageValue = Object.values(image)
-    const styleInfo = `parallax-${pos} ${keyName[0]}`
+export default function StackItems({
+  index,
+  data,
+  image,
+  hoverItem,
+  hoverState,
+  onMouseEnter,
+  onMouseLeave,
+}) {
+  const keyName = Object.keys(image);
+  const imageValue = Object.values(image);
+  const styleInfo = `parallax-items`;
+  const [hover,setHover] = useState("neutral")
+  const dataContent = keyName[0].replace(/Icon/g, '');
+  useEffect(() => {
+      if(hoverItem === keyName[0]) {
+          console.log("set larger for", keyName[0])
+          setHover(`${keyName[0]} larger`)
+      } else if (hoverItem !== keyName[0] && hoverItem !== "") {
+        console.log("set smaller for", keyName[0])
+        setHover(`${keyName[0]} smaller`)
+      } else {
+        console.log("set neutral for", keyName[0])
+        setHover(`${keyName[0]} neutral`)
+      }
+  },[hoverItem])
 
-
-    return(
-        <Plx className={styleInfo} parallaxData={ data } >
-            <div className="img-container">
-                <img src={ imageValue[0]} alt="" className="items"/>
-                <span className="text sketchy">BLEH</span>
-            </div>
-        </Plx>
-    )
+  return (
+    <div className="item">
+      <Plx className={styleInfo} parallaxData={data}>
+        <img
+          src={imageValue[0]}
+          alt=""
+          className={hover}
+          onMouseEnter={onMouseEnter}
+          onMouseLeave={onMouseLeave}
+        />
+      </Plx>
+      <span data-content={dataContent}></span>
+    </div>
+  );
 }

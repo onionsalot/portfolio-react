@@ -104,90 +104,86 @@
     //             height: 70px;
     //         }
     //     }
+    .heading {
+        display       : flex;
+        flex-direction: row;
+        align-items   : center;
+        padding       : 0 40px;
+    
+        h1 {
+            flex-grow: 0;
+            font-size: 50px;
+        }
+    
+        .divider {
+            flex-grow       : 1;
+            height          : 5px;
+            margin          : 5%;
+            background-color: transparent;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), transparent);
+        }
+    
+    }
+    
+    .special {
+        height  : 60px;
+        width   : 90px;
+        position: absolute;
+        margin  : auto 10px;
+    
+        box-shadow      : 0 20px 35px rgba(0, 0, 0, 0.3);
+        border-radius   : 5px;
+        overflow        : hidden;
+        background-color: #1c1b29;
+    }
+    
+    .special:before {
+        content: "";
+        background-image: conic-gradient(#04b0ee 20deg,
+                transparent 120deg);
+        height   : 190%;
+        width    : 190%;
+        position : absolute;
+        left     : -50%;
+        top      : -50%;
+        animation: rotate 2s infinite linear;
+    }
+    
+    @keyframes rotate {
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    
+    .special:after {
+        font-family     : 'kgsecondchancessketch-kpap-webfont';
+        content         : "ME";
+        height          : 94%;
+        width           : 94%;
+        position        : absolute;
+        background-color: #1c1b29;
+        border-radius   : 5px;
+        top             : 3%;
+        left            : 3%;
+        color           : #04b0ee;
+        display         : grid;
+        place-items     : center;
+        font-size       : 50px;
+        letter-spacing  : 6px;
+    }
 }
 
-.endpoint {
-    position: absolute;
-    bottom  : 0px;
-}
+// .endpoint {
+//     position: absolute;
+//     bottom  : 0px;
+// }
 
-.halfpoint {
-    background-color: green;
-}
+// .halfpoint {
+//     background-color: green;
+// }
 
 .AboutSection span {
     display: inline;
 }
 
 
-
-
-.heading {
-    display       : flex;
-    flex-direction: row;
-    align-items   : center;
-    padding       : 0 40px;
-
-    h1 {
-        flex-grow: 0;
-        font-size: 50px;
-    }
-
-    .divider {
-        flex-grow       : 1;
-        height          : 1px;
-        margin          : 5%;
-        background-color: transparent;
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), transparent);
-    }
-
-}
-
-
-
-.bleh {
-    height  : 60px;
-    width   : 90px;
-    position: absolute;
-    margin  : auto 10px;
-
-    box-shadow      : 0 20px 35px rgba(0, 0, 0, 0.3);
-    border-radius   : 5px;
-    overflow        : hidden;
-    background-color: #1c1b29;
-}
-
-.bleh:before {
-    content: "";
-    background-image: conic-gradient(#04b0ee 20deg,
-            transparent 120deg);
-    height   : 190%;
-    width    : 190%;
-    position : absolute;
-    left     : -50%;
-    top      : -50%;
-    animation: rotate 2s infinite linear;
-}
-
-@keyframes rotate {
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-.bleh:after {
-    font-family     : 'kgsecondchancessketch-kpap-webfont';
-    content         : "ME";
-    height          : 94%;
-    width           : 94%;
-    position        : absolute;
-    background-color: #1c1b29;
-    border-radius   : 5px;
-    top             : 3%;
-    left            : 3%;
-    color           : #04b0ee;
-    display         : grid;
-    place-items     : center;
-    font-size       : 50px;
-    letter-spacing  : 6px;
-}
