@@ -26,6 +26,7 @@
         background-color: white;
         border-radius: 10%;
         opacity: 0;
+        pointer-events: none;
     }
     span::after {
         content         : attr(data-content);
