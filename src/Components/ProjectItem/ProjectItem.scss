@@ -1,3 +1,6 @@
+@import "../../styles/variables";
+@import "../../styles/globals";
+
 .ProjectItem {
     justify-self: center;
     margin          : 10px 20px;
@@ -6,6 +9,33 @@
     height          : 280px;
     position: relative;
     overflow: hidden;
+
+    @media screen and (max-width: $width-lg) {
+        width           : 500px;
+        height          : 280px;
+        margin          : 10px 5px;
+
+    }
+
+    @media screen and (max-width: $width-md) {
+        width           : 600px;
+        height          : 230px;
+        margin          : 10px 10px;
+
+    }
+
+    @media screen and (max-width: $width-sm) {
+        width           : 600px;
+        height: 160px;
+
+    }
+
+    @media screen and (max-width: $width-xs) {
+        width           : 600px;
+        height: 160px;
+        margin          : 10px 5px;
+
+    }
 
     .holder {
         display:flex;

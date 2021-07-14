@@ -14,7 +14,7 @@ export default function IndexPage() {
             <AboutSection />
             <TechSection />
             <ProjectSection />
-            <div style={{height: 5000}}/>
+            {/* <div style={{height: 5000}}/> */}
         </div>
     );
 }
