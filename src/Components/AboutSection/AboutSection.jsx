@@ -141,16 +141,12 @@ export default function AboutSection() {
               haven't looked back. Since graduating GA's SEI program, I strive
               to better my craft each and every day.
             </p>
+            <span> &laquo; </span>
+              <span> &raquo; </span>
+
+              <span> <button>1</button><button>2</button><button>3</button></span>
           </div>
-          {/* <div className="halfpoint"></div>
-          {parallaxDataBot.map((data, idx) => (
-            <StackItems
-              index={idx}
-              data={data}
-              image={iconBot[idx]}
-              pos={"bot"}
-            />
-          ))} */}
+
         </div>
         <div className="pfp-area">
             <div className="arrow">
