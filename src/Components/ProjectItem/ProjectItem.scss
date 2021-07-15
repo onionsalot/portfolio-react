@@ -3,75 +3,74 @@
 
 .ProjectItem {
     justify-self: center;
-    margin          : 10px 20px;
-    border   : 1px solid black;
-    width           : 600px;
-    height          : 280px;
-    position: relative;
-    overflow: hidden;
+    margin      : 10px 20px;
+    border      : 1px solid black;
+    width       : 100%;
+    height      : 280px;
+    position    : relative;
+    overflow    : hidden;
 
-    @media screen and (max-width: $width-lg) {
-        width           : 500px;
-        height          : 280px;
-        margin          : 10px 5px;
+    // @media screen and (max-width: $width-lg) {
+    //     width           : 500px;
+    //     height          : 280px;
+    //     margin          : 10px 5px;
 
-    }
+    // }
 
-    @media screen and (max-width: $width-md) {
-        width           : 600px;
-        height          : 230px;
-        margin          : 10px 10px;
+    // @media screen and (max-width: $width-md) {
+    //     width           : 600px;
+    //     height          : 230px;
+    //     margin          : 10px 10px;
 
-    }
+    // }
 
     @media screen and (max-width: $width-sm) {
-        width           : 600px;
-        height: 160px;
+        width : 100%;
+        height: 180px;
 
     }
 
     @media screen and (max-width: $width-xs) {
-        width           : 600px;
-        height: 160px;
-        margin          : 10px 5px;
+        width : 100%;
+        height: 180px;
+        margin: 10px 5px;
 
     }
 
     .holder {
-        display:flex;
-        flex-direction: column;
-        background: rgba(0, 0, 0, 0.459);
-        color: white;
-        position: absolute;
-        z-index: 5;
-        width: 100%;
-        height: 100%;
-        left:0;
-        pointer-events  : none;
+        display        : flex;
+        flex-direction : column;
+        background     : rgba(0, 0, 0, 0.459);
+        color          : white;
+        position       : absolute;
+        z-index        : 5;
+        width          : 100%;
+        height         : 100%;
+        left           : 0;
+        pointer-events : none;
         justify-content: center;
-        
+
         .name-desc {
             opacity: 0;
-            
+
         }
     }
 
     .projects {
-        width: 600px !important;
+        width : 130% !important;
         height: auto !important;
-        background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
-        background-size: cover;
-        transition: 1s opacity;
-        position: absolute;
-        text-align: center;
+
+        transition  : 1s opacity;
+        position    : absolute;
+        text-align  : center;
         margin-right: auto;
-        bottom: -70px;
-        left: 0px;
-        margin-left: auto;
-        border: 1px solid #009;
-        opacity: .9;
-        z-index: 2;
+        bottom      : -70px;
+        left        : 0px;
+        margin-left : auto;
+        opacity     : .9;
+        z-index     : 2;
     }
+
     // .description {
     //     border: black 2px solid;
     //     background: rgba(0, 0, 0, 0.459);
@@ -86,17 +85,19 @@
     // }
 }
 
-.ProjectItem.larger{
-    color: rgba(255, 255, 255, 1);
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.678);
-    transform: scale(1.05);
+.ProjectItem.larger {
+    color              : rgba(255, 255, 255, 1);
+    box-shadow         : 0 5px 15px rgba(255, 255, 255, 0.678);
+    transform          : scale(1.05);
     transition-duration: .5s;
+
     .name-desc {
         opacity: 1;
     }
 }
+
 .ProjectItem.smaller {
-    transform: scale(.95);
-    opacity: .6;
+    transform          : scale(.95);
+    opacity            : .6;
     transition-duration: .5s;
 }
