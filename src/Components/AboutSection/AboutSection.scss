@@ -21,10 +21,22 @@
         background-color: pink;
         vertical-align  : middle;
         height          : 100%;
+        padding: 0 10%;
         // padding: 10%;
+
+        @media screen and (max-width: $width-lg) {
+            flex-direction  : row;
+            padding: 0 5%;
+        }
+
+        @media screen and (max-width: $width-md) {
+            flex-direction  : row;
+            padding: 0 5%;
+        }
 
         @media screen and (max-width: $width-sm) {
             flex-direction  : row;
+            padding: 0 1%;
         }
 
         @media screen and (max-width: $width-xs) {
@@ -36,7 +48,72 @@
         vertical-align: center;
         margin        : auto 10%;
         position      : relative;
+        span {
+            position      : absolute;
+        }
+        span:nth-of-type(1) {
+            color:red;
+            margin-top: 100px;
+            margin-bottom: auto;
+            top: 0;
+            bottom: 0;
+            left: -70px;
+            text-align: center;
+            font-size: 100px;
+            @media screen and (max-width: $width-md) {
+                left: -50px;
+                margin-top: 80px;
+            }
+    
+            @media screen and (max-width: $width-sm) {
+                color:red;
+                margin-left: auto;
+                margin-right: auto;
+                top: auto;
+                left: -130px;
+                right: 0;
+                bottom: -35px;
+                text-align: center;
+                font-size: 80px;
+            }
 
+        }
+        span:nth-of-type(2) {
+            color:red;
+            margin-top: 100px;
+            margin-bottom: auto;
+            top: 0;
+            bottom: 0;
+            right: -70px;
+            text-align: center;
+            font-size: 100px;
+            @media screen and (max-width: $width-md) {
+                right: -50px;
+                margin-top: 80px;
+            }
+    
+            @media screen and (max-width: $width-sm) {
+                color:red;
+                margin-left: auto;
+                margin-right: auto;
+                top: auto;
+                left: 0;
+                right: -130px;
+                bottom: -35px;
+                text-align: center;
+                font-size: 80px;
+            }
+        }
+        span:nth-of-type(3) {
+            color:red;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            bottom: -25px;
+            text-align: center;
+            font-size: 100px;
+        }
         @media screen and (max-width: $width-md) {
             margin        : auto 5%;
         }

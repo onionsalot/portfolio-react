@@ -25,5 +25,8 @@
         pointer-events: none;
 
     }
+    @media screen and (max-width: $width-xs) {
+        font-size        : 13px;
+    }
 }
 
