@@ -148,11 +148,20 @@
 
     footer {
         background-color: black;
-        opacity         : .5;
+        color: white;
+        opacity         : .7;
         height          : 150px;
         width           : 100%;
         position        : absolute;
         bottom          : 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: auto;
+        div:nth-of-type(3n) {
+            align-self: flex-end;
+            padding-right: 30px;
+        }
     }
 }
 

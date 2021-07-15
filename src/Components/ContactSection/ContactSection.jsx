@@ -1,7 +1,6 @@
 import "./ContactSection.scss";
 import { useState } from "react";
 import { send } from "emailjs-com";
-import { useMediaQuery } from "react-responsive";
 
 export default function ContactSection() {
   const [form, setForm] = useState({
@@ -25,15 +24,7 @@ export default function ContactSection() {
       console.log('FAILED', err);
     })
   }
-  const Large = ({ children }) => {
-    const isDesktop = useMediaQuery({ minWidth: 1100 });
-    return isDesktop ? children : null;
-  };
 
-  const Mobile = ({ children }) => {
-    const isMobile = useMediaQuery({ maxWidth: 699 });
-    return isMobile ? children : null;
-  };
   return (
     <div className="ContactSection">
       <div className="heading">
@@ -107,7 +98,17 @@ export default function ContactSection() {
           <div className="col-right">{error}</div>
         </div>
       </main>
-      <footer></footer>
+      <footer>
+        <div>
+        About Me &nbsp; | &nbsp; Tech Stack &nbsp; | &nbsp; My Work &nbsp; | &nbsp; Contact
+        </div>
+        <div>
+          Made with 💜&nbsp; from New York City, New York
+        </div>
+        <div>
+          Pictures blah blah
+        </div>
+      </footer>
     </div>
   );
 }
