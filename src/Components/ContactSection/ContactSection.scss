@@ -93,11 +93,14 @@
         flex-direction : row;
         justify-content: space-between;
         height         : 50%;
+        @media screen and (max-width: $width-xs) {
+            margin         : 0 5%;
 
+        }
         .left {
             background-color: rgb(170, 170, 170);
             width           : 100%;
-
+            overflow-wrap: break-word;
         }
 
         .right {
@@ -133,8 +136,15 @@
                 height: 30px;
                 width : 200px;
             }
+            @media screen and (max-width: $width-md) {
+                .col-left, .col-right, .submit-button {
+                  width: 100%;
+                  margin-top: 0;
+                }
+              }
         }
     }
+
 
     footer {
         background-color: black;
