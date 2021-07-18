@@ -9,6 +9,7 @@
     height      : 280px;
     position    : relative;
     overflow    : hidden;
+    background: white;
 
     // @media screen and (max-width: $width-lg) {
     //     width           : 500px;
@@ -56,18 +57,23 @@
     }
 
     .projects {
-        width : 130% !important;
-        height: auto !important;
-
+        width : 100%;
+        height: auto;
         transition  : 1s opacity;
-        position    : absolute;
+        // position    : absolute;
         text-align  : center;
         margin-right: auto;
-        bottom      : -70px;
-        left        : 0px;
         margin-left : auto;
         opacity     : .9;
         z-index     : 2;
+        @media screen and (max-width: $width-md) {
+            width : 140%;
+            height: auto;
+        }
+        @media screen and (max-width: $width-sm) {
+            width : 100%;
+            height: auto;
+        }
     }
 
     // .description {

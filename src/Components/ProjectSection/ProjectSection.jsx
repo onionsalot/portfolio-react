@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import project1 from "../../images/sample-mp4-file.mp4"
-import project2 from "../../images/sample-mp4-file.mp4"
+import project1 from "../../images/matchvid.mp4"
+import project2 from "../../images/bootstrapvid.mp4"
 import project3 from "../../images/sample-mp4-file.mp4"
 import project4 from "../../images/sample-mp4-file.mp4"
 import ProjectItem from "../ProjectItem/ProjectItem"
