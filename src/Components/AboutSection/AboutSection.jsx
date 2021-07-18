@@ -12,8 +12,8 @@ import IconPython from "../../images/icons/python.png";
 import IconReact from "../../images/icons/react.png";
 import IconSass from "../../images/icons/sass.png";
 import StackItems from "../StackItems/StackItems";
-import pfp from "../../images/placeholder.jpeg";
-import arrow from "../../images/me.png"
+import me1 from "../../images/me1.png";
+import arrow from "../../images/arrow1.png"
 
 export default function AboutSection() {
   const [parallaxDataTop, setParallaxDataTop] = useState([]);
@@ -154,7 +154,7 @@ export default function AboutSection() {
                 <img src={arrow} alt=""/>
             </div>
             <div class="sketchy">
-                <img src={pfp} alt="" className="pfp"/>
+                <img src={me1} alt="" className="pfp" loading="lazy"/>
             </div>
 
         </div>
