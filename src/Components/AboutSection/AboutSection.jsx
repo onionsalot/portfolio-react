@@ -115,13 +115,25 @@ export default function AboutSection() {
   return (
     <div className="AboutSection">
       {/* <hr class="hr-text" data-content="ABOUT ME" /> */}
-      <div className="heading">
+      {/* <div className="heading">
+        <div className="wave1" />
+        <div className="wave2" />
+        <div className="wave3" />
         <h1>
             About <span className="special"></span>
         </h1>
         <div class="divider"></div>
 
+      </div> */}
+      <div className="heading">
+        About
+        <div className="ocean">
+  <div className="wave"></div>
+  <div className="wave"></div>
+  <div className="wave"></div>
+</div>
       </div>
+
 
       <main>
         <div className="about-text">
