@@ -126,7 +126,9 @@ export default function AboutSection() {
 
       </div> */}
       <div className="heading">
-        About
+        <div className="centered-hr">
+        <hr className="hr-text" data-content="About Me" />
+        </div>
         <div className="ocean">
   <div className="wave"></div>
   <div className="wave"></div>
