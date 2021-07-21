@@ -28,11 +28,16 @@ export default function ContactSection() {
   return (
     <div className="ContactSection">
       <div className="heading">
-        <div class="divider"></div>
-        <h1>
-          <span className="special"></span> Hello!
-        </h1>
+        <div className="centered-hr">
+          <hr className="hr-text" data-content="Say Hello!" />
+        </div>
+        <div className="ocean">
+          <div className="wave"></div>
+          <div className="wave"></div>
+          <div className="wave"></div>
+        </div>
       </div>
+
       <main className="sketchy">
         <div className="left">
           <h3>Thanks for stopping by!</h3>

@@ -29,13 +29,15 @@ export default function ProjectSection() {
 
   return (
     <div className="ProjectSection">
-      {/* <hr class="hr-text" data-content="ABOUT ME" /> */}
       <div className="heading">
-        <h1>
-            My <span className="special"></span>
-        </h1>
-        <div class="divider"></div>
-
+        <div className="centered-hr">
+          <hr className="hr-text" data-content="My Projects" />
+        </div>
+        <div className="ocean">
+          <div className="wave"></div>
+          <div className="wave"></div>
+          <div className="wave"></div>
+        </div>
       </div>
 
       <main>
