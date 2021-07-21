@@ -79,11 +79,16 @@ export default function TechSection() {
   return (
     <div className="TechSection">
       <div className="heading">
-        <div class="divider"></div>
-        <h1>
-          <span className="special"></span> Stack
-        </h1>
+        <div className="centered-hr">
+          <hr className="hr-text" data-content="Tech Stack" />
+        </div>
+        <div className="ocean">
+          <div className="wave"></div>
+          <div className="wave"></div>
+          <div className="wave"></div>
+        </div>
       </div>
+
       <div className="stack-container">
         {parallaxData.map((data,idx) => 
                         <StackItems index={ idx } data={ data } image={ icon[idx] } hoverItem={ hoverItem } hoverState={ hoverState } onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}/>)}

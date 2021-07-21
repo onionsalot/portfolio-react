@@ -1,32 +1,129 @@
-
-
+// For sketchy borders
 .sketchy {
-    padding          : 1rem 1rem;
-    display          : inline-block;
-    border           : 3px solid #333333;
-    font-size        : 15px;
-    border-radius    : 2% 6% 5% 4% / 1% 1% 2% 4%;
-    // text-transform: uppercase;
-    letter-spacing   : 0.3ch;
-    background       : #ffffff;
-    position         : relative;
+    padding       : 1rem 1rem;
+    display       : inline-block;
+    border        : 3px solid #333333;
+    font-size     : 15px;
+    border-radius : 2% 6% 5% 4% / 1% 1% 2% 4%;
+    letter-spacing: 0.3ch;
+    background    : #ffffff;
+    position      : relative;
 
     &::before {
-        content      : '';
-        border       : 2px solid #353535;
-        display      : block;
-        width        : 100%;
-        height       : 100%;
-        position     : absolute;
-        top          : 50%;
-        left         : 50%;
-        transform    : translate3d(-50%, -50%, 0) scale(1.015) rotate(0.5deg);
-        border-radius: 1% 1% 2% 4% / 2% 6% 5% 4%;
+        content       : '';
+        border        : 2px solid #353535;
+        display       : block;
+        width         : 100%;
+        height        : 100%;
+        position      : absolute;
+        top           : 50%;
+        left          : 50%;
+        transform     : translate3d(-50%, -50%, 0) scale(1.015) rotate(0.5deg);
+        border-radius : 1% 1% 2% 4% / 2% 6% 5% 4%;
         pointer-events: none;
 
     }
+
     @media screen and (max-width: $width-xs) {
-        font-size        : 13px;
+        font-size: 13px;
     }
 }
 
+
+// Center HR with text over for section division
+.centered-hr {
+    width     : 100%;
+    margin    : 5px auto;
+    text-align: center;
+
+    .hr-text {
+        font-size: 20px;
+        position : relative;
+        border   : 0;
+        height   : 1.5em;
+
+        &:before {
+            content   : '';
+            background: linear-gradient(to right, transparent, white, transparent);
+            position  : absolute;
+            left      : 0;
+            top       : 50%;
+            width     : 100%;
+            height    : 1px;
+        }
+
+        &:after {
+            content : attr(data-content);
+            position: relative;
+            display : inline-block;
+            color   : black;
+
+            padding         : 0 .5em;
+            line-height     : 1.5em;
+            color           : white;
+            background-color: rgb(36, 36, 36);
+        }
+    }
+}
+
+
+
+// Ocean waves for under heading
+.heading {
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+    padding       : 10px 40px;
+    height        : 50px;
+    position      : relative;
+    background-color: rgb(36, 36, 36);
+}
+
+.ocean {
+    height    : 150px;
+    width     : 100%;
+    position  : absolute;
+    bottom    : -100px;
+    left      : 0;
+    right     : 0;
+    overflow-x: hidden;
+}
+
+.wave {
+    background         : url('../images/wave.png');
+    background-size    : 50% 100px;
+    background-repeat  : repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin   : center bottom;
+    position           : absolute;
+    top                : 0;
+    width              : 200%;
+    height             : 100%;
+    animation          : wave 40s linear infinite;
+    transform          : translate3d(0, 0, 0);
+    opacity            : 0.8;
+}
+
+.wave:nth-of-type(2) {
+    animation: wave 10s linear infinite;
+    opacity  : 0.5;
+}
+
+.wave:nth-of-type(3) {
+    animation: wave 15s linear infinite;
+    opacity  : 0.5;
+}
+
+@keyframes wave {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1)
+    }
+
+    50% {
+        transform: translateX(-25%) translateZ(0) scaleY(1)
+    }
+
+    100% {
+        transform: translateX(-50%) translateZ(0) scaleY(1)
+    }
+}

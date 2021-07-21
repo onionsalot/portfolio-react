@@ -13,12 +13,12 @@ import IconReact from "../../images/icons/react.png";
 import IconSass from "../../images/icons/sass.png";
 import StackItems from "../StackItems/StackItems";
 import me1 from "../../images/me1.png";
-import arrow from "../../images/arrow1.png"
+import arrow from "../../images/arrow1.png";
 
 export default function AboutSection() {
   const [parallaxDataTop, setParallaxDataTop] = useState([]);
   const [parallaxDataBot, setParallaxDataBot] = useState([]);
-//   const [distance, setDistance] = useState((convertVWToPx("100vw") * 0.8) / 5);
+  //   const [distance, setDistance] = useState((convertVWToPx("100vw") * 0.8) / 5);
   const [iconTop] = useState([
     { IconCss: IconCss },
     { IconDj: IconDj },
@@ -34,106 +34,96 @@ export default function AboutSection() {
     { IconReact: IconReact },
     { IconSass: IconSass },
   ]);
-//   function convertVWToPx(value) {
-//     // eslint-disable-next-line no-useless-escape
-//     var parts = value.match(/([0-9\.]+)(vh|vw)/);
-//     var q = Number(parts[1]);
-//     var side =
-//       window[["innerHeight", "innerWidth"][["vh", "vw"].indexOf(parts[2])]];
-//     return side * (q / 100);
-//   }
+  //   function convertVWToPx(value) {
+  //     // eslint-disable-next-line no-useless-escape
+  //     var parts = value.match(/([0-9\.]+)(vh|vw)/);
+  //     var q = Number(parts[1]);
+  //     var side =
+  //       window[["innerHeight", "innerWidth"][["vh", "vw"].indexOf(parts[2])]];
+  //     return side * (q / 100);
+  //   }
 
   // console.log((convertVWToPx('100vw')*0.8/5))
 
-//   useEffect(() => {
-//     const data = [];
-//     for (let i = 0; i < 5; i++) {
-//       data.push([
-//         {
-//           start: ".parallax-top",
-//           end: ".halfpoint",
-//           properties: [
-//             {
-//               startValue: i * distance + 100,
-//               endValue: i * distance,
-//               property: "translateX",
-//             },
-//           ],
-//         },
-//         {
-//           start: ".parallax-top",
-//           end: ".halfpoint",
-//           properties: [
-//             {
-//               startValue: 0,
-//               endValue: 0.9,
-//               property: "opacity",
-//             },
-//           ],
-//         },
-//       ]);
-//     }
-//     const data1 = [];
-//     for (let i = 0; i < 5; i++) {
-//       data1.push([
-//         {
-//           start: ".halfpoint",
-//           end: ".endpoint",
-//           properties: [
-//             {
-//               startValue: i * distance - 100,
-//               endValue: i * distance,
-//               property: "translateX",
-//             },
-//           ],
-//         },
-//         {
-//           start: ".halfpoint",
-//           end: ".endpoint",
-//           properties: [
-//             {
-//               startValue: 0,
-//               endValue: 0.9,
-//               property: "opacity",
-//             },
-//           ],
-//         },
-//       ]);
-//     }
-//     setParallaxDataTop(data);
-//     setParallaxDataBot(data1);
-//     // console.log(parallaxData)
-//   }, [distance]);
+  //   useEffect(() => {
+  //     const data = [];
+  //     for (let i = 0; i < 5; i++) {
+  //       data.push([
+  //         {
+  //           start: ".parallax-top",
+  //           end: ".halfpoint",
+  //           properties: [
+  //             {
+  //               startValue: i * distance + 100,
+  //               endValue: i * distance,
+  //               property: "translateX",
+  //             },
+  //           ],
+  //         },
+  //         {
+  //           start: ".parallax-top",
+  //           end: ".halfpoint",
+  //           properties: [
+  //             {
+  //               startValue: 0,
+  //               endValue: 0.9,
+  //               property: "opacity",
+  //             },
+  //           ],
+  //         },
+  //       ]);
+  //     }
+  //     const data1 = [];
+  //     for (let i = 0; i < 5; i++) {
+  //       data1.push([
+  //         {
+  //           start: ".halfpoint",
+  //           end: ".endpoint",
+  //           properties: [
+  //             {
+  //               startValue: i * distance - 100,
+  //               endValue: i * distance,
+  //               property: "translateX",
+  //             },
+  //           ],
+  //         },
+  //         {
+  //           start: ".halfpoint",
+  //           end: ".endpoint",
+  //           properties: [
+  //             {
+  //               startValue: 0,
+  //               endValue: 0.9,
+  //               property: "opacity",
+  //             },
+  //           ],
+  //         },
+  //       ]);
+  //     }
+  //     setParallaxDataTop(data);
+  //     setParallaxDataBot(data1);
+  //     // console.log(parallaxData)
+  //   }, [distance]);
 
-//   window.onresize = function () {
-//     const newDistance = (convertVWToPx("100vw") * 0.8) / 5;
-//     if (newDistance !== distance) {
-//       setDistance(newDistance);
-//     }
-//   };
+  //   window.onresize = function () {
+  //     const newDistance = (convertVWToPx("100vw") * 0.8) / 5;
+  //     if (newDistance !== distance) {
+  //       setDistance(newDistance);
+  //     }
+  //   };
 
   return (
     <div className="AboutSection">
-      {/* <hr class="hr-text" data-content="ABOUT ME" /> */}
-      {/* <div className="heading">
-        <div className="wave1" />
-        <div className="wave2" />
-        <div className="wave3" />
-        <h1>
-            About <span className="special"></span>
-        </h1>
-        <div class="divider"></div>
-
-      </div> */}
       <div className="heading">
-        About
+        <div className="centered-hr">
+          <hr className="hr-text" data-content="About Me" />
+        </div>
         <div className="ocean">
-  <div className="wave"></div>
-  <div className="wave"></div>
-  <div className="wave"></div>
-</div>
+          <div className="wave"></div>
+          <div className="wave"></div>
+          <div className="wave"></div>
+        </div>
       </div>
-
 
       <main>
         <div className="about-text">
@@ -155,20 +145,23 @@ export default function AboutSection() {
               to better my craft each and every day.
             </p>
             <span> &laquo; </span>
-              <span> &raquo; </span>
+            <span> &raquo; </span>
 
-              <span> <button>1</button><button>2</button><button>3</button></span>
+            <span>
+              {" "}
+              <button>1</button>
+              <button>2</button>
+              <button>3</button>
+            </span>
           </div>
-
         </div>
         <div className="pfp-area">
-            <div className="arrow">
-                <img src={arrow} alt=""/>
-            </div>
-            <div class="sketchy">
-                <img src={me1} alt="" className="pfp" loading="lazy"/>
-            </div>
-
+          <div className="arrow">
+            <img src={arrow} alt="" />
+          </div>
+          <div class="sketchy">
+            <img src={me1} alt="" className="pfp" loading="lazy" />
+          </div>
         </div>
         {/* <div style={{height:100}} className="endpoint"></div> */}
       </main>
