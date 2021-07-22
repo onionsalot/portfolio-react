@@ -80,7 +80,7 @@
 }
 
 .ocean {
-    height    : 150px;
+    height    : 101px;
     width     : 100%;
     position  : absolute;
     bottom    : -100px;
@@ -90,7 +90,7 @@
 }
 
 .wave {
-    background         : url('../images/wave.png');
+    background         : url('../images/wave1.png');
     background-size    : 50% 100px;
     background-repeat  : repeat no-repeat;
     background-position: 0 bottom;
@@ -101,7 +101,7 @@
     height             : 100%;
     animation          : wave 40s linear infinite;
     transform          : translate3d(0, 0, 0);
-    opacity            : 0.8;
+    opacity            : 0.5;
 }
 
 .wave:nth-of-type(2) {
@@ -112,6 +112,14 @@
 .wave:nth-of-type(3) {
     animation: wave 15s linear infinite;
     opacity  : 0.5;
+}
+
+@media screen and (max-width: $width-xs) {
+    .wave {
+        background-size    : 50% 50px;
+        width              : 200%;
+        height             : 50%;
+    }
 }
 
 @keyframes wave {

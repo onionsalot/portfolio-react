@@ -5,94 +5,26 @@
     display         : flex;
     flex-direction  : column;
     width           : 100vw;
-    height          : 900px;
+    height          : 700px;
     margin          : 0 auto;
-    background-color: grey;
     position        : relative;
+    background-color: rgb(73,53,100);
 
+    main{
+        display         : flex;
+        flex-direction  : row;
+        vertical-align  : middle;
+        height          : 100%;
+        margin          : auto 0;
 
-    .heading {
-        display       : flex;
-        flex-direction: row;
-        align-items   : center;
-        padding       : 0 40px;
-
-        h1 {
-            flex-grow: 0;
-            font-size: 50px;
-            position : relative;
-
-            span {
-                position: absolute;
-                left    : -170px;
-            }
-        }
-
-        .divider {
-            flex-grow       : 1;
-            height          : 5px;
-            margin          : 0 0 0 0;
-            background-color: transparent;
-            background-image: linear-gradient(to left, rgba(0, 0, 0, 0.75), transparent);
-        }
-
+        // padding         : 0 10%;
     }
-
-    .special {
-        height  : 60px;
-        width   : 160px;
-        position: absolute;
-        margin  : auto 10px;
-
-        box-shadow      : 0 20px 35px rgba(0, 0, 0, 0.3);
-        border-radius   : 5px;
-        overflow        : hidden;
-        background-color: #1c1b29;
-    }
-
-    .special:before {
-        content: "";
-        background-image: conic-gradient(#04b0ee 20deg,
-                transparent 120deg);
-        height   : 300%;
-        width    : 170%;
-        position : absolute;
-        left     : -31%;
-        top      : -90%;
-        animation: rotate 2s infinite linear;
-    }
-
-    @keyframes rotate {
-        100% {
-            transform: rotate(360deg);
-        }
-    }
-
-    .special:after {
-        font-family     : 'kgsecondchancessketch-kpap-webfont';
-        content         : "SAY";
-        height          : 95%;
-        width           : 96%;
-        position        : absolute;
-        background-color: #1c1b29;
-        border-radius   : 5px;
-        top             : 3%;
-        left            : 3%;
-        color           : #04b0ee;
-        display         : grid;
-        place-items     : center;
-        font-size       : 50px;
-        letter-spacing  : 6px;
-    }
-
-
-
-    main {
-        margin         : 0 20%;
+    .sketchy {
+        margin         : 100px 20% 0 20%;
         display        : flex;
         flex-direction : row;
         justify-content: space-between;
-        height         : 50%;
+        height         : 60%;
         @media screen and (max-width: $width-xs) {
             margin         : 0 5%;
 
@@ -150,7 +82,7 @@
         background-color: black;
         color: white;
         opacity         : .7;
-        height          : 150px;
+        height          : 110px;
         width           : 100%;
         position        : absolute;
         bottom          : 0;
