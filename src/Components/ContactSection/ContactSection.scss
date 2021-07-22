@@ -26,11 +26,10 @@
         justify-content: space-between;
         height         : 60%;
         @media screen and (max-width: $width-xs) {
-            margin         : 0 5%;
+            margin         : 80px 5% 0 5%;
 
         }
         .left {
-            background-color: rgb(170, 170, 170);
             width           : 100%;
             overflow-wrap: break-word;
         }
