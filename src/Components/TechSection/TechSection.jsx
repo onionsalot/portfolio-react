@@ -89,76 +89,13 @@ export default function TechSection() {
         </div>
       </div>
 
+      <main>
+
       <div className="stack-container">
         {parallaxData.map((data,idx) => 
-                        <StackItems index={ idx } data={ data } image={ icon[idx] } hoverItem={ hoverItem } hoverState={ hoverState } onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}/>)}
-        {/* <div className="item">
-          <Plx className="" parallaxData={parallaxData[0]}>
-            <img src={IconCss} alt="" />
-          </Plx>
-        </div>
-        <div className="item">
-          <Plx className="parallax-items" parallaxData={parallaxData[1]}>
-            <img src={IconDj} alt="" />
-          </Plx>
-        </div>
-        <div className="item">
-          <Plx className="parallax-items" parallaxData={parallaxData[2]}>
-            <img src={IconGit} alt="" />
-          </Plx>
-        </div>
-        <div className="item">
-          <Plx className="parallax-items" parallaxData={parallaxData[3]}>
-            <img src={IconHtml} alt="" />
-          </Plx>
-        </div>
-        <div className="item">
-          <Plx className="parallax-items" parallaxData={parallaxData[4]}>
-            <img src={IconJs} alt="" />
-          </Plx>
-        </div>
-        <div className="item">
-          <Plx className="parallax-items" parallaxData={parallaxData[5]}>
-            <img src={IconMongo} alt="" />
-          </Plx>
-        </div>
-        <div className="item">
-          <Plx className="parallax-items" parallaxData={parallaxData[1]}>
-            <img src={IconNodejs} alt="" />
-          </Plx>
-        </div>
-        <div className="item">
-          <Plx className="parallax-items" parallaxData={parallaxData[1]}>
-            <img src={IconPostgresql} alt="" />
-          </Plx>
-        </div>
-        <div className="item">
-          <Plx className="parallax-items" parallaxData={parallaxData[1]}>
-            <img src={IconPython} alt="" />
-          </Plx>
-        </div>
-        <div className="item">
-          <Plx className="parallax-items" parallaxData={parallaxData[1]}>
-            <img src={IconReact} alt="" />
-          </Plx>
-        </div>
-        <div className="item">
-          <Plx className="parallax-items" parallaxData={parallaxData[1]}>
-            <img src={IconSass} alt="" />
-          </Plx>
-        </div>
-        <div className="item">
-          <Plx className="parallax-items" parallaxData={parallaxData[1]}>
-            <img src={IconNodejs} alt="" />
-          </Plx>
-        </div>
-        <div className="item">
-          <Plx className="parallax-items" parallaxData={parallaxData[1]}>
-            <img src={IconNodejs} alt="" />
-          </Plx>
-        </div> */}
-        
+                        <StackItems index={ idx } data={ data } image={ icon[idx] } hoverItem={ hoverItem } hoverState={ hoverState } onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}/>)}      
       </div>
+      </main>
       <div className="end-row" />
     </div>
   );

@@ -38,7 +38,9 @@ export default function ContactSection() {
         </div>
       </div>
 
-      <main className="sketchy">
+      <main>
+        <div className="sketchy">
+
         <div className="left">
           <h3>Thanks for stopping by!</h3>
           <br />
@@ -101,6 +103,7 @@ export default function ContactSection() {
             </button>
           </form>
           <div className="col-right">{error}</div>
+        </div>
         </div>
       </main>
       <footer>
