@@ -10,21 +10,12 @@
 $color-black: #000000;
 $color-white: #ffffff;
 
-$dark-blue: #2ec4b6;
+$dark-blue: rgb(15, 17, 36);
 $light-blue: #cbf3f0;
 $dark-orange: #ff9f1c;
 $light-orange: #ffbf69;
 
-$brand-black: #111;
-$brand-red: #F72E2E;
-$brand-gray01: #676968;
-$brand-gray03: #939393;
-$brand-gray04: #c2c2c2;
-$brand-gray05: #e5e5e5;
-
-$link-default: $dark-orange;
-$link-hover: $light-blue;
-$link-danger: $brand-red;
+$heading-color: $dark-blue;
 
 $width-xs: 580px;
 $width-sm: 768px;
