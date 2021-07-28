@@ -37,7 +37,7 @@
     text-align: center;
 
     .hr-text {
-        font-size: 20px;
+        font-size: 40px;
         position : relative;
         border   : 0;
         height   : 1.5em;
@@ -60,9 +60,16 @@
 
             padding         : 0 .5em;
             line-height     : 1.5em;
-            color           : white;
-            background-color: rgb(36, 36, 36);
+            color           : $dark-orange;
+            background-color: $heading-color;
         }
+    }
+    @media screen and (max-width: $width-sm) {
+        .hr-text { font-size: 30px; }
+    }
+
+    @media screen and (max-width: $width-xs) {
+        .hr-text { font-size: 25px; }
     }
 }
 
@@ -74,9 +81,16 @@
     flex-direction: column;
     align-items   : center;
     padding       : 10px 40px;
-    height        : 50px;
+    height        : 100px;
     position      : relative;
-    background-color: rgb(36, 36, 36);
+    background-color: $heading-color;
+    @media screen and (max-width: $width-sm) {
+        height        : 50px;
+    }
+
+    @media screen and (max-width: $width-xs) {
+        height        : 40px;
+    }
 }
 
 .ocean {
@@ -134,4 +148,8 @@
     100% {
         transform: translateX(-50%) translateZ(0) scaleY(1)
     }
+}
+
+span.highlighted-text {
+    color: $dark-orange;
 }

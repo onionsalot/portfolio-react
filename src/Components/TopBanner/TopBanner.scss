@@ -1,66 +1,117 @@
+@import "../../styles/variables";
+@import "../../styles/globals";
+
 .TopBanner {
-    position: relative;
-    height  : 100vh;
-    width   : 100vw;
+  position        : relative;
+  height          : 110vh;
+  width           : 100vw;
+  max-width       : 100%;
+  background-color: $dark-blue;
 }
 
 
 .inside-para {
-    height  : 1080px;
-    position: relative;
+  height  : 1200px;
+  position: relative;
 
-    .opening-text {
-        position  : absolute;
-        margin    : 0 auto;
-        width     : 500px;
-        left      : 0;
-        right     : 450px;
-        text-align: left;
-        z-index   : 5;
-        font-size: 46px;
-        color: white;
-        -ms-transform: skewY(-4deg); /* IE 9 */
-        transform: skewY(-4deg);
-    }
-    .windup {
-        display: inline;
-    }
+  .opening-text {
+    position     : absolute;
+    margin       : 5px auto 0 auto;
+    width        : 500px;
+    left         : 0;
+    right        : 450px;
+    text-align   : left;
+    z-index      : 5;
+    font-size    : 46px;
+    color        : white;
+    -ms-transform: skewY(-4deg);
+    /* IE 9 */
+    transform    : skewY(-4deg);
+  }
+
+  .windup {
+    display: inline;
+  }
 }
 
 .react-typeout-caret {
-    content: "|";
-    margin-left: 5px;
+  content          : "|";
+  margin-left      : 5px;
+  opacity          : 1;
+  font-weight      : 100;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation   : blink 0.7s infinite;
+  -ms-animation    : blink 0.7s infinite;
+  -o-animation     : blink 0.7s infinite;
+  animation        : blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0% {
     opacity: 1;
-    font-weight: 100;
-    -webkit-animation: blink 0.7s infinite;
-    -moz-animation: blink 0.7s infinite;
-    -ms-animation: blink 0.7s infinite;
-    -o-animation: blink 0.7s infinite;
-    animation: blink 0.7s infinite;
   }
-   
-  @keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
+
+  50% {
+    opacity: 0;
   }
-  @-webkit-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
+
+  100% {
+    opacity: 1;
   }
-  @-moz-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
   }
-  @-ms-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
+
+  50% {
+    opacity: 0;
   }
-  @-o-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
+
+  100% {
+    opacity: 1;
   }
+}
+
+@-moz-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

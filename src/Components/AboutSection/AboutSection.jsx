@@ -118,48 +118,41 @@ export default function AboutSection() {
         <div className="centered-hr">
           <hr className="hr-text" data-content="About Me" />
         </div>
-        <div className="ocean">
-          <div className="wave"></div>
-          <div className="wave"></div>
-          <div className="wave"></div>
-        </div>
       </div>
 
       <main>
-        <div className="about-text">
-          {/* {parallaxDataTop.map((data,idx) => 
-                        <StackItems index={ idx } data={ data } image={ iconTop[idx] } pos={"top"}/>)} */}
-          <div class="sketchy">
+        <div className="about-main">
+          <div className="about-greeting">
+            <p className="intro-text">
+              Hey there!
+              <br /> My name is{" "}
+              <span className="highlighted-text">Trong Nguyen</span>
+            </p>
+            <p className="sub-text">Welcome to my corner of the interwebs!</p>
+          </div>
+          <div className="about-text">
+
             <p>
               I am a full stack developer residing in NYC, New York - unwavering
               in my quest to be the best me that could possibly be! After
-              graduating Lehman College with a degree in Computer science, I
-              went into medicine with an interest in nonclinical administration.
-              I quickly realized that I've always been a programmer at heart,
+              graduating Lehman College with a degree in Computer science, I went
+              into medicine with an interest in nonclinical administration. I
+              quickly realized that I've always been a programmer at heart,
               frequently learning new technologies and developing small apps to
               make my life easier at work.
             </p>
             <p>
               In 2021, I committed to General Assembly's bootcamp program and
-              haven't looked back. Since graduating GA's SEI program, I strive
-              to better my craft each and every day.
+              haven't looked back. Since graduating GA's SEI program, I strive to
+              better my craft each and every day.
             </p>
-            <span> &laquo; </span>
-            <span> &raquo; </span>
-
-            <span>
-              {" "}
-              <button>1</button>
-              <button>2</button>
-              <button>3</button>
-            </span>
           </div>
         </div>
         <div className="pfp-area">
-          <div className="arrow">
+          {/* <div className="arrow">
             <img src={arrow} alt="" loading="lazy" />
-          </div>
-          <div class="sketchy">
+          </div> */}
+          <div>
             <img src={me1} alt="" className="pfp" />
           </div>
         </div>

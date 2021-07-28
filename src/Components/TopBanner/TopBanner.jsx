@@ -4,12 +4,12 @@ import TypeOut from 'react-typeout';
 import './TopBanner.scss'
 
 export default function TopBanner() {
-    const words = ['Student', 'A Developer', 'An Artist'];
+    const words = ['a Student', 'a Developer', 'an Artist'];
     return (
         <div className="TopBanner">
             
             
-            <Parallax blur={{ min: -15, max: 15 }} bgImage={background} strength={100} bgImageStyle={{height: "100vh"}}>
+            <Parallax blur={{ min: -15, max: 15 }} bgImage={background} strength={100} bgImageStyle={{height: "110vh"}}>
             <div className= "inside-para">
                 <div className="opening-text">
                     Hi, I'm Trong! <br/> I'm...&nbsp;

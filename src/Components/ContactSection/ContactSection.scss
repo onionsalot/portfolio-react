@@ -6,31 +6,35 @@
     flex-direction  : column;
     width           : 100vw;
     height          : 700px;
+    max-width       : 100%;
     margin          : 0 auto;
     position        : relative;
-    background-color: rgb(73,53,100);
+    background-color: rgb(73, 53, 100);
 
-    main{
-        display         : flex;
-        flex-direction  : row;
-        vertical-align  : middle;
-        height          : 100%;
-        margin          : auto 0;
+    main {
+        display       : flex;
+        flex-direction: row;
+        vertical-align: middle;
+        height        : 100%;
+        margin        : auto 0;
 
         // padding         : 0 10%;
     }
+
     .sketchy {
         margin         : 100px 20% 0 20%;
         display        : flex;
         flex-direction : row;
         justify-content: space-between;
         height         : 60%;
+
         @media screen and (max-width: $width-xs) {
-            margin         : 80px 5% 0 5%;
+            margin: 80px 5% 0 5%;
 
         }
+
         .left {
-            width           : 100%;
+            width        : 100%;
             overflow-wrap: break-word;
         }
 
@@ -67,30 +71,35 @@
                 height: 30px;
                 width : 200px;
             }
+
             @media screen and (max-width: $width-md) {
-                .col-left, .col-right, .submit-button {
-                  width: 100%;
-                  margin-top: 0;
+
+                .col-left,
+                .col-right,
+                .submit-button {
+                    width     : 100%;
+                    margin-top: 0;
                 }
-              }
+            }
         }
     }
 
 
     footer {
         background-color: black;
-        color: white;
+        color           : white;
         opacity         : .7;
         height          : 110px;
         width           : 100%;
         position        : absolute;
         bottom          : 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        padding: auto;
+        display         : flex;
+        flex-direction  : column;
+        justify-content : space-around;
+        padding         : auto;
+
         div:nth-of-type(3n) {
-            align-self: flex-end;
+            align-self   : flex-end;
             padding-right: 30px;
         }
     }
