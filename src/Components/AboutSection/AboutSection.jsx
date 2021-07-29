@@ -133,7 +133,7 @@ export default function AboutSection() {
             </p>
             <p className="sub-text">Welcome to my corner of the interwebs!</p>
           </div>
-          <div className="about-text">
+          <div className="main-text">
 
             <p>
               I am a passionate full stack developer residing currently based in NYC, New York - unwavering in my quest to be the best me that could possibly be! 
