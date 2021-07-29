@@ -137,3 +137,18 @@
 .AboutSection span {
     display: inline;
 }
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    img {
+        padding: 0 10px;
+        width: 40px;
+    }
+    @media screen and (max-width: $width-sm) {
+        img {
+            padding: 0 8px;
+            width: 35px;
+        }
+    }
+}

@@ -9,7 +9,7 @@ export default function TopBanner() {
         <div className="TopBanner">
             
             
-            <Parallax blur={{ min: -15, max: 15 }} bgImage={background} strength={100} bgImageStyle={{height: "110vh"}}>
+            <Parallax bgImage={background} strength={100} bgImageStyle={{height: "110vh"}} className="para">
             <div className= "inside-para">
                 <div className="opening-text">
                     Hi, I'm Trong! <br/> I'm...&nbsp;

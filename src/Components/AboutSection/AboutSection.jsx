@@ -14,6 +14,9 @@ import IconSass from "../../images/icons/sass.png";
 import StackItems from "../StackItems/StackItems";
 import me1 from "../../images/me1.png";
 import arrow from "../../images/arrow1.png";
+import linkedin from "../../images/linkedin.png";
+import github from "../../images/github.png";
+import twitter from "../../images/twitter.png";
 
 export default function AboutSection() {
   const [parallaxDataTop, setParallaxDataTop] = useState([]);
@@ -133,19 +136,23 @@ export default function AboutSection() {
           <div className="about-text">
 
             <p>
-              I am a full stack developer residing in NYC, New York - unwavering
-              in my quest to be the best me that could possibly be! After
-              graduating Lehman College with a degree in Computer science, I went
-              into medicine with an interest in nonclinical administration. I
-              quickly realized that I've always been a programmer at heart,
-              frequently learning new technologies and developing small apps to
-              make my life easier at work.
+              I am a passionate full stack developer residing currently based in NYC, New York - unwavering in my quest to be the best me that could possibly be! 
+              <br/> With my experience in non-clinical health administration and a background in art and design, I always strive for an end-user first approach in design.
+
             </p>
             <p>
-              In 2021, I committed to General Assembly's bootcamp program and
-              haven't looked back. Since graduating GA's SEI program, I strive to
-              better my craft each and every day.
+            <span className="highlighted-text">Full Name</span>: Trong T. Nguyen<br/>
+            <span className="highlighted-text">Email</span>: Trong.nguyen1008@gmail.com<br/>
+            <span className="highlighted-text">Education</span>: &nbsp;General Assembly&nbsp; / &nbsp;Bachelor of Computer Science &nbsp; / &nbsp;Associate's Degree (IT)
             </p>
+            <div className="contact-info">
+              <button>Contact me!</button> 
+              <div>
+              <img src={linkedin} alt=""/>
+              <img src={github} alt=""/>
+              <img src={twitter} alt=""/>
+                </div>
+            </div>
           </div>
         </div>
         <div className="pfp-area">
