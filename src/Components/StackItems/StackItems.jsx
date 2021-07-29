@@ -31,7 +31,6 @@ export default function StackItems({
 
   return (
     <div className="item">
-      <Plx className={styleInfo} parallaxData={data}>
         <img
           src={imageValue[0]}
           alt=""
@@ -39,7 +38,6 @@ export default function StackItems({
           onMouseEnter={onMouseEnter}
           onMouseLeave={onMouseLeave}
         />
-      </Plx>
       <span data-content={dataContent}></span>
     </div>
   );

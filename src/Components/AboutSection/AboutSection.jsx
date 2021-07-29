@@ -125,7 +125,7 @@ export default function AboutSection() {
 
       <main>
         <div className="about-main">
-          <div className="about-greeting">
+          <div className="section-border-r">
             <p className="intro-text">
               Hey there!
               <br /> My name is{" "}

@@ -287,3 +287,16 @@ button {
         font-size: $main-size - 5px;
     }
 }
+
+.section-border-r {
+    border-right : $dark-orange 2px solid;
+    border-bottom: $dark-orange 2px solid;
+    padding: 0 20px 5px 20px;
+    text-align: right;
+}
+.section-border-l {
+    border-left : $dark-orange 2px solid;
+    border-bottom: $dark-orange 2px solid;
+    padding: 0 20px 5px 20px;
+    text-align: left;
+}
