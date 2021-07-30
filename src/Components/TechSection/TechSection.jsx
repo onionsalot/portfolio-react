@@ -36,36 +36,36 @@ export default function TechSection() {
     { IconSass: IconSass },
   ]);
 
-  useEffect(() => {
-    const data = [];
-    for (let i = 0; i < 14; i++) {
-      data.push([
-        {
-          start: ".stack-container",
-          // end: ".end-row",
-          //   startOffset: 100,
-          startOffset: 30 * i,
-          duration: 400 - i * 20,
-          properties: [
-            {
-              startValue: 0,
-              endValue: 0.7,
-              property: "opacity",
-            },
-            {
-              startValue: -50,
-              endValue: 0,
-              property: "translateY",
-            },
-          ],
-        },
-      ]);
-    }
+  // useEffect(() => {
+  //   const data = [];
+  //   for (let i = 0; i < 14; i++) {
+  //     data.push([
+  //       {
+  //         start: ".stack-container",
+  //         // end: ".end-row",
+  //         //   startOffset: 100,
+  //         startOffset: 30 * i,
+  //         duration: 400 - i * 20,
+  //         properties: [
+  //           {
+  //             startValue: 0,
+  //             endValue: 0.7,
+  //             property: "opacity",
+  //           },
+  //           {
+  //             startValue: -50,
+  //             endValue: 0,
+  //             property: "translateY",
+  //           },
+  //         ],
+  //       },
+  //     ]);
+  //   }
 
-    setParallaxData(data);
-    // setParallaxDataBot(data1);
-    // console.log(parallaxData)
-  }, []);
+  //   setParallaxData(data);
+  //   // setParallaxDataBot(data1);
+  //   // console.log(parallaxData)
+  // }, []);
 
   function onMouseEnter(e) {
     console.log(e.target.className);
@@ -98,11 +98,11 @@ export default function TechSection() {
             <span class="sub-text">Tech Stack</span>
           </div>
         <div className="stack-container">
-          {parallaxData.map((data, idx) => (
+          {icon.map((data, idx) => (
             <StackItems
               index={idx}
-              data={data}
-              image={icon[idx]}
+              // data={data}
+              image={data}
               hoverItem={hoverItem}
               hoverState={hoverState}
               onMouseEnter={onMouseEnter}
