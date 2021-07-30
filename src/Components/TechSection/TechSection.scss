@@ -11,7 +11,7 @@
     position        : relative;
     background-color: $light-blue;
     @media screen and (max-width: $width-sm) {
-        height: 900px;
+        height: 1000px;
     }
     main {
         display       : flex;
@@ -38,7 +38,8 @@
 .stack-container {
     display        : inline-flex;
     flex-wrap      : wrap;
-    border         : 1px solid red;
+    border         : 1px solid black;
+    background-color: $dark-blue;
     flex-direction : row;
     margin         : auto;
     width          : 100%;

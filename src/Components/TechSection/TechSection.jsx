@@ -35,6 +35,11 @@ export default function TechSection() {
     { IconSass: IconSass },
     { IconSass: IconSass },
   ]);
+  const cardObj = [
+    {"Mobile-first" : "As the world moves forward, as do we. There are currently 3.8billion (48%) of people in the world with a smartphone, and building without them in mind is a mistake!"},
+    {"Secure" : "Data is expensive, and stolen data is even more expensive. I make sure to never leave a stone unturned, whether it be a cryptographic approach to data handling, to a simple complier warning."},
+    {"Consistent, DRY and KISS": "Moving out of the basement means working with real people. They need to know what you're writing, and YOU need to know what you're writing a month from then. Every line I write, I make sure that it is consistent and DRY, so I can keep consistency and not repeat myself. Oops."},
+  ]
 
   // useEffect(() => {
   //   const data = [];
@@ -86,12 +91,12 @@ export default function TechSection() {
 
       <main>
       <div className="section-border-r">
-            <span class="sub-text">Knowledge</span>
+            <span class="sub-text">Coding Philosophy</span>
           </div>
         <div className="knowledge-section">
-          <KnowledgeItems />
-          <KnowledgeItems />
-          <KnowledgeItems />
+          {cardObj.map((e, idx) => (
+          <KnowledgeItems idx={idx} content={e}/>
+          ))}
         </div>
         <br />
         <div className="section-border-l">
