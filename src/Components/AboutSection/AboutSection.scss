@@ -50,7 +50,7 @@
         text-align    : left;
         width         : 100%;
 
-        
+
         .intro-text {
             text-align: left;
         }
@@ -64,26 +64,49 @@
     }
 
     .pfp-area {
-        display       : flex;
-        flex-direction: column;
-        height        : 100%;
-        margin        : auto;
-        position      : relative;
-        flex-grow     : 5;
+        display          : flex;
+        flex-direction   : column;
+        height           : 95%;
+        width            : 80%;
+        margin           : auto;
+        position         : relative;
+        flex-grow        : 5;
+        background-image : url("../../images/me1.png");
+        background-position: left;
+        background-size  : contain;
+        background-repeat: no-repeat;
 
+        // .pfp {
+        //     // height: 200px;
+        //     width     : 100%;
+        //     /* or any custom size */
+        //     height    : 100%;
+        //     max-height: 100%;
+        //     max-width : 100%;
+        //     object-fit: contain;
+
+        // }
+
+        @media screen and (max-width: $width-lg) {
+            flex-shrink: 1;
+            width            : 100%;
+        }        
+        
         @media screen and (max-width: $width-md) {
-            flex-shrink: 2;
-
+            flex-shrink: 1;
+            width            : 80%;
         }
 
         @media screen and (max-width: $width-sm) {
-            flex-shrink     : 4;
-
+            flex-shrink: 4;
+            background-position: center;
+            width            : 100%;
         }
 
         @media screen and (max-width: $width-xs) {
-            flex-shrink     : 2;
-
+            flex-shrink: 2;
+            background-position: center;
+            width            : 100%;
         }
 
         .arrow {
@@ -93,12 +116,6 @@
                 height: 100px;
                 width : 200px;
             }
-        }
-
-        .pfp {
-            // height: 200px;
-            width: 100%;
-            
         }
     }
 
@@ -110,16 +127,18 @@
 }
 
 .contact-info {
-    display: flex;
+    display        : flex;
     justify-content: space-between;
+
     img {
         padding: 0 10px;
-        width: 40px;
+        width  : 40px;
     }
+
     @media screen and (max-width: $width-sm) {
         img {
             padding: 0 8px;
-            width: 35px;
+            width  : 35px;
         }
     }
 }
