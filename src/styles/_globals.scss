@@ -64,12 +64,64 @@
             background-color: $heading-color;
         }
     }
+
     @media screen and (max-width: $width-sm) {
-        .hr-text { font-size: 30px; }
+        .hr-text {
+            font-size: 30px;
+        }
     }
 
     @media screen and (max-width: $width-xs) {
-        .hr-text { font-size: 25px; }
+        .hr-text {
+            font-size: 25px;
+        }
+    }
+}
+
+.centered-hr-light {
+    width     : 100%;
+    margin    : 5px auto;
+    text-align: center;
+
+    .hr-text {
+        font-size: $heading-size;
+        position : relative;
+        border   : 0;
+        height   : 1.5em;
+
+        &:before {
+            content   : '';
+            background: linear-gradient(to right, transparent, white, transparent);
+            position  : absolute;
+            left      : 0;
+            top       : 50%;
+            width     : 100%;
+            height    : 1px;
+        }
+
+        &:after {
+            content : attr(data-content);
+            position: relative;
+            display : inline-block;
+            color   : black;
+
+            padding         : 0 .5em;
+            line-height     : 1.5em;
+            color           : $dark-orange;
+            background-color: $heading-color-light;
+        }
+    }
+
+    @media screen and (max-width: $width-sm) {
+        .hr-text {
+            font-size: $heading-size-sm;
+        }
+    }
+
+    @media screen and (max-width: $width-xs) {
+        .hr-text {
+            font-size: $heading-size-xs;
+        }
     }
 }
 
@@ -77,20 +129,25 @@
 
 // Ocean waves for under heading
 .heading {
-    display       : flex;
-    flex-direction: column;
-    align-items   : center;
-    padding       : 10px 40px;
-    height        : 100px;
-    position      : relative;
+    display         : flex;
+    flex-direction  : column;
+    align-items     : center;
+    padding         : 10px 40px;
+    height          : 100px;
+    position        : relative;
     background-color: $heading-color;
+
     @media screen and (max-width: $width-sm) {
-        height        : 50px;
+        height: 50px;
     }
 
     @media screen and (max-width: $width-xs) {
-        height        : 40px;
+        height: 40px;
     }
+}
+
+.light {
+    background-color: $heading-color-light;
 }
 
 .ocean {
@@ -130,9 +187,9 @@
 
 @media screen and (max-width: $width-xs) {
     .wave {
-        background-size    : 50% 50px;
-        width              : 200%;
-        height             : 50%;
+        background-size: 50% 50px;
+        width          : 200%;
+        height         : 50%;
     }
 }
 
@@ -152,4 +209,94 @@
 
 span.highlighted-text {
     color: $dark-orange;
+}
+
+button {
+    background-color: $dark-orange;
+    border-radius   : 4px;
+    border-color    : $dark-orange;
+    font-size       : 20px;
+    color           : black;
+    padding         : 5px;
+    cursor          : pointer;
+    transition      : all 0.5s;
+    text-align      : center;
+
+    @media screen and (max-width: $width-sm) {
+        font-size: 15px;
+        padding  : 2px;
+    }
+
+    @media screen and (max-width: $width-xs) {
+        font-size: 13px;
+        padding  : 2px;
+    }
+}
+
+.intro-text {
+    font-size: 40px;
+}
+
+.sub-text {
+    font-size: 25px;
+}
+
+.main-text {
+    font-size: 20px;
+}
+
+
+@media screen and (max-width: $width-md) {
+    .intro-text {
+        font-size: $intro-size - 10px;
+    }
+
+    .sub-text {
+        font-size: $sub-size - 3px;
+    }
+
+    .main-text {
+        font-size: $main-size - 2px;
+    }
+}
+
+@media screen and (max-width: $width-sm) {
+    .intro-text {
+        font-size: $intro-size - 15px;
+    }
+
+    .sub-text {
+        font-size: $sub-size - 7px;
+    }
+
+    .main-text {
+        font-size: $main-size - 4px;
+    }
+}
+
+@media screen and (max-width: $width-xs) {
+    .intro-text {
+        font-size: $intro-size - 20px;
+    }
+
+    .sub-text {
+        font-size: $sub-size - 7px;
+    }
+
+    .main-text {
+        font-size: $main-size - 5px;
+    }
+}
+
+.section-border-r {
+    border-right : $dark-orange 2px solid;
+    border-bottom: $dark-orange 2px solid;
+    padding: 0 20px 5px 20px;
+    text-align: right;
+}
+.section-border-l {
+    border-left : $dark-orange 2px solid;
+    border-bottom: $dark-orange 2px solid;
+    padding: 0 20px 5px 20px;
+    text-align: left;
 }

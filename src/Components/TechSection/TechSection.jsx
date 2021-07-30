@@ -13,6 +13,7 @@ import IconSass from "../../images/icons/sass.png";
 import Plx from "react-plx";
 import { useEffect, useState } from "react";
 import StackItems from "../StackItems/StackItems";
+import KnowledgeItems from "../KnowledgeItems/KnowledgeItems";
 
 export default function TechSection() {
   const [parallaxData, setParallaxData] = useState([]);
@@ -35,66 +36,80 @@ export default function TechSection() {
     { IconSass: IconSass },
   ]);
 
+  // useEffect(() => {
+  //   const data = [];
+  //   for (let i = 0; i < 14; i++) {
+  //     data.push([
+  //       {
+  //         start: ".stack-container",
+  //         // end: ".end-row",
+  //         //   startOffset: 100,
+  //         startOffset: 30 * i,
+  //         duration: 400 - i * 20,
+  //         properties: [
+  //           {
+  //             startValue: 0,
+  //             endValue: 0.7,
+  //             property: "opacity",
+  //           },
+  //           {
+  //             startValue: -50,
+  //             endValue: 0,
+  //             property: "translateY",
+  //           },
+  //         ],
+  //       },
+  //     ]);
+  //   }
 
-  useEffect(() => {
-    const data = [];
-    for (let i = 0; i < 14; i++) {
-      data.push([
-        {
-          start: ".stack-container",
-            // end: ".end-row",
-          //   startOffset: 100,
-          startOffset: 30 * i,
-          duration: 400 - i*20,
-          properties: [
-            {
-              startValue: 0,
-              endValue: .7,
-              property: "opacity",
-            },
-            {
-              startValue: -50,
-              endValue: 0,
-              property: "translateY",
-            },
-          ],
-        },
-      ]);
-    }
-    
-    setParallaxData(data);
-    // setParallaxDataBot(data1);
-    // console.log(parallaxData)
-  }, []);
+  //   setParallaxData(data);
+  //   // setParallaxDataBot(data1);
+  //   // console.log(parallaxData)
+  // }, []);
 
   function onMouseEnter(e) {
-    console.log(e.target.className)
-    setHoverItem(e.target.classList[0])
+    console.log(e.target.className);
+    setHoverItem(e.target.classList[0]);
   }
   function onMouseLeave(e) {
-    console.log(e)
-    setHoverItem("")
+    console.log(e);
+    setHoverItem("");
   }
-  
+
   return (
     <div className="TechSection">
-      <div className="heading">
-        <div className="centered-hr">
-          <hr className="hr-text" data-content="Tech Stack" />
-        </div>
-        <div className="ocean">
-          <div className="wave"></div>
-          <div className="wave"></div>
-          <div className="wave"></div>
+      <div className="heading light">
+        <div className="centered-hr-light">
+          <hr className="hr-text" data-content="My Skills" />
         </div>
       </div>
 
       <main>
-
-      <div className="stack-container">
-        {parallaxData.map((data,idx) => 
-                        <StackItems index={ idx } data={ data } image={ icon[idx] } hoverItem={ hoverItem } hoverState={ hoverState } onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}/>)}      
-      </div>
+      <div className="section-border-r">
+            <span class="sub-text">Knowledge</span>
+          </div>
+        <div className="knowledge-section">
+          <KnowledgeItems />
+          <KnowledgeItems />
+          <KnowledgeItems />
+        </div>
+        <br />
+        <div className="section-border-l">
+            <span class="sub-text">Tech Stack</span>
+          </div>
+        <div className="stack-container">
+          {icon.map((data, idx) => (
+            <StackItems
+              index={idx}
+              // data={data}
+              image={data}
+              hoverItem={hoverItem}
+              hoverState={hoverState}
+              onMouseEnter={onMouseEnter}
+              onMouseLeave={onMouseLeave}
+            />
+          ))}
+        </div>
       </main>
       <div className="end-row" />
     </div>
