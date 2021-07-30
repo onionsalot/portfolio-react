@@ -10,6 +10,7 @@
     margin          : 0 auto;
     position        : relative;
     background-color: $light-blue;
+    
     @media screen and (max-width: $width-sm) {
         height: 1000px;
     }
