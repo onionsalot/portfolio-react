@@ -4,11 +4,13 @@ import project2 from "../../images/bootstrapvid.mp4";
 import project3 from "../../images/sample-mp4-file.mp4";
 import project4 from "../../images/sample-mp4-file.mp4";
 import ProjectItem from "../ProjectItem/ProjectItem";
+import PhoneDisplay from "../PhoneDisplay/PhoneDisplay"
 import "./ProjectSection.scss";
 import phone from "../../images/Phone.gif"
 
 export default function ProjectSection() {
   const [hover, setHover] = useState("");
+  const [phoneClass, setPhoneClass] = useState("phone")
   // const projectList1 = [
   //   { "project1": project1},
   //   { "project2": project2},
@@ -56,6 +58,13 @@ export default function ProjectSection() {
     // e.target.currentTime=0;
     setHover("");
   }
+  function onFlip() {
+    if (phoneClass === "phone horizontal") {
+      setPhoneClass("phone")
+    } else {
+      setPhoneClass("phone horizontal")
+    }
+  }
 
   return (
     <div className="ProjectSection">
@@ -87,11 +96,8 @@ export default function ProjectSection() {
           ))}
         </div>
         <div className="right">
-          <div className="phone">
-          <div className="content">
-    <img src={phone} alt=""/>
-  </div>
-          </div>
+            <PhoneDisplay phoneClass={phoneClass} video={phone}/>
+          <button onClick={onFlip}>FLIP ME</button>
         </div>
       </main>
     </div>

@@ -1,0 +1,41 @@
+@import "../../styles/variables";
+@import "../../styles/globals";
+
+
+.phone {
+    position: relative;
+    width: 240px;
+    height: 426px;
+    margin: 20px auto;
+    border: 16px black solid;
+    border-top-width: 60px;
+    border-bottom-width: 60px;
+    border-radius: 36px;
+    transition: transform .8s ease-in-out;  
+  }
+.phone:before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 5px;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #333;
+    border-radius: 10px;
+  }
+
+  .phone .content {
+    width: 240px;
+    height: 426px;
+    background: white;
+    img {
+        width: 240px;
+    height: 426px;
+    }
+  }
+
+.horizontal {
+    transform: rotate(90deg);
+}

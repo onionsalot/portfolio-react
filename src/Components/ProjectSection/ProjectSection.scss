@@ -59,50 +59,9 @@
                 width: 100%;
                 background-color: gray;
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
                 flex-wrap: wrap;
-                // .phone {
-                //     // height: 951px;
-                //     // width: 476px;
-                //     border: 50px solid pink;
-                //     border-image-source: url("../../images/iphone.png");
-                //     border-image-slice: 120 40;
-                //     // border-image-width: ;
-                //     // border-image-: 60 50 60 50;
-                //     border-image-repeat: stretch;
-                // }
-                .phone {
-                    position: relative;
-                    width: 240px;
-                    height: 426px;
-                    margin: 10%;
-                    border: 16px black solid;
-                    border-top-width: 60px;
-                    border-bottom-width: 60px;
-                    border-radius: 36px;
-                  }
-                .phone:before {
-                    content: '';
-                    display: block;
-                    width: 60px;
-                    height: 5px;
-                    position: absolute;
-                    top: -30px;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    background: #333;
-                    border-radius: 10px;
-                  }
-                
-                  .phone .content {
-                    width: 240px;
-                    height: 426px;
-                    background: white;
-                    img {
-                        width: 240px;
-                    height: 426px;
-                    }
-                  }
+ 
             }
 
         // @media screen and (max-width: $width-sm) {
