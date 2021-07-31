@@ -159,11 +159,9 @@ export default function AboutSection() {
           {/* <div className="arrow">
             <img src={arrow} alt="" loading="lazy" />
           </div> */}
-          <div>
-            <img src={me1} alt="" className="pfp" />
-          </div>
+
         </div>
-        {/* <div style={{height:100}} className="endpoint"></div> */}
+
       </main>
     </div>
   );

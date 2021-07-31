@@ -33,11 +33,11 @@ export default function ProjectSection() {
         <div className="centered-hr">
           <hr className="hr-text" data-content="My Projects" />
         </div>
-        <div className="ocean">
+        {/* <div className="ocean">
           <div className="wave"></div>
           <div className="wave"></div>
           <div className="wave"></div>
-        </div>
+        </div> */}
       </div>
 
       <main>

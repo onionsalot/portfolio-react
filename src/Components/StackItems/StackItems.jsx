@@ -32,14 +32,14 @@ export default function StackItems({
 
   return (
     <div className="item">
-      <ScrollAnimation animateIn="fadeInDown" animateOut="fadeOut">
-          <img
-            src={imageValue[0]}
-            alt=""
-            className={hover}
-            onMouseEnter={onMouseEnter}
-            onMouseLeave={onMouseLeave}
-          />
+      <ScrollAnimation animateIn="fadeInDown" animateOnce="true">
+        <img
+          src={imageValue[0]}
+          alt=""
+          className={hover}
+          onMouseEnter={onMouseEnter}
+          onMouseLeave={onMouseLeave}
+        />
       </ScrollAnimation>
       <span data-content={dataContent}></span>
     </div>
