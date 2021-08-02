@@ -46,11 +46,15 @@ export default function ProjectSection() {
     },
   ];
 
-  function onFlip() {
-    if (phoneClass === "phone horizontal") {
+  function handleClick(e) {
+    if (e.target.id === "phone") {
       setPhoneClass("phone")
-    } else {
+    }
+    if (e.target.id === "tablet") {
       setPhoneClass("phone horizontal")
+    }
+    if (e.target.id === "desktop") {
+      setPhoneClass("phone desktop")
     }
   }
 
@@ -84,8 +88,12 @@ export default function ProjectSection() {
           ))}
         </div>
         <div className="right">
+        <div>
+            <button onClick={handleClick} id="phone">Phone</button>
+            <button onClick={handleClick} id="tablet">Tablet</button>
+            <button onClick={handleClick} id="desktop">Desktop</button>
+          </div>
             <PhoneDisplay phoneClass={phoneClass} video={phone}/>
-          <button onClick={onFlip}>FLIP ME</button>
         </div>
       </main>
     </div>
