@@ -13,7 +13,7 @@ import IconReact from "../../images/icons/react.png";
 import IconSass from "../../images/icons/sass.png";
 import StackItems from "../StackItems/StackItems";
 import me1 from "../../images/me1.png";
-import arrow from "../../images/arrow1.png";
+import arrow from "../../images/arrow.png";
 import linkedin from "../../images/linkedin.png";
 import github from "../../images/github.png";
 import twitter from "../../images/twitter.png";

@@ -10,51 +10,48 @@
     margin          : 0 auto;
     position        : relative;
     background-color: $dark-blue;
-
-
-
-    // overflow-x: hidden;
+    @media screen and (max-width: $width-sm) {
+        height          : 1000px;
+    }
     main {
         display        : flex;
-        flex-direction : column;
-        flex-wrap      : nowrap;
+        flex-direction : row;
         vertical-align : middle;
+        justify-content: space-between;
         height         : 100%;
-        justify-content: center;
-        align-items    : center;
-        padding        : 0;
-        // padding: 10%;
-
-        .top-row {
-            display       : flex;
-            flex-direction: row;
-            flex-wrap     : nowrap;
-            width         : 90%;
-
-            @media screen and (max-width: $width-sm) {
-                flex-direction: column;
+        margin         : 0 3%;
+        
+            .left {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: flex-start;
             }
-        }
-
-        .bottom-row {
-            display       : flex;
-            flex-direction: row;
-            flex-wrap     : nowrap;
-            width         : 90%;
-
-            @media screen and (max-width: $width-sm) {
+            .right{
+                height: 100%;
+                width: 100%;
+                display: flex;
                 flex-direction: column;
+
+ 
             }
-        }
 
-
+        
         // @media screen and (max-width: $width-sm) {
         //     flex-direction  : row;
         // }
+        @media screen and (max-width: $width-md) {
+            flex-direction: row;
+        }
+        @media screen and (max-width: $width-sm) {
+            flex-direction: column;
+        }
+        @media screen and (max-width: $width-xs) {
+            flex-direction: column;
+            margin         : 0;
+        }
 
-        // @media screen and (max-width: $width-xs) {
-        //     flex-direction  : row;
-        // }
     }
-
 }

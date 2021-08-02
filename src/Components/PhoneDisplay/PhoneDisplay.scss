@@ -1,0 +1,218 @@
+@import "../../styles/variables";
+@import "../../styles/globals";
+
+// =============== PHONE ================ //
+.phone {
+    position           : relative;
+    // 16:9 preserved
+    width              : 240px; // 9*26
+    height             : 426px; // 16*26
+    margin             : 20px auto;
+    border             : 16px $light-phone solid;
+    border-top-width   : 60px;
+    border-bottom-width: 60px;
+    border-radius      : 36px;
+    transition         : all .8s ease-in-out;
+    ::before {
+        content      : '';
+        display      : block;
+        width        : 60px;
+        height       : 5px;
+        position     : absolute;
+        top          : -30px;
+        left         : 50%;
+        transform    : translate(-50%, -50%);
+        background   : #333;
+        border-radius: 10px;
+    }
+    ::after {
+        content: '';
+        display: block;
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        left: 50%;
+        bottom: -65px;
+        transform: translate(-50%, -50%);
+        background: $dark-phone;
+        border-radius: 50%;
+        border: 2px solid black;
+    }
+}
+// .phone::before {
+//     content      : '';
+//     display      : block;
+//     width        : 60px;
+//     height       : 5px;
+//     position     : absolute;
+//     top          : -30px;
+//     left         : 50%;
+//     transform    : translate(-50%, -50%);
+//     background   : #333;
+//     border-radius: 10px;
+// }
+// .phone::after {
+//     content: '';
+//     display: block;
+//     width: 35px;
+//     height: 35px;
+//     position: absolute;
+//     left: 50%;
+//     bottom: -65px;
+//     transform: translate(-50%, -50%);
+//     background: $dark-phone;
+//     border-radius: 50%;
+//     border: 2px solid black;
+//   }
+.phone .content {
+    border    : 2px black solid;
+    width     : 240px; // 9*26
+    height    : 426px; // 16*26
+    background: white;
+
+    img {
+        width : 100%;
+        height: 100%;
+    }
+}
+
+
+// =============== TABLET ================ //
+.phone.horizontal {
+    // 4:3 preserved
+    width    : 366px; // 3*122
+    height     : 490px; // 4*122
+    background: white;
+}
+.phone.horizontal .content {
+    width    : 366px; // 3*122
+    height     : 490px; // 4*122
+    background: white;
+}
+
+
+// =============== MONITOR ================ //
+.phone.desktop {
+    width       : 490px; // 16*30.6
+    height     : 275px; // 9*30.6
+    border-top-width   : 20px;
+    border-bottom-width: 20px;
+    border-radius      : 17px;
+    ::before {
+        content      : '';
+        display      : block;
+        width        : 10px;
+        height       : 10px;
+        position     : absolute;
+        top          : -10px;
+        left         : 50%;
+        transform    : translate(-50%, -50%);
+        background   : #333;
+        border-radius: 10px;
+    }
+}
+// .phone.desktop::before {
+//     content      : '';
+//     display      : block;
+//     width        : 10px;
+//     height       : 10px;
+//     position     : absolute;
+//     top          : -10px;
+//     left         : 50%;
+//     transform    : translate(-50%, -50%);
+//     background   : #333;
+//     border-radius: 10px;
+// }
+.phone.desktop::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 35px;
+    position: absolute;
+    left: 50%;
+    bottom: -65px;
+    transform: translate(-50%, -50%);
+    background: $light-phone;
+    border: 2px solid $light-phone; 
+    border-radius: 0%;
+  }
+.phone.desktop .content {
+    width       : 490px; // 16*30.6
+    height     : 275px; // 9*30.6
+    background: white;
+}
+.phone.desktop .content::after {
+    content: '';
+    display: block;
+    width: 250px;
+    height: 20px;
+    position: absolute;
+    left: 50%;
+    bottom: -65px;
+    transform: translate(-50%, -50%);
+    background: $light-phone;
+    border-radius: 50% 50% 0% 0%;
+}
+
+
+
+
+
+
+@media screen and (max-width: $width-md) {
+    .phone {
+        // 16:9 preserved
+        width : 162px; // 9*18
+        height: 288px; // 16*18
+        margin: auto;
+        border             : 10px $light-phone solid;
+        border-top-width   : 40px;
+        border-bottom-width: 40px;
+        .content {
+            // 16:9 preserved
+            width : 162px; // 9*18
+            height: 288px; // 16*18
+        }
+        ::after {
+            width: 20px;
+            height: 20px;
+            left: 50%;
+            bottom: -45px;
+          }
+    }
+
+    .phone.horizontal {
+        // 4:3 preserved
+        width: 261px; // 3*87
+        height : 348px; // 4*87
+        .content {
+            // 4:3 preserved
+            width: 261px; // 3*87
+            height : 348px; // 4*87
+        }
+    }
+
+    .phone.desktop {
+        // 16:9 preserved
+        width       : 352px; // 16*22
+        height     : 198px; // 9*22
+        .content {
+            // 16:9 preserved
+            width       : 352px; // 16*22
+            height     : 198px; // 9*22
+        }
+    }
+    
+}
+
+@media screen and (max-width: $width-sm) {
+    .phone {
+        margin: 1px auto;
+    }
+}
+
+@media screen and (max-width: $width-xs) {
+    .phone {
+        margin: 1px auto;
+    }
+}
