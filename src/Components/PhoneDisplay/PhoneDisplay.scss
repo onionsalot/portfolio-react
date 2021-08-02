@@ -3,39 +3,91 @@
 
 
 .phone {
-    position: relative;
-    width: 240px;
-    height: 426px;
-    margin: 20px auto;
-    border: 16px black solid;
-    border-top-width: 60px;
+    position           : relative;
+    // 16:9 preserved
+    width              : 240px; // 9*26
+    height             : 426px; // 16*26
+    margin             : 20px auto;
+    border             : 16px black solid;
+    border-top-width   : 60px;
     border-bottom-width: 60px;
-    border-radius: 36px;
-    transition: transform .8s ease-in-out;  
-  }
+    border-radius      : 36px;
+    transition         : all .8s ease-in-out;
+}
+
 .phone:before {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 5px;
-    position: absolute;
-    top: -30px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #333;
+    content      : '';
+    display      : block;
+    width        : 60px;
+    height       : 5px;
+    position     : absolute;
+    top          : -30px;
+    left         : 50%;
+    transform    : translate(-50%, -50%);
+    background   : #333;
     border-radius: 10px;
-  }
+}
 
-  .phone .content {
-    width: 240px;
-    height: 426px;
+.phone .content {
+    width     : 240px; // 9*26
+    height    : 426px; // 16*26
     background: white;
-    img {
-        width: 240px;
-    height: 426px;
-    }
-  }
 
-.horizontal {
-    transform: rotate(90deg);
+    img {
+        width : 100%;
+        height: 100%;
+    }
+}
+
+.phone.horizontal {
+    // 3.5:3 preserved
+    width     : 490px; // 4*122
+    height    : 366px; // 3*122
+    background: white;
+}
+.phone.horizontal .content {
+    width     : 490px; // 4*122
+    height    : 366px; // 3*122
+    background: white;
+}
+
+@media screen and (max-width: $width-md) {
+    .phone {
+        // 16:9 preserved
+        width : 162px; // 9*18
+        height: 288px; // 16*18
+        margin: auto;
+        border             : 10px black solid;
+        border-top-width   : 40px;
+        border-bottom-width: 40px;
+        .content {
+            // 16:9 preserved
+            width : 162px; // 9*18
+            height: 288px; // 16*18
+        }
+    }
+
+    .phone.horizontal {
+        // 4:3 preserved
+        width : 350px; // 4*87
+        height: 261px; // 3*87
+        .content {
+            // 4:3 preserved
+            width : 350px; // 4*87
+            height: 261px; // 3*87
+        }
+    }
+    
+}
+
+@media screen and (max-width: $width-sm) {
+    .phone {
+        margin: 1px auto;
+    }
+}
+
+@media screen and (max-width: $width-xs) {
+    .phone {
+        margin: 1px auto;
+    }
 }

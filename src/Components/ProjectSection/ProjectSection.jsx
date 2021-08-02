@@ -9,7 +9,7 @@ import "./ProjectSection.scss";
 import phone from "../../images/Phone.gif"
 
 export default function ProjectSection() {
-  const [hover, setHover] = useState("");
+  const [clicked, setClicked] = useState("");
   const [phoneClass, setPhoneClass] = useState("phone")
   // const projectList1 = [
   //   { "project1": project1},
@@ -27,37 +27,25 @@ export default function ProjectSection() {
       link: "",
     },
     {
-      title: "Match Two",
-      text: "A Memory card game designed using pure JS, CSS, and DOM manipulation.",
+      title: "BootstrapMarketCap",
+      text: "A Cryptocurrency tracker with auth and portfolio tracking included!",
       git: "",
       link: "",
     },
     {
-      title: "Match Two",
-      text: "A Memory card game designed using pure JS, CSS, and DOM manipulation.",
+      title: "Coding Tutor",
+      text: "A Marketplace where tutors and students can connect. Sign up for tutors on their available dates and leave reviews.",
       git: "",
       link: "",
     },
     {
-      title: "Match Two",
-      text: "A Memory card game designed using pure JS, CSS, and DOM manipulation.",
+      title: "News Reader",
+      text: "A heavily customizable, native android app featuring a plethora of new sources.",
       git: "",
       link: "",
     },
   ];
 
-  function onMouseEnter(e) {
-    console.log("bloop");
-    // e.target.play()
-    setHover(e.target.id);
-  }
-  function onMouseLeave(e) {
-    console.log("bloop");
-
-    // e.target.pause()
-    // e.target.currentTime=0;
-    setHover("");
-  }
   function onFlip() {
     if (phoneClass === "phone horizontal") {
       setPhoneClass("phone")
@@ -92,7 +80,7 @@ export default function ProjectSection() {
         </div> */}
         <div className="left">
           {projectList.map((e, idx) => (
-            <ProjectItem idx={idx} content={e} setHover={setHover} />
+            <ProjectItem idx={idx} content={e} clicked={clicked} setClicked={setClicked} />
           ))}
         </div>
         <div className="right">

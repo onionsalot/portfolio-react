@@ -3,7 +3,9 @@ import { useEffect, useState } from "react";
 import { Collapse } from "react-collapse";
 
 export default function ProjectItem({
-  setHover,
+  idx,
+  clicked,
+  setClicked,
   content,
 }) {
   // const [holderClass, setHolderClass] = useState("ProjectItem");
@@ -12,6 +14,13 @@ export default function ProjectItem({
   const text = content["text"]
   const git = content["git"]
   const link = content["link"]
+
+
+  useEffect(() => {
+    if (clicked !== idx) {
+      setShow(false)
+    }
+  },[clicked])
   // useEffect(() => {
   //   if (hover == name) {
   //     setHolderClass("ProjectItem larger");
@@ -28,29 +37,34 @@ export default function ProjectItem({
     setShow(!show);
   }
 
-  function onMouseEnter(e) {
-    console.log("bloop", e.target.id)
-    // e.target.play()
-    setHover(e.target.id)
-    setShow(true);
-  }
-  function onMouseLeave(e) {
-    console.log("bloop")
+  // function onMouseEnter(e) {
+  //   console.log("bloop", e.target.id)
+  //   // e.target.play()
+  //   setHover(e.target.id)
+  //   setShow(true);
+  // }
+  // function onMouseLeave(e) {
+  //   console.log("bloop")
 
-    // e.target.pause()
-    // e.target.currentTime=0;
-    setHover("")
-    setShow(false);
+  //   // e.target.pause()
+  //   // e.target.currentTime=0;
+  //   setHover("")
+  //   setShow(false);
 
+  // }
+
+  function handleClicked(e) {
+    setClicked(idx)
+    setShow(!show);
   }
 
   return (
     <div className="ProjectItem">
-      <div className="card2" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-        <div className="card2-heading highlight">
+      <div className="card" onClick={handleClicked}>
+        <div className="card-heading highlight">
           <span className="highlighted-text main-text">{title}</span>
         </div>
-        <div className="card2-body main-text">
+        <div className="card-body main-text">
           {text}
         </div>
       <Collapse isOpened={show}>
