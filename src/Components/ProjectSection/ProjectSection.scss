@@ -50,6 +50,9 @@
         @media screen and (max-width: $width-xs) {
             flex-direction: column;
             margin         : 0;
+            .right {
+                margin-top: 10px;
+            }
         }
 
     }
