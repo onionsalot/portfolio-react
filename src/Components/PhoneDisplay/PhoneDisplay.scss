@@ -184,7 +184,9 @@
             width : 162px; // 9*18
             height: 288px; // 16*18
         }
-
+        ::before {
+            top: -20px;
+        }
         ::after {
             width : 20px;
             height: 20px;
