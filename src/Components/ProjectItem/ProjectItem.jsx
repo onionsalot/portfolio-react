@@ -55,23 +55,31 @@ export default function ProjectItem({
 
   function handleClicked(e) {
     setClicked(idx)
-    setShow(!show);
+    setShow(true);
   }
 
   return (
-    <div className="ProjectItem">
-      <div className="card" onClick={handleClicked}>
+    <div className="ProjectItem" onClick={handleClicked}>
+      <div className="card">
         <div className="card-heading highlight">
           <span className="highlighted-text main-text">{title}</span>
         </div>
         <div className="card-body main-text">
           {text}
         </div>
-      <Collapse isOpened={show}>
-        <div>Git Repo: {git}</div>
-        <div>Link: {link}</div>
-      </Collapse>
       </div>
+        <Collapse isOpened={show}>
+          {show ? (
+            <>
+              <div><a href={git} target="_blank" rel="noreferrer">&#9655; Git Repo</a></div>
+              <div><a href={link} target="_blank" rel="noreferrer">&#9655; Try it out</a></div>
+            </>
+          ):(
+            <>
+            </>
+          )}
+        </Collapse>
+        {!show ? <div className="arrow">&#9660;</div> : ""}
     </div>
   );
 }

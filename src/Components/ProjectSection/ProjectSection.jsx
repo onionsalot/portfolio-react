@@ -1,15 +1,13 @@
 import { useEffect, useState } from "react";
-import project1 from "../../images/matchvid.mp4";
-import project2 from "../../images/bootstrapvid.mp4";
-import project3 from "../../images/sample-mp4-file.mp4";
-import project4 from "../../images/sample-mp4-file.mp4";
 import ProjectItem from "../ProjectItem/ProjectItem";
 import PhoneDisplay from "../PhoneDisplay/PhoneDisplay"
 import "./ProjectSection.scss";
-import phone from "../../images/Phone.gif"
+import cryptoP from "../../videos/cryptoP.mp4"
+import cryptoT from "../../videos/cryptoT.mp4"
+import cryptoD from "../../videos/cryptoD.mp4"
 
 export default function ProjectSection() {
-  const [clicked, setClicked] = useState("");
+  const [clicked, setClicked] = useState(0);
   const [phoneClass, setPhoneClass] = useState("phone")
   // const projectList1 = [
   //   { "project1": project1},
@@ -23,26 +21,38 @@ export default function ProjectSection() {
     {
       title: "Match Two",
       text: "A Memory card game designed using pure JS, CSS, and DOM manipulation.",
-      git: "",
-      link: "",
+      git: "https://github.com/onionsalot/Matching-memory-game",
+      link: "https://onionsalot.github.io/Matching-memory-game/",
+      vidP: " ",
+      vidT: " ",
+      vidD: " ",
     },
     {
       title: "BootstrapMarketCap",
       text: "A Cryptocurrency tracker with auth and portfolio tracking included!",
-      git: "",
-      link: "",
+      git: "https://github.com/onionsalot/crypto-app-mern",
+      link: "https://bootstrapmarketcap.herokuapp.com/",
+      vidP: {cryptoP},
+      vidT: {cryptoT},
+      vidD: {cryptoD},
     },
     {
       title: "Coding Tutor",
       text: "A Marketplace where tutors and students can connect. Sign up for tutors on their available dates and leave reviews.",
-      git: "",
-      link: "",
+      git: "https://github.com/onionsalot/codingtutor",
+      link: "https://codingtutor.herokuapp.com/",
+      vidP: " ",
+      vidT: " ",
+      vidD: " ",
     },
     {
       title: "News Reader",
       text: "A heavily customizable, native android app featuring a plethora of new sources.",
-      git: "",
-      link: "",
+      git: "https://github.com/onionsalot/NewsReader",
+      link: "https://github.com/onionsalot/NewsReader",
+      vidP: " ",
+      vidT: " ",
+      vidD: " ",
     },
   ];
 
@@ -93,7 +103,7 @@ export default function ProjectSection() {
             <button onClick={handleClick} id="tablet">Tablet</button>
             <button onClick={handleClick} id="desktop">Desktop</button>
           </div>
-            <PhoneDisplay phoneClass={phoneClass} video={phone}/>
+            <PhoneDisplay phoneClass={phoneClass} clicked={projectList[clicked]}/>
         </div>
       </main>
     </div>

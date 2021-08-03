@@ -41,7 +41,9 @@ export default function StackItems({
           onMouseLeave={onMouseLeave}
         />
       </ScrollAnimation>
-      <span data-content={dataContent}></span>
+      <div className="under_text">
+        <div>{dataContent}</div>
+      </div>
     </div>
   );
 }
