@@ -1,3 +1,7 @@
+a {
+    text-decoration: none;
+}
+
 // For sketchy borders
 .sketchy {
     padding       : 1rem 1rem;
@@ -233,6 +237,40 @@ button {
     }
 }
 
+a.link_button {
+    background-color   : $dark-orange;
+    border-radius      : 4px;
+    // border-color    : $dark-orange;
+    border-bottom   : 2px solid rgb(161, 105, 1);
+    border-right  : 2px solid rgb(161, 105, 1);
+    border-left : 2px solid $dark-orange;
+    border-top: 2px solid $dark-orange;
+    font-size          : 20px;
+    color              : black;
+    padding            : 10px 5px 10px 5px;
+    cursor             : pointer;
+    text-align         : center;
+    margin             : auto;
+
+
+    @media screen and (max-width: $width-sm) {
+        font-size: 15px;
+        padding  : 5px;
+    }
+
+    @media screen and (max-width: $width-xs) {
+        font-size: 13px;
+        padding  : 5px;
+    }
+}
+
+a.link_button:focus {
+    border-top   : 2px solid rgb(161, 105, 1);
+    border-left  : 2px solid rgb(161, 105, 1);
+    border-right : 2px solid $dark-orange;
+    border-bottom: 2px solid $dark-orange;
+}
+
 .intro-text {
     font-size: 40px;
 }
@@ -291,12 +329,62 @@ button {
 .section-border-r {
     border-right : $dark-orange 2px solid;
     border-bottom: $dark-orange 2px solid;
-    padding: 0 20px 5px 20px;
-    text-align: right;
+    padding      : 0 20px 5px 20px;
+    text-align   : right;
 }
+
 .section-border-l {
-    border-left : $dark-orange 2px solid;
+    border-left  : $dark-orange 2px solid;
     border-bottom: $dark-orange 2px solid;
-    padding: 0 20px 5px 20px;
-    text-align: left;
+    padding      : 0 20px 5px 20px;
+    text-align   : left;
+}
+
+
+@-webkit-keyframes bounce {
+
+    0%,
+    100% {
+        -webkit-transform: translateY(0);
+    }
+
+    50% {
+        -webkit-transform: translateY(-5px);
+    }
+}
+
+@-moz-keyframes bounce {
+
+    0%,
+    100% {
+        -moz-transform: translateY(0);
+    }
+
+    50% {
+        -moz-transform: translateY(-5px);
+    }
+}
+
+@-o-keyframes bounce {
+
+    0%,
+    100% {
+        -o-transform: translateY(0);
+    }
+
+    50% {
+        -o-transform: translateY(-5px);
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
 }

@@ -54,9 +54,8 @@ export default function ProjectItem({
   // }
 
   function handleClicked(e) {
-    console.log('clicked is', idx)
     setClicked(idx)
-    setShow(!show);
+    setShow(true);
   }
 
   return (
@@ -68,10 +67,11 @@ export default function ProjectItem({
         <div className="card-body main-text">
           {text}
         </div>
-      <Collapse isOpened={show}>
-        <div>Git Repo: {git}</div>
-        <div>Link: {link}</div>
-      </Collapse>
+        <Collapse isOpened={show}>
+          <div><a href={git} target="_blank" rel="noreferrer">&#9655; Git Repo</a></div>
+          <div><a href={link} target="_blank" rel="noreferrer">&#9655; Try it out</a></div>
+        </Collapse>
+        {!show ? <div className="arrow">&#9660;</div> : ""}
       </div>
     </div>
   );

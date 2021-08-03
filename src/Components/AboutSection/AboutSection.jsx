@@ -146,7 +146,11 @@ export default function AboutSection() {
             <span className="highlighted-text">Education</span>: &nbsp;General Assembly&nbsp; / &nbsp;Bachelor of Computer Science &nbsp; / &nbsp;Associate's Degree (IT)
             </p>
             <div className="contact-info">
-              <button>Contact me!</button> 
+              {/* <button>Contact me!</button>  */}
+              <div>
+              <a className="link_button" href="#contact_me">Contact me!</a>
+              </div>
+              
               <div>
               <img src={linkedin} alt=""/>
               <img src={github} alt=""/>

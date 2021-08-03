@@ -26,7 +26,7 @@ export default function ContactSection() {
   }
 
   return (
-    <div className="ContactSection">
+    <div className="ContactSection" id="contact_me">
       <div className="heading light">
         <div className="centered-hr-light">
           <hr className="hr-text" data-content="Say Hello!" />

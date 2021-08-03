@@ -21,8 +21,8 @@ export default function ProjectSection() {
     {
       title: "Match Two",
       text: "A Memory card game designed using pure JS, CSS, and DOM manipulation.",
-      git: "",
-      link: "",
+      git: "https://github.com/onionsalot/Matching-memory-game",
+      link: "https://onionsalot.github.io/Matching-memory-game/",
       vidP: " ",
       vidT: " ",
       vidD: " ",
@@ -30,8 +30,8 @@ export default function ProjectSection() {
     {
       title: "BootstrapMarketCap",
       text: "A Cryptocurrency tracker with auth and portfolio tracking included!",
-      git: "",
-      link: "",
+      git: "https://github.com/onionsalot/crypto-app-mern",
+      link: "https://bootstrapmarketcap.herokuapp.com/",
       vidP: {cryptoP},
       vidT: {cryptoT},
       vidD: {cryptoD},
@@ -39,8 +39,8 @@ export default function ProjectSection() {
     {
       title: "Coding Tutor",
       text: "A Marketplace where tutors and students can connect. Sign up for tutors on their available dates and leave reviews.",
-      git: "",
-      link: "",
+      git: "https://github.com/onionsalot/codingtutor",
+      link: "https://codingtutor.herokuapp.com/",
       vidP: " ",
       vidT: " ",
       vidD: " ",
@@ -48,8 +48,8 @@ export default function ProjectSection() {
     {
       title: "News Reader",
       text: "A heavily customizable, native android app featuring a plethora of new sources.",
-      git: "",
-      link: "",
+      git: "https://github.com/onionsalot/NewsReader",
+      link: "https://github.com/onionsalot/NewsReader",
       vidP: " ",
       vidT: " ",
       vidD: " ",
