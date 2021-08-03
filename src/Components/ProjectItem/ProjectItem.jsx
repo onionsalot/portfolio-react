@@ -54,6 +54,7 @@ export default function ProjectItem({
   // }
 
   function handleClicked(e) {
+    console.log('clicked is', idx)
     setClicked(idx)
     setShow(!show);
   }
