@@ -14,6 +14,7 @@ export default function ProjectItem({
   const text = content["text"]
   const git = content["git"]
   const link = content["link"]
+  const techs = content["techs"]
 
 
   useEffect(() => {
@@ -70,10 +71,11 @@ export default function ProjectItem({
       </div>
         <Collapse isOpened={show}>
           {show ? (
-            <>
-              <div><a href={git} target="_blank" rel="noreferrer">&#9655; Git Repo</a></div>
-              <div><a href={link} target="_blank" rel="noreferrer">&#9655; Try it out</a></div>
-            </>
+            <div className="tech-bottom">
+              <span><a href={git} target="_blank" rel="noreferrer">&#9655; Git Repo</a>
+              <a href={link} target="_blank" rel="noreferrer">&#9655; Try it out</a></span>
+              <p className="multi">{techs}</p>
+            </div>
           ):(
             <>
             </>

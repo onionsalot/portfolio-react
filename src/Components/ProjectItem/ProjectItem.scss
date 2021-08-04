@@ -24,14 +24,13 @@
         transition: 0.3s;
         // width: 100vw;
         margin    : 10px 10px 0px 10px;
-        border-radius: 20px;
 
     }
 
     .card-heading {
         padding         : 2px 16px;
         background-color: $light-blue;
-        border-radius: 20px 20px 0 0;
+        border-radius: 10px 10px 0 0;
 
     }
 
@@ -40,7 +39,7 @@
         background-color: $light-blue;
         text-align      : left;
         height: 160px;
-        border-radius: 0 0 20px 20px;
+        border-radius: 0 0 10px 10px;
     }
 
     .ReactCollapse--collapse {
@@ -56,7 +55,14 @@
         div {
             width: 100%;
             display: flex;
+            flex-direction: column;
             align-items: flex-end;
+            span {
+                display: flex;
+                width: 100%;
+                flex-direction: row;
+                justify-content: space-between;
+            }
         }
     }
 

@@ -231,4 +231,15 @@
     .phone {
         margin: 1px auto;
     }
+    .phone.horizontal {
+        // 4:3 preserved
+        width : 237px; // 3*79
+        height: 316px; // 4*79
+
+        .content {
+            // 4:3 preserved
+            width : 236px; // 3*79
+            height: 316px; // 4*79
+        }
+    }
 }

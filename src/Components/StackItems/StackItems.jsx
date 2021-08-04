@@ -31,14 +31,15 @@ export default function StackItems({
   }, [hoverItem]);
 
   return (
-    <div className="item">
+    <div className="item" 
+    >
       <ScrollAnimation animateIn="fadeInDown" animateOnce="true">
         <img
           src={imageValue[0]}
           alt=""
           className={hover}
           onMouseEnter={onMouseEnter}
-          onMouseLeave={onMouseLeave}
+    onMouseLeave={onMouseLeave}
         />
       </ScrollAnimation>
       <div className="under_text">
