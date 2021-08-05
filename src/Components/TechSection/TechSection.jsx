@@ -17,69 +17,31 @@ import KnowledgeItems from "../KnowledgeItems/KnowledgeItems";
 
 export default function TechSection() {
   const [parallaxData, setParallaxData] = useState([]);
-  const [hoverItem, setHoverItem] = useState("");
+  const [hoverItem, setHoverItem] = useState(null);
   const [hoverState, setHoverState] = useState(false);
-  const [icon] = useState([
-    { IconCss: IconCss },
-    { IconDjango: IconDjango },
-    { IconGit: IconGit },
-    { IconHtml: IconHtml },
-    { IconJavascript: IconJavascript },
-    { IconMongo: IconMongo },
-    { IconNodejs: IconNodejs },
-    { IconPostgresql: IconPostgresql },
-    { IconPython: IconPython },
-    { IconReact: IconReact },
-    { IconSass: IconSass },
-    { IconSass: IconSass },
-    { IconSass: IconSass },
-    { IconSass: IconSass },
+  const [stack] = useState([
+    { name: "CSS", IconCss: IconCss },
+    { name: "Django", IconDjango: IconDjango },
+    { name: "Git", IconGit: IconGit },
+    { name: "HTML", IconHtml: IconHtml },
+    { name: "Javascript", IconJavascript: IconJavascript },
+    { name: "MongoDB", IconMongo: IconMongo },
+    { name: "NodeJS", IconNodejs: IconNodejs },
+    { name: "Postgresql", IconPostgresql: IconPostgresql },
+    { name: "Python", IconPython: IconPython },
+    { name: "React", IconReact: IconReact },
+    { name: "SASS", IconSass: IconSass },
+    { name: "AWS", IconSass: IconSass },
+    { name: "Photoshop", IconSass: IconSass },
+    { name: "AfterEffects", IconSass: IconSass },
   ]);
-  const cardObj = [
-    {"Mobile-first" : "As the world moves forward, as do we. There are currently 3.8billion (48%) of people in the world with a smartphone, and building without them in mind is a mistake!"},
-    {"Secure" : "Data is expensive, and stolen data is even more expensive. I make sure to never leave a stone unturned, whether it be a cryptographic approach to data handling, to a simple complier warning."},
-    {"Consistent, DRY and KISS": "Moving out of the basement means working with real people. They need to know what you're writing, and YOU need to know what you're writing a month from then. Every line I write, I make sure that it is consistent and DRY, so I can keep consistency and not repeat myself. Oops."},
-  ]
+  // const cardObj = [
+  //   {"Mobile-first" : "As the world moves forward, as do we. There are currently 3.8billion (48%) of people in the world with a smartphone, and building without them in mind is a mistake!"},
+  //   {"Secure" : "Data is expensive, and stolen data is even more expensive. I make sure to never leave a stone unturned, whether it be a cryptographic approach to data handling, to a simple complier warning."},
+  //   {"Consistent, DRY and KISS": "Moving out of the basement means working with real people. They need to know what you're writing, and YOU need to know what you're writing a month from then. Every line I write, I make sure that it is consistent and DRY, so I can keep consistency and not repeat myself. Oops."},
+  // ]
 
-  // useEffect(() => {
-  //   const data = [];
-  //   for (let i = 0; i < 14; i++) {
-  //     data.push([
-  //       {
-  //         start: ".stack-container",
-  //         // end: ".end-row",
-  //         //   startOffset: 100,
-  //         startOffset: 30 * i,
-  //         duration: 400 - i * 20,
-  //         properties: [
-  //           {
-  //             startValue: 0,
-  //             endValue: 0.7,
-  //             property: "opacity",
-  //           },
-  //           {
-  //             startValue: -50,
-  //             endValue: 0,
-  //             property: "translateY",
-  //           },
-  //         ],
-  //       },
-  //     ]);
-  //   }
 
-  //   setParallaxData(data);
-  //   // setParallaxDataBot(data1);
-  //   // console.log(parallaxData)
-  // }, []);
-
-  function onMouseEnter(e) {
-    console.log(e.target.className);
-    setHoverItem(e.target.classList[0]);
-  }
-  function onMouseLeave(e) {
-    console.log(e);
-    setHoverItem("");
-  }
 
   return (
     <div className="TechSection">
@@ -90,33 +52,27 @@ export default function TechSection() {
       </div>
 
       <main>
-      <div className="section-border-r">
-            <span class="sub-text">Coding Philosophy</span>
-          </div>
-        <div className="knowledge-section">
-          {cardObj.map((e, idx) => (
-          <KnowledgeItems idx={idx} content={e}/>
-          ))}
+        <div className="left">
+        
+        <div className="laptop"> 
+          {hoverItem ? (
+            <div className={hoverItem}/>
+            ) : (
+            <div className="VSCode"/>
+          )}
         </div>
-        <br />
-        <div className="section-border-l">
-            <span class="sub-text">Tech Stack</span>
+
+        </div>
+        <div className="right">
+          <div className="skill-box">
+            {stack.map((e, idx) => (
+              <StackItems idx={idx} stackItem={e} setHoverItem={setHoverItem}/>
+            ))}
+            
+            <div className="more"><p className="main-text">...and if I don't know it, I'm willing to learn it!</p></div>
           </div>
-        <div className="stack-container">
-          {icon.map((data, idx) => (
-            <StackItems
-              index={idx}
-              // data={data}
-              image={data}
-              hoverItem={hoverItem}
-              hoverState={hoverState}
-              onMouseEnter={onMouseEnter}
-              onMouseLeave={onMouseLeave}
-            />
-          ))}
         </div>
       </main>
-      <div className="end-row" />
     </div>
   );
 }
