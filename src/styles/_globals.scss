@@ -2,37 +2,6 @@ a {
     text-decoration: none;
 }
 
-// For sketchy borders
-.sketchy {
-    padding       : 1rem 1rem;
-    display       : inline-block;
-    border        : 3px solid #333333;
-    font-size     : 15px;
-    border-radius : 2% 6% 5% 4% / 1% 1% 2% 4%;
-    letter-spacing: 0.3ch;
-    background    : #ffffff;
-    position      : relative;
-
-    &::before {
-        content       : '';
-        border        : 2px solid #353535;
-        display       : block;
-        width         : 100%;
-        height        : 100%;
-        position      : absolute;
-        top           : 50%;
-        left          : 50%;
-        transform     : translate3d(-50%, -50%, 0) scale(1.015) rotate(0.5deg);
-        border-radius : 1% 1% 2% 4% / 2% 6% 5% 4%;
-        pointer-events: none;
-
-    }
-
-    @media screen and (max-width: $width-xs) {
-        font-size: 13px;
-    }
-}
-
 
 // Center HR with text over for section division
 .centered-hr {
@@ -283,6 +252,18 @@ a.link_button:focus {
     font-size: 20px;
 }
 
+.tech-bottom {
+    font-size: $main-size -5px;
+    font-weight: bold;
+    .multi {
+        text-transform: uppercase;
+        text-align: center;
+        width: 100%;
+        font-size: $main-size - 5px;
+        color: black;
+    }
+}
+
 
 @media screen and (max-width: $width-md) {
     .intro-text {
@@ -295,6 +276,13 @@ a.link_button:focus {
 
     .main-text {
         font-size: $main-size - 2px;
+    }
+
+    .tech-bottom {
+        font-size: $main-size - 5px;
+        .multi {
+            font-size: $main-size - 7px;
+        }
     }
 }
 
@@ -310,6 +298,13 @@ a.link_button:focus {
     .main-text {
         font-size: $main-size - 4px;
     }
+
+    .tech-bottom {
+        font-size: $main-size - 7px;
+        .multi {
+            font-size: $main-size - 9px;
+        }
+    }
 }
 
 @media screen and (max-width: $width-xs) {
@@ -323,6 +318,13 @@ a.link_button:focus {
 
     .main-text {
         font-size: $main-size - 5px;
+    }
+
+    .tech-bottom {
+        font-size: $main-size - 8px;
+        .multi {
+            font-size: $main-size - 10px;
+        }
     }
 }
 

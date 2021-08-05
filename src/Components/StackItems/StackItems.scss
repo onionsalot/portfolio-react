@@ -1,98 +1,121 @@
 @import "../../styles/variables";
 @import "../../styles/globals";
 
-.parallax-items:hover>img {
-    animation        : bounce 2.5s infinite; //other browsers
-    -webkit-animation: bounce 2.5s infinite; //webkit browsers
-    -moz-animation   : bounce 2.5s infinite; //firefox
-    -o-animation     : bounce 2.5s infinite; //opera
-}
-
 .item {
-    display       : flex;
-    flex-direction: column;
-    position      : relative;
-    align-items: center;
-    text-align: center;
-    margin             : 5px 5px;
-    // border-right    : 1px solid black;
-    // background-color: #727272;
-    // width              : 14vw;
-    // height             : 100px;
-    height: 30%;
-    width: 15%;
+    flex-grow: 1;
+    width: 50%;
+    cursor: pointer;
 
-    img {
-        // height : 100%;
-        // width: auto;
-        object-fit: scale-down;
-        height: 80px;
-    }
-    
-    .under_text {
-        position        : absolute;
-        margin          : 0 auto;
-        align-self      : center;
-        bottom          : 0;
-        padding: 5px;
-        width           : 80%;
-        border          : 1px solid black;
-        background-color: $dark-orange;
-        border-radius   : 10px;
-        opacity         : 0;
-        pointer-events  : none;
-        border: 1px solid black;
-        overflow: hidden;
-        color: black;
-    }
-    
-    @media screen and (max-width: $width-md) {
-        img {height: 60px;}
-        .under_text {
-            font-size: 16px;
-            width: 100%;
-        }
-    }
-
-    @media screen and (max-width: $width-sm) {
-        img {height: 80px;}
-        .under_text {
-            font-size: 14px;
-        }
-    }
-
-    @media screen and (max-width: $width-xs) {
-        img {height: 70px;}
-        height: 20%;
-        width: 20%;
-        .under_text {
-            font-size: 13px;
-            width: 130%;
-        }
-    }
-    
-    .smaller {
-        transform          : scale(0.7);
-        opacity            : .4;
-        transition-duration: .5s;
-        filter: grayscale(100%);
-    }
-
-    .larger {}
-
-    .neutral {
-        transform          : scale(1);
-        transition-duration: .5s;
-
-    }
 }
+
+// .item::before {
+//     content:"<";
+// }
 
 .item:hover {
-    .under_text {
-        opacity            : 1;
-        transition-duration: .5s;
-    }
+    color: $light-orange;
 }
+.item:hover::before {
+    font-size: 15px;
+    content:"< ";
+}
+.item:hover::after {
+    font-size: 15px;
+    content:" />";
+}
+
+// .parallax-items:hover>img {
+//     animation        : bounce 2.5s infinite; //other browsers
+//     -webkit-animation: bounce 2.5s infinite; //webkit browsers
+//     -moz-animation   : bounce 2.5s infinite; //firefox
+//     -o-animation     : bounce 2.5s infinite; //opera
+// }
+
+// .item {
+//     display       : flex;
+//     flex-direction: column;
+//     position      : relative;
+//     align-items: center;
+//     text-align: center;
+//     margin             : 5px 5px;
+//     // border-right    : 1px solid black;
+//     // background-color: #727272;
+//     // width              : 14vw;
+//     // height             : 100px;
+//     height: 30%;
+//     width: 15%;
+
+//     img {
+//         // height : 100%;
+//         // width: auto;
+//         object-fit: scale-down;
+//         height: 80px;
+//     }
+    
+//     .under_text {
+//         position        : absolute;
+//         margin          : 0 auto;
+//         align-self      : center;
+//         bottom          : 0;
+//         padding: 5px;
+//         width           : 80%;
+//         border          : 1px solid black;
+//         background-color: $dark-orange;
+//         border-radius   : 10px;
+//         opacity         : 0;
+//         pointer-events  : none;
+//         border: 1px solid black;
+//         overflow: hidden;
+//         color: black;
+//     }
+    
+//     @media screen and (max-width: $width-md) {
+//         img {height: 60px;}
+//         .under_text {
+//             font-size: 16px;
+//             width: 100%;
+//         }
+//     }
+
+//     @media screen and (max-width: $width-sm) {
+//         img {height: 80px;}
+//         .under_text {
+//             font-size: 14px;
+//         }
+//     }
+
+//     @media screen and (max-width: $width-xs) {
+//         img {height: 70px;}
+//         height: 20%;
+//         width: 20%;
+//         .under_text {
+//             font-size: 13px;
+//             width: 130%;
+//         }
+//     }
+    
+//     .smaller {
+//         transform          : scale(0.7);
+//         opacity            : .4;
+//         transition-duration: .5s;
+//         filter: grayscale(100%);
+//     }
+
+//     .larger {}
+
+//     .neutral {
+//         transform          : scale(1);
+//         transition-duration: .5s;
+
+//     }
+// }
+
+// .item:hover {
+//     .under_text {
+//         opacity            : 1;
+//         transition-duration: .5s;
+//     }
+// }
 
 // .IconDj img{
 //     opacity: 1;

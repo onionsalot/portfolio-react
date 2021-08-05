@@ -152,9 +152,9 @@ export default function AboutSection() {
               </div>
               
               <div>
-              <img src={linkedin} alt=""/>
-              <img src={github} alt=""/>
-              <img src={twitter} alt=""/>
+              <a href="https://www.linkedin.com/in/trong-nguyen1008/" target="_blank" rel="noreferrer"> <img src={linkedin} alt=""/> </a>
+              <a href="https://github.com/onionsalot" rel="noreferrer"> <img src={github} alt=""/> </a>
+              <a href="https://twitter.com/onionsalot" rel="noreferrer"> <img src={twitter} alt=""/> </a>
                 </div>
             </div>
           </div>

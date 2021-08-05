@@ -7,7 +7,7 @@ import cryptoT from "../../videos/cryptoT.mp4"
 import cryptoD from "../../videos/cryptoD.mp4"
 
 export default function ProjectSection() {
-  const [clicked, setClicked] = useState(0);
+  const [clicked, setClicked] = useState("");
   const [phoneClass, setPhoneClass] = useState("phone")
   // const projectList1 = [
   //   { "project1": project1},
@@ -26,6 +26,7 @@ export default function ProjectSection() {
       vidP: " ",
       vidT: " ",
       vidD: " ",
+      techs: "Javascript, HTML, CSS",
     },
     {
       title: "BootstrapMarketCap",
@@ -35,6 +36,7 @@ export default function ProjectSection() {
       vidP: {cryptoP},
       vidT: {cryptoT},
       vidD: {cryptoD},
+      techs: "Javascript, React, CSS, RESTFUL API, Mongoose, Express, NodeJS",
     },
     {
       title: "Coding Tutor",
@@ -44,6 +46,7 @@ export default function ProjectSection() {
       vidP: " ",
       vidT: " ",
       vidD: " ",
+      techs: "Python, HTML, React, Django, Postgresql, CSS, RESTFUL API",
     },
     {
       title: "News Reader",
@@ -53,6 +56,7 @@ export default function ProjectSection() {
       vidP: " ",
       vidT: " ",
       vidD: " ",
+      techs: "Java, RESTFUL API, SQLite",
     },
   ];
 

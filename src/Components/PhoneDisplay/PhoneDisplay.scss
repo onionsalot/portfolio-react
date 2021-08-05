@@ -14,32 +14,33 @@
     border-radius      : 36px;
     transition         : all .8s ease-in-out;
 
-    ::before {
-        content      : '';
-        display      : block;
-        width        : 60px;
-        height       : 5px;
-        position     : absolute;
-        top          : -30px;
-        left         : 50%;
-        transform    : translate(-50%, -50%);
-        background   : #333;
-        border-radius: 10px;
-    }
+}
 
-    ::after {
-        content      : '';
-        display      : block;
-        width        : 35px;
-        height       : 35px;
-        position     : absolute;
-        left         : 50%;
-        bottom       : -65px;
-        transform    : translate(-50%, -50%);
-        background   : $dark-phone;
-        border-radius: 50%;
-        border       : 2px solid black;
-    }
+.phone::before {
+    content      : '';
+    display      : block;
+    width        : 60px;
+    height       : 5px;
+    position     : absolute;
+    top          : -30px;
+    left         : 50%;
+    transform    : translate(-50%, -50%);
+    background   : #333;
+    border-radius: 10px;
+}
+
+.phone::after {
+    content      : '';
+    display      : block;
+    width        : 35px;
+    height       : 35px;
+    position     : absolute;
+    left         : 50%;
+    bottom       : -65px;
+    transform    : translate(-50%, -50%);
+    background   : $dark-phone;
+    border-radius: 50%;
+    border       : 2px solid black;
 }
 
 // .phone::before {
@@ -73,6 +74,7 @@
     height    : 426px; // 16*26
     background: white;
     transition: all .8s ease-in-out;
+    color     : black;
 
     video {
         width     : 100%;
@@ -105,18 +107,19 @@
     border-bottom-width: 20px;
     border-radius      : 17px;
 
-    ::before {
-        content      : '';
-        display      : block;
-        width        : 10px;
-        height       : 10px;
-        position     : absolute;
-        top          : -10px;
-        left         : 50%;
-        transform    : translate(-50%, -50%);
-        background   : #333;
-        border-radius: 10px;
-    }
+}
+
+.phone.desktop::before {
+    content      : '';
+    display      : block;
+    width        : 10px;
+    height       : 10px;
+    position     : absolute;
+    top          : -10px;
+    left         : 50%;
+    transform    : translate(-50%, -50%);
+    background   : #333;
+    border-radius: 10px;
 }
 
 // .phone.desktop::before {
@@ -184,15 +187,17 @@
             width : 162px; // 9*18
             height: 288px; // 16*18
         }
-        ::before {
-            top: -20px;
-        }
-        ::after {
-            width : 20px;
-            height: 20px;
-            left  : 50%;
-            bottom: -45px;
-        }
+    }
+
+    .phone::before {
+        top: -20px;
+    }
+
+    .phone::after {
+        width : 20px;
+        height: 20px;
+        left  : 50%;
+        bottom: -45px;
     }
 
     .phone.horizontal {
@@ -230,5 +235,90 @@
 @media screen and (max-width: $width-xs) {
     .phone {
         margin: 1px auto;
+    }
+
+    .phone.horizontal {
+        // 4:3 preserved
+        width : 237px; // 3*79
+        height: 316px; // 4*79
+
+        .content {
+            // 4:3 preserved
+            width : 236px; // 3*79
+            height: 316px; // 4*79
+        }
+    }
+}
+
+.empty {
+    height: 100%;
+    margin: auto 0;
+}
+
+.lds-ellipsis {
+    display   : inline-block;
+    position  : relative;
+    width     : 80px;
+    height    : 80px;
+    text-align: center;
+}
+
+.lds-ellipsis div {
+    position                 : absolute;
+    top                      : 33px;
+    width                    : 13px;
+    height                   : 13px;
+    border-radius            : 50%;
+    background               : $dark-orange;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis div:nth-child(1) {
+    left     : 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(2) {
+    left     : 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(3) {
+    left     : 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(4) {
+    left     : 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+}
+
+@keyframes lds-ellipsis1 {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes lds-ellipsis3 {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes lds-ellipsis2 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(24px, 0);
     }
 }
