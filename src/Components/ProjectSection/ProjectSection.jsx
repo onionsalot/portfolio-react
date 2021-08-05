@@ -7,7 +7,7 @@ import cryptoT from "../../videos/cryptoT.mp4"
 import cryptoD from "../../videos/cryptoD.mp4"
 
 export default function ProjectSection() {
-  const [clicked, setClicked] = useState(0);
+  const [clicked, setClicked] = useState("");
   const [phoneClass, setPhoneClass] = useState("phone")
   // const projectList1 = [
   //   { "project1": project1},
