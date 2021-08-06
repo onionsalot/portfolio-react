@@ -40,7 +40,7 @@ export default function ProjectSection() {
     },
     {
       title: "Coding Tutor",
-      text: "A Marketplace where tutors and students can connect. Sign up for tutors on their available dates and leave reviews.",
+      text: "A marketplace where students can connect with tutors, sign up on their available dates and leave reviews.",
       git: "https://github.com/onionsalot/codingtutor",
       link: "https://codingtutor.herokuapp.com/",
       vidP: " ",
@@ -74,8 +74,8 @@ export default function ProjectSection() {
 
   return (
     <div className="ProjectSection">
-      <div className="heading">
-        <div className="centered-hr">
+      <div className="heading light">
+      <div className="centered-hr-light">
           <hr className="hr-text" data-content="My Projects" />
         </div>
         {/* <div className="ocean">

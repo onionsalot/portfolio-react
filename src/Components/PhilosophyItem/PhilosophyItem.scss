@@ -1,0 +1,114 @@
+@import "../../styles/variables";
+@import "../../styles/globals";
+
+
+.PhilosophySection {
+
+    .card {
+        box-shadow         : 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition         : 0.3s;
+        border-radius      : 10px;
+        background-color   : $dark-blue;
+        margin             : 10px;
+        -webkit-user-select: none;
+        -khtml-user-select : none;
+        -moz-user-select   : -moz-none;
+        -o-user-select     : none;
+        user-select        : none;
+        width              : 48%;
+        height             : 50%;
+    }
+
+    .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.2);
+
+        .top-hide {
+            transform: translateY(-200px);
+        }
+
+        .bot-hide {
+            transform: translateY(200px);
+        }
+    }
+
+    .card-heading {
+        padding         : 2px 16px;
+        background-color: $dark-blue;
+        border-radius   : 10px 10px 0 0;
+        z-index         : 5;
+    }
+
+    .card-body {
+        padding           : 2px 16px;
+        height            : 90%;
+        position          : relative;
+        overflow          : hidden;
+        background-color  : $light-blue;
+        box-sizing        : border-box;
+        -moz-box-sizing   : border-box;
+        -webkit-box-sizing: border-box;
+        border-right      : 20px solid $dark-blue;
+        border-bottom     : 20px solid $dark-blue;
+        border-left       : 20px solid $dark-blue;
+        border-top        : 10px solid $dark-blue;
+        border-radius     : 0 0 10px 10px;
+        text-align        : left;
+    }
+
+    .top-hide {
+        background-color: $dark-blue;
+        width           : 100%;
+        height          : 50%;
+        top             : 0;
+        left            : 0;
+        position        : absolute;
+        transition      : all .8s;
+        overflow-y      : hidden;
+
+        img {
+            position: absolute;
+            height  : 100px;
+            width   : 100px;
+            bottom  : -50px;
+            left    : 0;
+            right   : 0;
+            margin  : auto
+        }
+    }
+
+    .bot-hide {
+        background-color: $dark-blue;
+        width           : 100%;
+        height          : 50%;
+        bottom          : 0;
+        left            : 0;
+        position        : absolute;
+        transition      : all .8s;
+        overflow-y      : hidden;
+
+        img {
+            position: absolute;
+            height  : 100px;
+            width   : 100px;
+            top     : -50px;
+            left    : 0;
+            right   : 0;
+            margin  : auto
+        }
+    }
+
+    @media screen and (max-width: $width-md) {
+        .card {
+            width    : 48%;
+            // height: 46%;
+            margin   : 5px;
+        }
+    }
+
+    @media screen and (max-width: $width-xs) {
+        .card {
+            width : 100%;
+            height: 23%;
+        }
+    }
+}

@@ -136,7 +136,7 @@ export default function AboutSection() {
           <div className="main-text">
 
             <p>
-              I am a passionate full stack developer residing currently based in NYC, New York - unwavering in my quest to be the best me that could possibly be! 
+              I am a passionate full-stack developer currently residing in NYC, New York - unwavering in my quest to be the best me that could possibly be! 
               <br/> With my experience in non-clinical health administration and a background in art and design, I always strive for an end-user first approach in design.
 
             </p>
