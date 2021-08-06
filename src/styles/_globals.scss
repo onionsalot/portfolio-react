@@ -253,6 +253,11 @@ a.link_button:focus {
 }
 
 .tech-bottom {
+    font-size: 25px;
+    // font-weight: bold;
+}
+
+.project-bottom {
     font-size: $main-size -5px;
     font-weight: bold;
     .multi {
@@ -278,11 +283,14 @@ a.link_button:focus {
         font-size: $main-size - 2px;
     }
 
-    .tech-bottom {
+    .project-bottom {
         font-size: $main-size - 5px;
         .multi {
             font-size: $main-size - 7px;
         }
+    }
+    .tech-bottom {
+        font-size: $sub-size - 3px;
     }
 }
 
@@ -299,11 +307,14 @@ a.link_button:focus {
         font-size: $main-size - 4px;
     }
 
-    .tech-bottom {
+    .project-bottom {
         font-size: $main-size - 7px;
         .multi {
             font-size: $main-size - 9px;
         }
+    }
+    .tech-bottom {
+        font-size: $sub-size - 3px;
     }
 }
 
@@ -320,11 +331,14 @@ a.link_button:focus {
         font-size: $main-size - 5px;
     }
 
-    .tech-bottom {
+    .project-bottom {
         font-size: $main-size - 8px;
         .multi {
             font-size: $main-size - 10px;
         }
+    }
+    .tech-bottom {
+        font-size: $sub-size - 5px;
     }
 }
 
