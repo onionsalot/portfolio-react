@@ -13,7 +13,6 @@ import IconSass from "../../images/icons/sass.png";
 import Plx from "react-plx";
 import { useEffect, useState } from "react";
 import StackItems from "../StackItems/StackItems";
-import KnowledgeItems from "../KnowledgeItems/KnowledgeItems";
 
 export default function TechSection() {
   const [parallaxData, setParallaxData] = useState([]);
@@ -45,8 +44,8 @@ export default function TechSection() {
 
   return (
     <div className="TechSection">
-      <div className="heading light">
-        <div className="centered-hr-light">
+      <div className="heading">
+        <div className="centered-hr">
           <hr className="hr-text" data-content="My Skills" />
         </div>
       </div>

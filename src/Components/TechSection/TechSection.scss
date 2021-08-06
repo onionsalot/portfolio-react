@@ -9,7 +9,7 @@
     height          : 800px;
     margin          : 0 auto;
     position        : relative;
-    background-color: $light-blue;
+    background-color: $dark-blue;
     @media screen and (max-width: $width-sm) {
         height          : 1000px;
     }
@@ -56,7 +56,7 @@
                 .skill-box {
                     margin: 10% auto auto 10px;
                     border: 2px solid $dark-orange;
-                    background-color: $dark-blue;
+                    background-color: $light-blue;
                     border-radius: 10px;
                     width: 70%;
                     display: flex;
