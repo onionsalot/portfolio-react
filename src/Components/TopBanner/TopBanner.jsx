@@ -1,5 +1,6 @@
 import { Parallax } from 'react-parallax';
 import background from '../../images/bloop.png';
+import video from '../../videos/Animasi.mp4';
 import TypeOut from 'react-typeout';
 import './TopBanner.scss'
 
@@ -9,8 +10,9 @@ export default function TopBanner() {
         <div className="TopBanner">
             
             
-            <Parallax bgImage={background} strength={100} bgImageStyle={{height: "110vh"}} className="para">
+            <Parallax strength={100} bgImageStyle={{height: "110vh"}} >
             <div className= "inside-para">
+            <video loop muted autoPlay src={video} className="para"/>
                 <div className="opening-text">
                     Hi, I'm Trong! <br/> I'm...&nbsp;
                     <TypeOut words={words} random={false} typeSpeed={100} pauseSpeed={2000} caret={true} className="windup"/>

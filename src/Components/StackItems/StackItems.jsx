@@ -31,7 +31,7 @@ export default function StackItems({ stackItem, setHoverItem }) {
   }
 
   return (
-    <div className="item sub-text" id={name} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+    <div className="item tech-bottom" id={name} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
       {name}
       {/* <div className="under_text">
         <div>{dataContent}</div>

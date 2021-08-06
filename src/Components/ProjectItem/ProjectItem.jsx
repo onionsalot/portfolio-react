@@ -71,7 +71,7 @@ export default function ProjectItem({
       </div>
         <Collapse isOpened={show}>
           {show ? (
-            <div className="tech-bottom">
+            <div className="project-bottom">
               <span><a href={git} target="_blank" rel="noreferrer">&#9655; Git Repo</a>
               <a href={link} target="_blank" rel="noreferrer">&#9655; Try it out</a></span>
               <p className="multi">{techs}</p>

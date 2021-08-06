@@ -31,8 +31,8 @@ export default function TechSection() {
     { name: "React", IconReact: IconReact },
     { name: "SASS", IconSass: IconSass },
     { name: "AWS", IconSass: IconSass },
+    { name: "Java", IconSass: IconSass },
     { name: "Photoshop", IconSass: IconSass },
-    { name: "AfterEffects", IconSass: IconSass },
   ]);
   // const cardObj = [
   //   {"Mobile-first" : "As the world moves forward, as do we. There are currently 3.8billion (48%) of people in the world with a smartphone, and building without them in mind is a mistake!"},
