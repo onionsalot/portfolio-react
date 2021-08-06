@@ -9,20 +9,28 @@
   background-color: $dark-blue;
 }
 
+.react-parallax {
+height: 100%;
+}
+
 .para {
-  .react-parallax-bgimage{
-    height: 110vh;
-  }
+  height: 110vh;
+  left: 50%;
+  min-height: 100%;
+  min-width: 100%;
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, -0%);
 }
 
 .inside-para {
-  height  : 1200px;
+  height  : 110vh;
   position: relative;
 
   .opening-text {
     position     : absolute;
     margin       : 5px auto 0 auto;
-    width        : 300px;
+    width        : 380px;
     left         : 0;
     right        : 450px;
     text-align   : left;
@@ -118,5 +126,37 @@
 
   100% {
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: $width-xs) {
+  .para {
+    height: 60vh;
+    left: 50%;
+    min-height: 50%;
+    min-width: 100%;
+    position: absolute;
+    top: 0;
+    transform: translate(-43%, 20%);
+  }
+  .inside-para {
+    // height  : 1200px;
+    position: relative;
+  
+    .opening-text {
+      position     : absolute;
+      margin       : 5px auto 0 auto;
+      width        : 380px;
+      left         : 0;
+      bottom: 20%;
+      right        : 450px;
+      text-align   : left;
+      z-index      : 5;
+      font-size    : 40px;
+      color        : white;
+      -ms-transform: skewY(-4deg);
+      /* IE 9 */
+      transform    : skewY(-4deg);
+    }
   }
 }
