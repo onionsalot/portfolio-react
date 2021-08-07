@@ -29,22 +29,64 @@
                 flex-wrap: wrap;
                 align-items: flex-start;
                 .laptop {
-                    border: 1px solid green;
                     height: 90%;
                     width: 90%;
-                    background-image : url("../../images/laptop.png");
+                    background-image : url("../../images/lapcup.png");
                     background-position: center;
                     background-size  : contain;
                     background-repeat: no-repeat;
-                    .VSCode {
-                        border: 1px solid gray;
+                    div {
                         height: 100%;
                         width: 100%;
-                        background-image : url("../../images/laptop.png");
                         background-position: center;
                         background-size  : contain;
                         background-repeat: no-repeat;
-
+                        transition: .08s all;
+                    }
+                    .VSCode {
+                        background-image : url("../../images/icons/vscode.png");
+                    }
+                    .CSS {
+                        background-image : url("../../images/icons/css.png");
+                    }
+                    .Django {
+                        background-image : url("../../images/icons/dj.png");
+                    }
+                    .Git {
+                        background-image : url("../../images/icons/git.png");
+                    }
+                    .HTML {
+                        background-image : url("../../images/icons/html.png");
+                    }
+                    .Javascript {
+                        background-image : url("../../images/icons/js.png");
+                    }
+                    .MongoDB {
+                        background-image : url("../../images/icons/mongo.png");
+                    }
+                    .NodeJS {
+                        background-image : url("../../images/icons/nodejs.png");
+                    }
+                    .Postgresql {
+                        background-image : url("../../images/icons/postgresql.png");
+                    }
+                    .Python {
+                        background-image : url("../../images/icons/python.png");
+                    }
+                    .React {
+                        background-image : url("../../images/icons/react.png");
+                    }
+                    .SASS {
+                        background-image : url("../../images/icons/sass.png");
+                    }
+                    .AWS {
+                        background-image : url("../../images/icons/aws.png");
+                    }
+                    .Java {
+                        background-image : url("../../images/icons/java.png");
+                    }
+                    .Photoshop {
+                        background-image : url("../../images/icons/photoshop.png");
                     }
                 }
             }
@@ -56,7 +98,7 @@
                 .skill-box {
                     margin: 10% auto auto 10px;
                     padding-top: 10%;
-                    border: 2px solid $dark-orange;
+                    // border: 2px solid $dark-orange;
                     background-color: $light-blue;
                     border-radius: 10px;
                     width: 80%;
