@@ -38,14 +38,16 @@
     .left {
         width        : 100%;
         overflow-wrap: break-word;
-        margin       : 10px 10px;
+        padding       : 10px 10px;
+        background-color: $dark-blue-content;
+
         a {
             color: $dark-orange;
         }
     }
 
     .right {
-        background-color: $dark-blue;
+        background-color: $dark-blue-content;
         width           : 100%;
         padding         : 20px;
         height: 100%;
