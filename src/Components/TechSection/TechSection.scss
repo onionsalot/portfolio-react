@@ -10,6 +10,7 @@
     margin          : 0 auto;
     position        : relative;
     background-color: $dark-blue;
+
     // @media screen and (max-width: $width-sm) {
     //     height          : 1000px;
     // }
@@ -20,137 +21,167 @@
         justify-content: space-between;
         height         : 100%;
         margin         : 0 3%;
-        
-            .left {
-                height: 100%;
-                width: 100%;
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                align-items: flex-start;
-                .laptop {
-                    height: 90%;
-                    width: 90%;
-                    background-image : url("../../images/lapcup.png");
-                    background-position: center;
-                    background-size  : contain;
-                    background-repeat: no-repeat;
-                    div {
-                        height: 100%;
-                        width: 100%;
-                        background-position: center;
-                        background-size  : contain;
-                        background-repeat: no-repeat;
-                        transition: .08s all;
-                    }
-                    .VSCode {
-                        background-image : url("../../images/icons/vscode.png");
-                    }
-                    .CSS {
-                        background-image : url("../../images/icons/css.png");
-                    }
-                    .Django {
-                        background-image : url("../../images/icons/dj.png");
-                    }
-                    .Git {
-                        background-image : url("../../images/icons/git.png");
-                    }
-                    .HTML {
-                        background-image : url("../../images/icons/html.png");
-                    }
-                    .Javascript {
-                        background-image : url("../../images/icons/js.png");
-                    }
-                    .MongoDB {
-                        background-image : url("../../images/icons/mongo.png");
-                    }
-                    .NodeJS {
-                        background-image : url("../../images/icons/nodejs.png");
-                    }
-                    .Postgresql {
-                        background-image : url("../../images/icons/postgresql.png");
-                    }
-                    .Python {
-                        background-image : url("../../images/icons/python.png");
-                    }
-                    .React {
-                        background-image : url("../../images/icons/react.png");
-                    }
-                    .SASS {
-                        background-image : url("../../images/icons/sass.png");
-                    }
-                    .AWS {
-                        background-image : url("../../images/icons/aws.png");
-                    }
-                    .Java {
-                        background-image : url("../../images/icons/java.png");
-                    }
-                    .Photoshop {
-                        background-image : url("../../images/icons/photoshop.png");
-                    }
-                }
-            }
-            .right{
-                height: 100%;
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                .skill-box {
-                    margin: 10% auto auto 10px;
-                    padding-top: 10%;
-                    // border: 2px solid $dark-orange;
-                    background-color: $light-blue;
-                    border-radius: 10px;
-                    width: 80%;
-                    display: flex;
-                    flex-direction: row;
-                    flex-wrap: wrap;
-                    .more {
-                        margin-top: 20%;
-                        .p{
-                            justify-self: flex-end;
-                        }
-                    }
-                }
-            }
 
-        
+        .left {
+            height        : 100%;
+            width         : 100%;
+            display       : flex;
+            flex-direction: row;
+            flex-wrap     : wrap;
+            align-items   : flex-start;
+
+            .laptop {
+                height             : 90%;
+                width              : 90%;
+                background-image   : url("../../images/lapcup.png");
+                background-position: center;
+                background-size    : contain;
+                background-repeat  : no-repeat;
+
+                div {
+                    height             : 100%;
+                    width              : 100%;
+                    background-position: center;
+                    background-size    : contain;
+                    background-repeat  : no-repeat;
+                    transition         : .08s all;
+                }
+
+                .VSCode {
+                    background-image: url("../../images/icons/vscode.png");
+                }
+
+                .CSS {
+                    background-image: url("../../images/icons/css.png");
+                }
+
+                .Django {
+                    background-image: url("../../images/icons/dj.png");
+                }
+
+                .Git {
+                    background-image: url("../../images/icons/git.png");
+                }
+
+                .HTML {
+                    background-image: url("../../images/icons/html.png");
+                }
+
+                .Javascript {
+                    background-image: url("../../images/icons/js.png");
+                }
+
+                .MongoDB {
+                    background-image: url("../../images/icons/mongo.png");
+                }
+
+                .NodeJS {
+                    background-image: url("../../images/icons/nodejs.png");
+                }
+
+                .Postgresql {
+                    background-image: url("../../images/icons/postgresql.png");
+                }
+
+                .Python {
+                    background-image: url("../../images/icons/python.png");
+                }
+
+                .React {
+                    background-image: url("../../images/icons/react.png");
+                }
+
+                .SASS {
+                    background-image: url("../../images/icons/sass.png");
+                }
+
+                .AWS {
+                    background-image: url("../../images/icons/aws.png");
+                }
+
+                .Java {
+                    background-image: url("../../images/icons/java.png");
+                }
+
+                .Photoshop {
+                    background-image: url("../../images/icons/photoshop.png");
+                }
+            }
+        }
+
+        .right {
+            height        : 100%;
+            width         : 100%;
+            display       : flex;
+            flex-direction: column;
+
+            .skill-box {
+                margin          : 10% auto auto 10px;
+                padding-top     : 10%;
+                // border: 2px solid $dark-orange;
+                background-color: $dark-blue-content;
+                box-shadow      : 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+                border-radius : 10px;
+                width         : 80%;
+                display       : flex;
+                flex-direction: row;
+                flex-wrap     : wrap;
+
+                .more {
+                    margin-top: 20%;
+
+                    .p {
+                        justify-self: flex-end;
+                    }
+                }
+            }
+        }
+
+
         // @media screen and (max-width: $width-sm) {
         //     flex-direction  : row;
         // }
         @media screen and (max-width: $width-md) {
             flex-direction: row;
-            .left .laptop { 
+
+            .left .laptop {
                 width: 100%;
             }
+
             .right .skill-box {
                 width: 100%;
             }
         }
+
         @media screen and (max-width: $width-sm) {
             flex-direction: column;
-            margin         : 0;
-            .left .laptop { 
+            margin        : 0;
+
+            .left .laptop {
                 margin: 0 auto;
-                width: 90%;
+                width : 90%;
             }
+
             .right .skill-box {
                 padding-top: 5%;
-                margin: 0 auto;
-                width: 90%;
+                margin     : 0 auto;
+                width      : 90%;
             }
         }
-        
+
         @media screen and (max-width: $width-xs) {
             flex-direction: column;
-            margin         : 0;
-            .left .laptop { 
+            margin        : 0;
+
+            .left .laptop {
                 margin: 0 auto;
-                width: 90%;
+                width : 90%;
             }
+
             .right .skill-box {
                 margin: 0 auto;
-                width: 90%;
+                width : 90%;
             }
         }
 
