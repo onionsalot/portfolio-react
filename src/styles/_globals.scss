@@ -49,6 +49,12 @@ a {
             font-size: 25px;
         }
     }
+
+    @media screen and (max-width: $width-xxs) {
+        .hr-text {
+            font-size: $heading-size-xxs;
+        }
+    }
 }
 
 .centered-hr-light {
@@ -96,6 +102,12 @@ a {
             font-size: $heading-size-xs;
         }
     }
+
+    @media screen and (max-width: $width-xxs) {
+        .hr-text {
+            font-size: $heading-size-xxs;
+        }
+    }
 }
 
 
@@ -123,62 +135,7 @@ a {
     background-color: $heading-color-light;
 }
 
-.ocean {
-    height    : 101px;
-    width     : 100%;
-    position  : absolute;
-    bottom    : -100px;
-    left      : 0;
-    right     : 0;
-    overflow-x: hidden;
-}
 
-.wave {
-    background         : url('../images/wave1.png');
-    background-size    : 50% 100px;
-    background-repeat  : repeat no-repeat;
-    background-position: 0 bottom;
-    transform-origin   : center bottom;
-    position           : absolute;
-    top                : 0;
-    width              : 200%;
-    height             : 100%;
-    animation          : wave 40s linear infinite;
-    transform          : translate3d(0, 0, 0);
-    opacity            : 0.5;
-}
-
-.wave:nth-of-type(2) {
-    animation: wave 10s linear infinite;
-    opacity  : 0.5;
-}
-
-.wave:nth-of-type(3) {
-    animation: wave 15s linear infinite;
-    opacity  : 0.5;
-}
-
-@media screen and (max-width: $width-xs) {
-    .wave {
-        background-size: 50% 50px;
-        width          : 200%;
-        height         : 50%;
-    }
-}
-
-@keyframes wave {
-    0% {
-        transform: translateX(0) translateZ(0) scaleY(1)
-    }
-
-    50% {
-        transform: translateX(-25%) translateZ(0) scaleY(1)
-    }
-
-    100% {
-        transform: translateX(-50%) translateZ(0) scaleY(1)
-    }
-}
 
 span.highlighted-text {
     color: $dark-orange;
@@ -328,7 +285,31 @@ a.link_button:focus {
     }
 
     .main-text {
-        font-size: $main-size - 5px;
+        font-size: $main-size - 6px;
+    }
+
+    .project-bottom {
+        font-size: $main-size - 8px;
+        .multi {
+            font-size: $main-size - 10px;
+        }
+    }
+    .tech-bottom {
+        font-size: $sub-size - 5px;
+    }
+}
+
+@media screen and (max-width: $width-xxs) {
+    .intro-text {
+        font-size: $intro-size - 20px;
+    }
+
+    .sub-text {
+        font-size: $sub-size - 7px;
+    }
+
+    .main-text {
+        font-size: $main-size - 8px;
     }
 
     .project-bottom {

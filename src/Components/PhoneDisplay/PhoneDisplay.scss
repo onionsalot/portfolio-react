@@ -41,6 +41,7 @@
     background   : $dark-phone;
     border-radius: 50%;
     border       : 2px solid black;
+    transition: 0.8s all;
 }
 
 // .phone::before {
@@ -146,6 +147,7 @@
     background   : $light-phone;
     border       : 2px solid $light-phone;
     border-radius: 0%;
+    transition: 0.8s all;
 }
 
 .phone.desktop .content {
@@ -165,6 +167,7 @@
     transform    : translate(-50%, -50%);
     background   : $light-phone;
     border-radius: 50% 50% 0% 0%;
+    transition: 0.8s all;
 }
 
 
@@ -246,6 +249,24 @@
             // 4:3 preserved
             width : 236px; // 3*79
             height: 316px; // 4*79
+        }
+    }
+}
+
+@media screen and (max-width: $width-xxs) {
+    .phone {
+        margin: 1px auto;
+    }
+
+    .phone.desktop {
+        // 16:9 preserved
+        width : 320px; // 16*20
+        height: 180px; // 9*20
+
+        .content {
+            // 16:9 preserved
+            width : 320px; // 16*20
+            height: 180px; // 9*20
         }
     }
 }
