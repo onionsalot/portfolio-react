@@ -302,40 +302,39 @@
 
 
 
+@media screen and (max-width: $width-sm) {
+  .TopBanner {
+    height:100vh;
+  }
+  .inside-animation {
+    .animation {
+      height    : 80vh;
+      min-height: 50%;
+    }
 
+    .mouse-container {
+      bottom   : 20%;
+    }
+  }
+}
 
 
 
 @media screen and (max-width: $width-xs) {
   .TopBanner {
-
     height: 90vh;
   }
-
 
   .inside-animation {
     // height  : 1200px;
     position: relative;
     .animation {
       height    : 60vh;
-      left      : 50%;
       min-height: 50%;
       min-width : 100%;
-      position  : absolute;
-      top       : 0;
       transform : translate(-43%, 20%);
     }
     .opening-text {
-      position     : absolute;
-      margin       : 5px auto 0 auto;
-      width        : 380px;
-      left         : 0;
-      top          : 0;
-      right        : 450px;
-      text-align   : left;
-      z-index      : 5;
-      font-size    : 40px;
-      color        : white;
       -ms-transform: skewY(0deg);
       /* IE 9 */
       transform    : skewY(0deg);
@@ -343,5 +342,11 @@
     .mouse-container {
       bottom   : 22%;
     }
+  }
+}
+
+@media screen and (max-width: $width-xxs) {
+  .inside-animation .opening-text {
+    font-size    : 34px;
   }
 }
