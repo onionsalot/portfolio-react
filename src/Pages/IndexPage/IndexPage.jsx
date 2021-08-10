@@ -13,9 +13,9 @@ export default function IndexPage() {
             <TopBanner />
 
             <AboutSection />
-            <PhilosophySection />
-            <TechSection />
             <ProjectSection />
+            <TechSection />
+            <PhilosophySection />
             <ContactSection />
             {/* <div style={{height: 5000}}/> */}
         </div>

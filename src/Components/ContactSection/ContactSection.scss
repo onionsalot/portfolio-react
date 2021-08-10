@@ -110,6 +110,22 @@
             padding: 0;
         }
     }
+    @media screen and (max-width: $width-xxs) {
+        .container {
+            flex-direction: column;
+            height: 80%;
+        }
+        .right {
+            .col-left{
+                display: none;
+            }
+            .col-right{
+                padding: 0px 10px 0px 10px;
+                width     : 94%;
+
+            }
+        }
+    }
 
     // .sketchy {
     //     margin         : 100px 20% 0 20%;

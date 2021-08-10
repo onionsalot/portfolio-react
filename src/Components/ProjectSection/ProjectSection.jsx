@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import ProjectItem from "../ProjectItem/ProjectItem";
-import PhoneDisplay from "../PhoneDisplay/PhoneDisplay"
+import PhoneDisplay from "../PhoneDisplay/PhoneDisplay";
 import "./ProjectSection.scss";
-import cryptoP from "../../videos/cryptoP.mp4"
-import cryptoT from "../../videos/cryptoT.mp4"
-import cryptoD from "../../videos/cryptoD.mp4"
+import cryptoP from "../../videos/cryptoP.mp4";
+import cryptoT from "../../videos/cryptoT.mp4";
+import cryptoD from "../../videos/cryptoD.mp4";
 
 export default function ProjectSection() {
   const [clicked, setClicked] = useState("");
-  const [phoneClass, setPhoneClass] = useState("phone")
+  const [phoneClass, setPhoneClass] = useState("phone");
   // const projectList1 = [
   //   { "project1": project1},
   //   { "project2": project2},
@@ -33,9 +33,9 @@ export default function ProjectSection() {
       text: "A Cryptocurrency tracker with auth and portfolio tracking included!",
       git: "https://github.com/onionsalot/crypto-app-mern",
       link: "https://bootstrapmarketcap.herokuapp.com/",
-      vidP: {cryptoP},
-      vidT: {cryptoT},
-      vidD: {cryptoD},
+      vidP: { cryptoP },
+      vidT: { cryptoT },
+      vidD: { cryptoD },
       techs: "Javascript, React, CSS, RESTFUL API, Mongoose, Express, NodeJS",
     },
     {
@@ -62,20 +62,20 @@ export default function ProjectSection() {
 
   function handleClick(e) {
     if (e.target.id === "phone") {
-      setPhoneClass("phone")
+      setPhoneClass("phone");
     }
     if (e.target.id === "tablet") {
-      setPhoneClass("phone horizontal")
+      setPhoneClass("phone horizontal");
     }
     if (e.target.id === "desktop") {
-      setPhoneClass("phone desktop")
+      setPhoneClass("phone desktop");
     }
   }
 
   return (
     <div className="ProjectSection">
       <div className="heading light">
-      <div className="centered-hr-light">
+        <div className="centered-hr-light">
           <hr className="hr-text" data-content="My Projects" />
         </div>
         {/* <div className="ocean">
@@ -96,18 +96,33 @@ export default function ProjectSection() {
           <ProjectItem idx={idx} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} name={Object.keys(project)[0]} video={Object.values(project)[0]} hover={hover} />
           )}
         </div> */}
-        <div className="left">
-          {projectList.map((e, idx) => (
-            <ProjectItem idx={idx} content={e} clicked={clicked} setClicked={setClicked} />
-          ))}
+        <div className="left" id="display">
+        <div>
+            <button onClick={handleClick} id="phone">
+              Phone
+            </button>
+            <button onClick={handleClick} id="tablet">
+              Tablet
+            </button>
+            <button onClick={handleClick} id="desktop">
+              Desktop
+            </button>
+          </div>
+          <PhoneDisplay
+            phoneClass={phoneClass}
+            clicked={projectList[clicked]}
+          />
         </div>
         <div className="right">
-        <div>
-            <button onClick={handleClick} id="phone">Phone</button>
-            <button onClick={handleClick} id="tablet">Tablet</button>
-            <button onClick={handleClick} id="desktop">Desktop</button>
-          </div>
-            <PhoneDisplay phoneClass={phoneClass} clicked={projectList[clicked]}/>
+          {projectList.map((e, idx) => (
+            <ProjectItem
+              idx={idx}
+              content={e}
+              clicked={clicked}
+              setClicked={setClicked}
+            />
+          ))}
+          
         </div>
       </main>
     </div>
