@@ -63,7 +63,7 @@ export default function TechSection() {
 
         </div>
         <div className="right">
-          <div className="skill-box">
+          <div className="section-border-l">
             {stack.map((e, idx) => (
               <StackItems idx={idx} stackItem={e} setHoverItem={setHoverItem}/>
             ))}

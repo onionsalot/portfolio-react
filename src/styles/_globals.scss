@@ -151,6 +151,7 @@ button {
     cursor          : pointer;
     transition      : all 0.5s;
     text-align      : center;
+    letter-spacing   : 0.3ch;
 
     @media screen and (max-width: $width-sm) {
         font-size: 15px;
@@ -166,7 +167,7 @@ button {
 a.link_button {
     background-color   : $dark-orange;
     border-radius      : 4px;
-    // border-color    : $dark-orange;
+    transition: .5s all;
     border-bottom   : 2px solid rgb(161, 105, 1);
     border-right  : 2px solid rgb(161, 105, 1);
     border-left : 2px solid $dark-orange;
@@ -191,10 +192,21 @@ a.link_button {
 }
 
 a.link_button:focus {
-    border-top   : 2px solid rgb(161, 105, 1);
-    border-left  : 2px solid rgb(161, 105, 1);
-    border-right : 2px solid $dark-orange;
-    border-bottom: 2px solid $dark-orange;
+    border-top   : 2px solid rgb(97, 63, 1);
+    border-left  : 2px solid rgb(97, 63, 1);
+    border-right : 2px solid $dark-orange-selected;
+    border-bottom: 2px solid $dark-orange-selected;
+    background: $dark-orange-selected;
+    color: white;
+}
+button.selected,
+button:focus {
+    border-top   : 2px solid rgb(97, 63, 1);
+    border-left  : 2px solid rgb(97, 63, 1);
+    border-right : 2px solid $dark-orange-selected;
+    border-bottom: 2px solid $dark-orange-selected;
+    background: $dark-orange-selected;
+    color: white;
 }
 
 .intro-text {
@@ -323,21 +335,6 @@ a.link_button:focus {
     }
 }
 
-.section-border-r {
-    border-right : $dark-orange 2px solid;
-    border-bottom: $dark-orange 2px solid;
-    padding      : 0 20px 5px 20px;
-    text-align   : right;
-}
-
-.section-border-l {
-    border-left  : $dark-orange 2px solid;
-    border-bottom: $dark-orange 2px solid;
-    padding      : 0 20px 5px 20px;
-    text-align   : left;
-}
-
-
 @-webkit-keyframes bounce {
 
     0%,
@@ -385,3 +382,75 @@ a.link_button:focus {
         transform: translateY(-5px);
     }
 }
+
+
+.section-border-l {
+    margin          : 10% auto auto 10px;
+    padding     : 20px;
+
+    border-left  : $dark-orange 2px solid;
+    border-top: $dark-orange 2px solid;
+    // padding      : 0 20px 5px 20px;
+    text-align   : left;
+    background-color: $dark-blue-content;
+    width         : 80%;
+    display       : flex;
+    flex-direction: row;
+    flex-wrap     : wrap;
+    position: relative;
+    border-top-left-radius : 10px;
+    .more {
+        margin-top: 20%;
+
+        .p {
+            justify-self: flex-end;
+        }
+    }
+}
+
+
+.content-box {
+    margin          : 10% auto auto 10px;
+    padding-top     : 10%;
+    border: 2px solid $dark-orange;
+    background-color: $dark-blue-content;
+    box-shadow      : 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius : 10px;
+    
+    width         : 80%;
+    display       : flex;
+    flex-direction: row;
+    flex-wrap     : wrap;
+    position: relative;
+    .more {
+        margin-top: 20%;
+
+        .p {
+            justify-self: flex-end;
+        }
+    }
+}
+.content-box::before {
+    content:'';
+    position:absolute;
+    top:-2px; left:-2px;
+    border:2px solid $dark-blue-content;
+    height:100%;
+    width:100%;
+    border-radius: 40px;
+    pointer-events: none;
+    transition: .8s all;
+}
+
+.content-box:hover::before {
+    border-radius: 60px;
+}
+
+.section-border-r {
+    border-right : $dark-orange 2px solid;
+    border-bottom: $dark-orange 2px solid;
+    padding      : 0 20px 5px 20px;
+    border-bottom-right-radius: 20px;
+    text-align   : right;
+}
+

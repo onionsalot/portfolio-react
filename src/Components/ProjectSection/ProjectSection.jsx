@@ -78,11 +78,6 @@ export default function ProjectSection() {
         <div className="centered-hr-light">
           <hr className="hr-text" data-content="My Projects" />
         </div>
-        {/* <div className="ocean">
-          <div className="wave"></div>
-          <div className="wave"></div>
-          <div className="wave"></div>
-        </div> */}
       </div>
 
       <main>
@@ -98,15 +93,21 @@ export default function ProjectSection() {
         </div> */}
         <div className="left" id="display">
         <div>
-            <button onClick={handleClick} id="phone">
+          {phoneClass === "phone" ? (<button className="selected" onClick={handleClick} id="phone">
               Phone
-            </button>
-            <button onClick={handleClick} id="tablet">
+            </button>):(<button onClick={handleClick} id="phone">
+              Phone
+            </button>)}
+          {phoneClass === "phone horizontal" ? (<button className="selected" onClick={handleClick} id="tablet">
               Tablet
-            </button>
-            <button onClick={handleClick} id="desktop">
+            </button>):(<button onClick={handleClick} id="tablet">
+              Tablet
+            </button>)}
+          {phoneClass === "phone desktop" ? (<button className="selected" onClick={handleClick} id="desktop">
               Desktop
-            </button>
+            </button>):(<button onClick={handleClick} id="desktop">
+              Desktop
+            </button>)}
           </div>
           <PhoneDisplay
             phoneClass={phoneClass}

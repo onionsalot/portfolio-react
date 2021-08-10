@@ -114,28 +114,6 @@
             width         : 100%;
             display       : flex;
             flex-direction: column;
-
-            .skill-box {
-                margin          : 10% auto auto 10px;
-                padding-top     : 10%;
-                // border: 2px solid $dark-orange;
-                background-color: $dark-blue-content;
-                box-shadow      : 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-
-                border-radius : 10px;
-                width         : 80%;
-                display       : flex;
-                flex-direction: row;
-                flex-wrap     : wrap;
-
-                .more {
-                    margin-top: 20%;
-
-                    .p {
-                        justify-self: flex-end;
-                    }
-                }
-            }
         }
 
 
@@ -149,7 +127,7 @@
                 width: 100%;
             }
 
-            .right .skill-box {
+            .right .section-border-l {
                 width: 100%;
             }
         }
@@ -163,10 +141,10 @@
                 width : 90%;
             }
 
-            .right .skill-box {
+            .right .section-border-l {
                 padding-top: 5%;
                 margin     : 0 auto;
-                width      : 90%;
+                width      : 80%;
             }
         }
 
@@ -179,9 +157,9 @@
                 width : 90%;
             }
 
-            .right .skill-box {
+            .right .section-border-l {
                 margin: 0 auto;
-                width : 90%;
+                width : 80%;
             }
         }
 
