@@ -1,5 +1,6 @@
 import "./ProjectItem.scss";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback} from "react";
+import {useHistory} from 'react-router-dom';
 import { Collapse } from "react-collapse";
 
 export default function ProjectItem({
@@ -9,6 +10,7 @@ export default function ProjectItem({
   content,
 }) {
   // const [holderClass, setHolderClass] = useState("ProjectItem");
+  const history = useHistory();
   const [show, setShow] = useState(false);
   const title = content["title"]
   const text = content["text"]
@@ -57,6 +59,7 @@ export default function ProjectItem({
   function handleClicked(e) {
     setClicked(idx)
     setShow(true);
+    document.getElementById('display').scrollIntoView();
   }
 
   return (
