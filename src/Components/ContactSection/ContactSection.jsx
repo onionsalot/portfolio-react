@@ -50,10 +50,10 @@ export default function ContactSection() {
             <p className="main-text">Here are a couple of links to my corner of the interwebs;</p>
             <br />
             <br />
-            <p className="main-text">Github: <a href="https://github.com/onionsalot" target="_blank" rel="noreferrer"> Link</a></p>
-            <p className="main-text">LinkedIn: <a href="https://www.linkedin.com/in/trong-nguyen1008/" target="_blank" rel="noreferrer"> Link</a></p>
-            <p className="main-text">Twitter: <a href="https://twitter.com/onionsalot" target="_blank" rel="noreferrer"> Link</a></p>
-            <p className="main-text">Email: <a href="mailto:trong.nguyen1008@gmail.com?subject=Hello, Trong"> Link</a></p>
+            <p className="main-text"> <a href="https://github.com/onionsalot" target="_blank" rel="noreferrer"> Github</a></p>
+            <p className="main-text"><a href="https://www.linkedin.com/in/trong-nguyen1008/" target="_blank" rel="noreferrer">LinkedIn</a></p>
+            <p className="main-text"><a href="https://twitter.com/onionsalot" target="_blank" rel="noreferrer"> Twitter</a></p>
+            <p className="main-text"><a href="mailto:trong.nguyen1008@gmail.com?subject=Hello, Trong">Email</a></p>
             <br />
           </div>
           <div className="right">
@@ -68,7 +68,7 @@ export default function ContactSection() {
                   <input
                     type="text"
                     name="name"
-                    placeholder="Your name here..."
+                    placeholder="Your Name here..."
                     value={form.name}
                     onChange={handleChange}
                   />
@@ -97,6 +97,7 @@ export default function ContactSection() {
                     rows="4"
                     cols="50"
                     name="message"
+                    placeholder="Suggestions? Comments? Work together? Anything here!"
                     value={form.message}
                     onChange={handleChange}
                   ></textarea>

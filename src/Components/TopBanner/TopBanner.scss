@@ -53,8 +53,9 @@
     width    : 50px;
     height   : 120px;
     bottom   : 10%;
-    left: 50%;
-    transform: translate(-50%, 0);
+    left: 0;
+    right: 0;
+    margin: auto;
 
     // transform: translate(100%, 0%);
     .mouse {
