@@ -134,6 +134,10 @@
         padding: 0 10px;
         width  : 40px;
     }
+    img:hover,
+    img:focus {
+    transform: scale(1.3);
+    }
 
     @media screen and (max-width: $width-sm) {
         img {

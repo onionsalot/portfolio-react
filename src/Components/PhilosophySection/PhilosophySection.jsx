@@ -28,7 +28,7 @@ export default function PhilosophySection() {
 
 
   return (
-    <div className="PhilosophySection">
+    <div className="PhilosophySection" id="philosophy">
       <div className="heading light">
         <div className="centered-hr-light">
           <hr className="hr-text" data-content="Coding Philosophy" />

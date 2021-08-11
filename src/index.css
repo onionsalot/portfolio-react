@@ -17,6 +17,7 @@ code {
 /* * { border: 1px solid red !important; } */
 html,body{
   overflow-x: hidden;
+  position: relative;
 }
 
 html {

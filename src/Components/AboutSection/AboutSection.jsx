@@ -116,7 +116,7 @@ export default function AboutSection() {
   //   };
 
   return (
-    <div className="AboutSection">
+    <div className="AboutSection" id="about">
       <div className="heading">
         <div className="centered-hr">
           <hr className="hr-text" data-content="About Me" />
@@ -128,8 +128,8 @@ export default function AboutSection() {
           <div className="section-border-r">
             <p className="intro-text">
               Hey there!
-              <br /> My name is{" "}
-              <span className="highlighted-text">Trong Nguyen</span>
+              <br /> Thanks for stopping by.
+
             </p>
             <p className="sub-text">Welcome to my corner of the interwebs!</p>
           </div>
@@ -148,7 +148,7 @@ export default function AboutSection() {
             <div className="contact-info">
               {/* <button>Contact me!</button>  */}
               <div>
-              <a className="link_button" href="#contact_me">Contact me!</a>
+              <a className="link_button" href="#contact">Contact me!</a>
               </div>
               
               <div>

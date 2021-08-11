@@ -43,7 +43,7 @@ export default function TechSection() {
 
 
   return (
-    <div className="TechSection">
+    <div className="TechSection" id="tech">
       <div className="heading">
         <div className="centered-hr">
           <hr className="hr-text" data-content="My Skills" />
@@ -63,7 +63,7 @@ export default function TechSection() {
 
         </div>
         <div className="right">
-          <div className="skill-box">
+          <div className="section-border-l">
             {stack.map((e, idx) => (
               <StackItems idx={idx} stackItem={e} setHoverItem={setHoverItem}/>
             ))}

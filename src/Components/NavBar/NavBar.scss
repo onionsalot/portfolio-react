@@ -1,0 +1,200 @@
+@import "../../styles/variables";
+@import "../../styles/globals";
+
+
+.NavBar {
+    position: fixed;
+height: 100%;
+width: 100%;
+z-index: 6;
+pointer-events: none;
+}
+
+nav {
+display: flex;
+justify-content: space-around;
+align-items: center;
+min-height: 50px;
+background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,0) 42%, rgba(7,52,83,0.8379726890756303) 47%);
+background-size: 200% 200%;
+background-position: 45% 100% ;
+
+  width: 100%;
+// position: absolute;
+overflow-x: hidden;
+overflow-y: auto;
+pointer-events: auto;
+transition: .5s all ease-in-out;
+}
+nav.normal {
+    -webkit-animation: gradientUnFill .6s ease forwards; /* Safari 4+ */
+    -moz-animation:    gradientUnFill .6s ease forwards; /* Fx 5+ */
+    -o-animation:      gradientUnFill .6s ease forwards; /* Opera 12+ */
+    animation:         gradientUnFill .6s ease forwards; /* IE 10+, Fx 29+ */ 
+}
+nav.extend {
+    -webkit-animation: gradientFill .6s ease forwards; /* Safari 4+ */
+    -moz-animation:    gradientFill .6s ease forwards; /* Fx 5+ */
+    -o-animation:      gradientFill .6s ease forwards; /* Opera 12+ */
+    animation:         gradientFill .6s ease forwards; /* IE 10+, Fx 29+ */
+    // background: rgba(7,52,83,0.7);
+}
+.logo.show-logo {
+    -webkit-animation: nameAppear .6s ease forwards; /* Safari 4+ */
+    -moz-animation:    nameAppear .6s ease forwards; /* Fx 5+ */
+    -o-animation:      nameAppear .6s ease forwards; /* Opera 12+ */
+    animation:         nameAppear .6s ease forwards; /* IE 10+, Fx 29+ */ 
+}
+
+@keyframes gradientUnFill {
+    0%{background-position:91% 100%}
+    // 50%{background-position:70% 100%}
+    100%{background-position:42% 0%}
+
+}
+@keyframes gradientFill {
+    0%{background-position:42% 0%}
+    // 50%{background-position:70% 100%}
+    100%{background-position:91% 100%}
+
+}
+@keyframes nameAppear {
+    0%{opacity: 0; transform: translateX(20px)}
+    // 50%{background-position:70% 100%}
+    100%{opacity: 1;}
+}
+
+.link-section {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.empty-box {
+    display: none;
+}
+.nav-links {
+    display:flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.logo {
+    width: 40%;
+    opacity: 0;
+}
+
+.nav-links a{
+    color:white;
+    pointer-events: auto;
+    font-weight: bold;
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.burger div{
+    width: 25px;
+    height: 5px;
+    background-color: white;
+    margin: 5px;
+    transition: .3s all ease;
+}
+
+
+@media screen and(max-width: $width-sm) {
+
+    nav {
+        background: rgb(7, 53, 83);
+        border-bottom: 1px solid black;
+    }
+    nav.extend {
+        background: rgb(7, 53, 83);
+    }
+    .link-section {
+        position:absolute;
+        right: 0px;
+        height: 100vh;
+        top: 50px;
+        // background-color: blue;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        padding: 0 10px;
+        opacity: 0;
+        // transform: translateX(100%);
+        transition: opacity 0.5s ease-in;
+        -webkit-backdrop-filter: blur(2px);
+        backdrop-filter: blur(3px);
+        pointer-events: none;
+
+    }
+    .empty-box {
+        display: block;
+        // background-color: green;
+        position:absolute;
+        left: 0px;
+        height: 100vh;
+        width: 68%;
+        // transform: translateX(100%);
+        // pointer-events: auto;
+    }
+    .nav-links {
+        position:absolute;
+        right: 0px;
+        height: 100vh;
+        background-color: rgba(7,52,83,0.52);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 30%;
+        padding: 0 10px;
+        margin: 0;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in-out;
+        pointer-events: auto;
+    }
+
+    .nav-links li{
+        opacity: 1;
+        margin: 30px 0;
+        
+    }
+    
+    .nav-links a {
+        margin: 0 auto;
+        width: 100%;
+        height: 100px;
+    }
+
+    .burger{
+        display:block;
+        
+    }
+    .logo {
+        width: 60%;
+    }
+}
+
+.nav-active {
+    opacity: 1;
+    transform: translateX(0%);
+    pointer-events: auto;
+}
+
+.burger-active {
+    .line1{ transform: rotate(-45deg) translate(-8px, 6px)};
+    .line2{ opacity: 0 };
+    .line3{ transform: rotate(45deg) translate(-8px, -6px)};
+}
