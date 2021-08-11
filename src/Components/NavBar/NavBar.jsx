@@ -2,43 +2,46 @@ import "./NavBar.scss";
 import { useEffect, useState } from "react";
 
 export default function NavBar() {
-    const [toggleSide, setToggleSide] = useState("nav-links")
-    const [toggleBurger, setToggleBurger] = useState("burger")
+    const [toggle, setToggle] = useState(false);
 
-    function onClickSlider() {
-        if (toggleSide==="nav-links") {
-            console.log("bloop")
-            setToggleSide("nav-links nav-active")
-            setToggleBurger("burger burger-active")
+    const [sideClass, setSideClass] = useState("nav-links")
+    const [burgerClass, setBurgerClass] = useState("burger")
+
+    useEffect(() => {
+        if (toggle === true) {
+            setSideClass("nav-links nav-active")
+            setBurgerClass("burger burger-active")
         } else {
-            setToggleSide("nav-links")
-            setToggleBurger("burger")
+            setSideClass("nav-links")
+            setBurgerClass("burger")
         }
-    }
+      }, [toggle]);
+
+
 return(
     <div className="NavBar">
 
         <nav>
             <div className="logo"/>
-            <ul className={toggleSide}>
+            <ul className={sideClass} onClick={()=> {setToggle(!toggle)}}>
                 <li>
-                    <a href="#" alt="">Home</a>
+                    <a href="#about" alt="">About</a>
                 </li>
                 <li>
-                    <a href="#" alt="">About</a>
+                    <a href="#project" alt="">Projects</a>
                 </li>
                 <li>
-                    <a href="#" alt="">Work</a>
+                    <a href="#tech" alt="">Skills</a>
                 </li>
                 <li>
-                    <a href="#" alt="">Projects</a>
+                    <a href="#philosophy" alt="">Philosophy</a>
                 </li>
                 <li>
-                    <a href="#" alt="">Projects</a>
+                    <a href="#contact" alt="">Contact</a>
                 </li>
             </ul>
 
-            <div className={toggleBurger} onClick={onClickSlider}>
+            <div className={burgerClass} onClick={()=> {setToggle(!toggle)}}>
                 <div className="line1"/>
                 <div className="line2"/>
                 <div className="line3"/>

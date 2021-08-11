@@ -43,7 +43,7 @@ export default function TechSection() {
 
 
   return (
-    <div className="TechSection">
+    <div className="TechSection" id="tech">
       <div className="heading">
         <div className="centered-hr">
           <hr className="hr-text" data-content="My Skills" />

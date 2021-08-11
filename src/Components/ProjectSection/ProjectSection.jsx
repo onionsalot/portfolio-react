@@ -73,7 +73,7 @@ export default function ProjectSection() {
   }
 
   return (
-    <div className="ProjectSection">
+    <div className="ProjectSection" id="project">
       <div className="heading light">
         <div className="centered-hr-light">
           <hr className="hr-text" data-content="My Projects" />

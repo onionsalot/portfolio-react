@@ -35,7 +35,7 @@ export default function ContactSection() {
   }
 
   return (
-    <div className="ContactSection" id="contact_me">
+    <div className="ContactSection" id="contact">
       <div className="heading">
         <div className="centered-hr">
           <hr className="hr-text" data-content="Contact" />
