@@ -7,6 +7,7 @@
 height: 100%;
 width: 100%;
 z-index: 5;
+pointer-events: none;
 }
 
 nav {
@@ -34,6 +35,7 @@ overflow-y: auto;
 
 .nav-links a{
     color:white;
+    pointer-events: auto;
 }
 
 .nav-links li{
@@ -43,6 +45,7 @@ overflow-y: auto;
 .burger {
     display: none;
     cursor: pointer;
+    pointer-events: auto;
 }
 
 .burger div{
