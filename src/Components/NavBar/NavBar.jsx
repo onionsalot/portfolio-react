@@ -10,7 +10,7 @@ export default function NavBar() {
     const [sideClass, setSideClass] = useState("link-section")
     const [linkClass, setLinkClass] = useState("nav-links")
     const [burgerClass, setBurgerClass] = useState("burger")
-    const [navExtend, setNavExtend] = useState("")
+    const [navExtend, setNavExtend] = useState("normal")
 
     useEffect(() => {
         if (toggle === true) {
@@ -38,7 +38,7 @@ export default function NavBar() {
             setNameToggle(true);
         }
         if (position < screenHeight*0.7+1) {
-            setNavExtend("");
+            setNavExtend("normal");
             setNameToggle(false);
 
         }
@@ -51,7 +51,7 @@ return(
         TrongNguyen
 </ScrollAnimation> */}
 
-            <div className="logo">{nameToggle ? ("Trong Nguyen") : ("")}</div>
+            <div className={nameToggle ? "logo show-logo" : "logo"}>Trong Nguyen</div>
             
             {/* <div className={sideClass} onTouchStart={()=>{setToggle(!toggle)}} onMouseDown={()=>{setToggle(!toggle)}} > */}
             <div className={sideClass} >
@@ -72,6 +72,9 @@ return(
                     </li>
                     <li>
                         <a href="#contact" alt="" onClick={()=>{setToggle(!toggle)}}>Contact</a>
+                    </li>
+                    <li>
+                        <a href="#contact" alt="" onClick={()=>{setToggle(!toggle)}}>Resume</a>
                     </li>
                 </ul>
             </div>

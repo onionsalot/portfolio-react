@@ -208,6 +208,10 @@ button:focus {
     background: $dark-orange-selected;
     color: white;
 }
+.logo {
+    font-family: 'Nothing You Could Do', cursive;
+    font-size: 40px;
+}
 
 .intro-text {
     font-size: 40px;
@@ -240,6 +244,9 @@ button:focus {
 
 
 @media screen and (max-width: $width-md) {
+    .logo {
+        font-size: $logo-size-md;
+    }
     .intro-text {
         font-size: $intro-size - 10px;
     }
@@ -264,6 +271,9 @@ button:focus {
 }
 
 @media screen and (max-width: $width-sm) {
+    .logo {
+        font-size: $logo-size-sm;
+    }
     .intro-text {
         font-size: $intro-size - 15px;
     }
@@ -288,6 +298,9 @@ button:focus {
 }
 
 @media screen and (max-width: $width-xs) {
+    .logo {
+        font-size: $logo-size-xs;
+    }
     .intro-text {
         font-size: $intro-size - 20px;
     }
@@ -312,6 +325,9 @@ button:focus {
 }
 
 @media screen and (max-width: $width-xxs) {
+    .logo {
+        font-size: $logo-size-xxs;
+    }
     .intro-text {
         font-size: $intro-size - 20px;
     }
