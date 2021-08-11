@@ -128,8 +128,8 @@ export default function AboutSection() {
           <div className="section-border-r">
             <p className="intro-text">
               Hey there!
-              <br /> My name is{" "}
-              <span className="highlighted-text">Trong Nguyen</span>
+              <br /> Thanks for stopping by.
+
             </p>
             <p className="sub-text">Welcome to my corner of the interwebs!</p>
           </div>
