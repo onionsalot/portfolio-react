@@ -38,6 +38,7 @@
     z-index      : 5;
     font-size    : 40px;
     color        : white;
+    top          : 0;
     -ms-transform: skewY(-4deg);
     /* IE 9 */
     transform    : skewY(-4deg);
@@ -53,9 +54,9 @@
     width    : 50px;
     height   : 120px;
     bottom   : 10%;
-    left: 0;
-    right: 0;
-    margin: auto;
+    left     : 0;
+    right    : 0;
+    margin   : auto;
 
     // transform: translate(100%, 0%);
     .mouse {
@@ -305,16 +306,21 @@
 
 @media screen and (max-width: $width-sm) {
   .TopBanner {
-    height:100vh;
+    height: 100vh;
   }
+
   .inside-animation {
     .animation {
       height    : 80vh;
       min-height: 50%;
-    }
+      transform : translate(-43%, 60px);
 
+    }
+    .opening-text {
+top: 60px;
+    }
     .mouse-container {
-      bottom   : 20%;
+      bottom: 20%;
     }
   }
 }
@@ -329,25 +335,26 @@
   .inside-animation {
     // height  : 1200px;
     position: relative;
+
     .animation {
       height    : 60vh;
       min-height: 50%;
       min-width : 100%;
-      transform : translate(-43%, 20%);
+      transform : translate(-43%, 60px);
     }
+
     .opening-text {
-      -ms-transform: skewY(0deg);
-      /* IE 9 */
-      transform    : skewY(0deg);
+font-size: 35px;
     }
+
     .mouse-container {
-      bottom   : 22%;
+      bottom: 22%;
     }
   }
 }
 
 @media screen and (max-width: $width-xxs) {
   .inside-animation .opening-text {
-    font-size    : 34px;
+    font-size: 34px;
   }
 }
