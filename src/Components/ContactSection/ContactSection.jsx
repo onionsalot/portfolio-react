@@ -115,9 +115,9 @@ export default function ContactSection() {
         </div>
       </main>
       <footer>
-
-        <div>Made with 💜&nbsp; from New York City, New York</div>
-        <div>Pictures blah blah</div>
+        <div onClick={() => {window.scrollTo(0, 0)}} style={{cursor: "pointer"}}>&#8657; To the Top &#8657; </div>
+        <div>Made with 💜&nbsp;from New York City, New York</div>
+        <div>All graphics on this page were self-produced.</div>
       </footer>
     </div>
   );

@@ -133,6 +133,13 @@
     img {
         padding: 0 10px;
         width  : 40px;
+        -webkit-touch-callout: none;
+        -webkit-user-select  : none;
+        -moz-user-select     : none;
+        -ms-user-select      : none;
+        user-select          : none;
+        user-drag            : none;
+        -webkit-user-drag    : none;
     }
     img:hover,
     img:focus {

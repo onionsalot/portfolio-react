@@ -3,14 +3,12 @@ import { useEffect, useState } from "react";
 import ScrollAnimation from 'react-animate-on-scroll';
 
 export default function NavBar() {
-    // const [y, setY] = useState(0);
     const [toggle, setToggle] = useState(false);
     const [nameToggle, setNameToggle] = useState(false);
-    const screenHeight= window.innerHeight
     const [sideClass, setSideClass] = useState("link-section")
     const [linkClass, setLinkClass] = useState("nav-links")
     const [burgerClass, setBurgerClass] = useState("burger")
-    const [navExtend, setNavExtend] = useState("normal")
+    const [navExtend, setNavExtend] = useState("")
 
     useEffect(() => {
         if (toggle === true) {
@@ -33,14 +31,13 @@ export default function NavBar() {
       }, []);
       const handleScroll = () => {
         const position = window.pageYOffset;
-        if (position > screenHeight*0.7) {
+        if (position > 200) {
             setNavExtend("extend");
             setNameToggle(true);
         }
-        if (position < screenHeight*0.7+1) {
-            setNavExtend("normal");
+        if (position < 201) {
+            setNavExtend("");
             setNameToggle(false);
-
         }
     };
 return(
@@ -74,7 +71,7 @@ return(
                         <a href="#contact" alt="" onClick={()=>{setToggle(!toggle)}}>Contact</a>
                     </li>
                     <li>
-                        <a href="#contact" alt="" onClick={()=>{setToggle(!toggle)}}>Resume</a>
+                        <a href="https://docs.google.com/document/d/1S8aMJ3WoTIo6sUAvhkNf_9uvzYKVeWI1WqVsm5E8re0/edit?usp=sharing" target="_blank" rel="noreferrer" alt="" onClick={()=>{setToggle(!toggle)}}>Resume</a>
                     </li>
                 </ul>
             </div>

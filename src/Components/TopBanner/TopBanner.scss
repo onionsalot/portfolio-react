@@ -29,19 +29,22 @@
   }
 
   .opening-text {
-    position     : absolute;
-    margin       : 5px auto 0 auto;
-    width        : 380px;
-    left         : 0;
-    right        : 600px;
-    text-align   : left;
-    z-index      : 5;
-    font-size    : 40px;
-    color        : white;
-    top          : 0;
-    -ms-transform: skewY(-4deg);
-    /* IE 9 */
-    transform    : skewY(-4deg);
+    position             : absolute;
+    margin               : 5px auto 0 auto;
+    width                : 380px;
+    left                 : 0;
+    right                : 600px;
+    text-align           : left;
+    z-index              : 5;
+    font-size            : 40px;
+    color                : white;
+    top                  : 0;
+    transform            : skewY(-4deg);
+    -webkit-touch-callout: none;
+    -webkit-user-select  : none;
+    -moz-user-select     : none;
+    -ms-user-select      : none;
+    user-select          : none;
   }
 
   .windup {
@@ -316,9 +319,11 @@
       transform : translate(-43%, 50px);
 
     }
+
     .opening-text {
-top: 50px;
+      top: 50px;
     }
+
     .mouse-container {
       bottom: 20%;
     }
@@ -344,7 +349,7 @@ top: 50px;
     }
 
     .opening-text {
-font-size: 35px;
+      font-size: 35px;
     }
 
     .mouse-container {
