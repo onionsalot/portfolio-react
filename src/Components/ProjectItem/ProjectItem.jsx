@@ -1,5 +1,5 @@
 import "./ProjectItem.scss";
-import { useEffect, useState, useCallback} from "react";
+import { useEffect, useState } from "react";
 import {useHistory} from 'react-router-dom';
 import { Collapse } from "react-collapse";
 
@@ -9,8 +9,6 @@ export default function ProjectItem({
   setClicked,
   content,
 }) {
-  // const [holderClass, setHolderClass] = useState("ProjectItem");
-  const history = useHistory();
   const [show, setShow] = useState(false);
   const title = content["title"]
   const text = content["text"]
@@ -24,42 +22,11 @@ export default function ProjectItem({
       setShow(false)
     }
   },[clicked])
-  // useEffect(() => {
-  //   if (hover == name) {
-  //     setHolderClass("ProjectItem larger");
-  //   } else if (hover !== name && hover !== "") {
-  //     console.log("set smaller for", name);
-  //     setHolderClass(`ProjectItem smaller`);
-  //   } else {
-  //     console.log("set neutral for", name);
-  //     setHolderClass(`ProjectItem neutral`);
-  //   }
-  // }, [hover]);
-
-  function handleShow() {
-    setShow(!show);
-  }
-
-  // function onMouseEnter(e) {
-  //   console.log("bloop", e.target.id)
-  //   // e.target.play()
-  //   setHover(e.target.id)
-  //   setShow(true);
-  // }
-  // function onMouseLeave(e) {
-  //   console.log("bloop")
-
-  //   // e.target.pause()
-  //   // e.target.currentTime=0;
-  //   setHover("")
-  //   setShow(false);
-
-  // }
 
   function handleClicked(e) {
     setClicked(idx)
     setShow(true);
-    document.getElementById('display').scrollIntoView();
+    document.getElementById('project').scrollIntoView();
   }
 
   return (

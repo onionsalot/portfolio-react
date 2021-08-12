@@ -70,6 +70,7 @@ export default function ContactSection() {
                     name="name"
                     placeholder="Your Name here..."
                     value={form.name}
+                    required
                     onChange={handleChange}
                   />
                 </div>
@@ -84,6 +85,7 @@ export default function ContactSection() {
                     name="email"
                     placeholder="Your Email here..."
                     value={form.email}
+                    required
                     onChange={handleChange}
                   />
                 </div>
@@ -100,6 +102,7 @@ export default function ContactSection() {
                     placeholder="Suggestions? Comments? Work together? Anything here!"
                     value={form.message}
                     onChange={handleChange}
+                    required
                   ></textarea>
                 </div>
               </div>
@@ -112,12 +115,9 @@ export default function ContactSection() {
         </div>
       </main>
       <footer>
-        <div>
-          About Me &nbsp; | &nbsp; Tech Stack &nbsp; | &nbsp; My Work &nbsp; |
-          &nbsp; Contact
-        </div>
-        <div>Made with 💜&nbsp; from New York City, New York</div>
-        <div>Pictures blah blah</div>
+        <div onClick={() => {window.scrollTo(0, 0)}} style={{cursor: "pointer"}}>&#8657; To the Top &#8657; </div>
+        <div>Made with 💜&nbsp;from New York City, New York</div>
+        <div>All graphics on this page were self-produced.</div>
       </footer>
     </div>
   );

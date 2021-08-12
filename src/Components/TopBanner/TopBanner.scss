@@ -29,19 +29,22 @@
   }
 
   .opening-text {
-    position     : absolute;
-    margin       : 5px auto 0 auto;
-    width        : 380px;
-    left         : 0;
-    right        : 600px;
-    text-align   : left;
-    z-index      : 5;
-    font-size    : 40px;
-    color        : white;
-    top          : 0;
-    -ms-transform: skewY(-4deg);
-    /* IE 9 */
-    transform    : skewY(-4deg);
+    position             : absolute;
+    margin               : 5px auto 0 auto;
+    width                : 380px;
+    left                 : 0;
+    right                : 600px;
+    text-align           : left;
+    z-index              : 5;
+    font-size            : 40px;
+    color                : white;
+    top                  : 0;
+    transform            : skewY(-4deg);
+    -webkit-touch-callout: none;
+    -webkit-user-select  : none;
+    -moz-user-select     : none;
+    -ms-user-select      : none;
+    user-select          : none;
   }
 
   .windup {
@@ -58,7 +61,6 @@
     right    : 0;
     margin   : auto;
 
-    // transform: translate(100%, 0%);
     .mouse {
       border       : 3px solid white;
       height       : 45px;
@@ -66,9 +68,11 @@
       border-radius: 20px;
       margin       : 0 auto;
       position     : relative;
+      margin       : 0 auto;
+      left         : 0;
+      right        : 0;
 
       .wheel {
-        // border       : 5px solid white;
         background-color : white;
         border-radius    : 40%;
         width            : 5px;
@@ -84,13 +88,16 @@
     .arrow-1,
     .arrow-2,
     .arrow-3 {
-      position                   : absolute;
-      transform                  : translate(60%, 0%);
-      -webkit-animation          : fade 1s infinite;
-      -moz-animation             : fade 1s infinite;
-      animation                  : fade 1s infinite;
-      -webkit-animation-direction: alternate;
-      animation-direction        : alternate;
+      position                      : absolute;
+      // transform                  : translate(60%, 0%);
+      margin                        : 0 auto;
+      left                          : 2px;
+      right                         : 0;
+      -webkit-animation             : fade 1s infinite;
+      -moz-animation                : fade 1s infinite;
+      animation                     : fade 1s infinite;
+      -webkit-animation-direction   : alternate;
+      animation-direction           : alternate;
     }
 
     .arrow-1 {
@@ -316,9 +323,11 @@
       transform : translate(-43%, 50px);
 
     }
+
     .opening-text {
-top: 50px;
+      top: 50px;
     }
+
     .mouse-container {
       bottom: 20%;
     }
@@ -344,7 +353,7 @@ top: 50px;
     }
 
     .opening-text {
-font-size: 35px;
+      font-size: 35px;
     }
 
     .mouse-container {

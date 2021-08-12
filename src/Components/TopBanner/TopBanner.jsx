@@ -1,7 +1,5 @@
-import { Parallax } from "react-parallax";
 import Plx from "react-plx";
-import background from "../../images/bloop.png";
-import video from "../../videos/Animasi.mp4";
+import video from "../../videos/TrongNCleo.mp4";
 import TypeOut from "react-typeout";
 import "./TopBanner.scss";
 
@@ -50,14 +48,12 @@ export default function TopBanner() {
           />
         </div>
         <Plx className="mouse-container" parallaxData={parallaxDataMouse}>
-          {/* <div className="mouse-container"> */}
           <div className="mouse">
             <div className="wheel" />
           </div>
           <div className="arrow-1">&#5167;</div>
           <div className="arrow-2">&#5167;</div>
           <div className="arrow-3">&#5167;</div>
-          {/* </div> */}
         </Plx>
       </div>
     </div>

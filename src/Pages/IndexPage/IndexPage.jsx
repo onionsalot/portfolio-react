@@ -19,7 +19,6 @@ export default function IndexPage() {
             <TechSection />
             <PhilosophySection />
             <ContactSection />
-            {/* <div style={{height: 5000}}/> */}
         </div>
     );
 }

@@ -1,5 +1,5 @@
 import "./PhilosophySection.scss";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import PhilosophyItem from "../PhilosophyItem/PhilosophyItem";
 import Mobile from "../../images/mobile.png"
 import Responsive from "../../images/responsive.png"

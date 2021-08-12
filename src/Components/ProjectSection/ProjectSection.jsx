@@ -1,31 +1,35 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import ProjectItem from "../ProjectItem/ProjectItem";
 import PhoneDisplay from "../PhoneDisplay/PhoneDisplay";
 import "./ProjectSection.scss";
-import cryptoP from "../../videos/cryptoP.mp4";
-import cryptoT from "../../videos/cryptoT.mp4";
-import cryptoD from "../../videos/cryptoD.mp4";
+import BootstrapP from "../../videos/bootstrapP.mp4";
+import BootstrapT from "../../videos/bootstrapT.mp4";
+import BootstrapD from "../../videos/bootstrapD.mp4";
+
+import MatchP from "../../videos/matchP.mp4";
+import MatchT from "../../videos/matchT.mp4";
+import MatchD from "../../videos/matchD.mp4";
+
+import NewsP from "../../videos/newsP.mp4";
+import NewsT from "../../videos/newsT.mp4";
+import NewsD from "../../videos/newsD.mp4";
+
+import TutorP from "../../videos/tutorP.mp4";
+import TutorT from "../../videos/tutorT.mp4";
+import TutorD from "../../videos/tutorD.mp4";
 
 export default function ProjectSection() {
   const [clicked, setClicked] = useState("");
   const [phoneClass, setPhoneClass] = useState("phone");
-  // const projectList1 = [
-  //   { "project1": project1},
-  //   { "project2": project2},
-  // ]
-  // const projectList2 = [
-  //   { "project3": project3},
-  //   { "project4": project4},
-  // ]
   const projectList = [
     {
       title: "Match Two",
       text: "A Memory card game designed using pure JS, CSS, and DOM manipulation.",
       git: "https://github.com/onionsalot/Matching-memory-game",
       link: "https://onionsalot.github.io/Matching-memory-game/",
-      vidP: " ",
-      vidT: " ",
-      vidD: " ",
+      vidP: { MatchP },
+      vidT: { MatchT },
+      vidD: { MatchD },
       techs: "Javascript, HTML, CSS",
     },
     {
@@ -33,9 +37,9 @@ export default function ProjectSection() {
       text: "A Cryptocurrency tracker with auth and portfolio tracking included!",
       git: "https://github.com/onionsalot/crypto-app-mern",
       link: "https://bootstrapmarketcap.herokuapp.com/",
-      vidP: { cryptoP },
-      vidT: { cryptoT },
-      vidD: { cryptoD },
+      vidP: { BootstrapP },
+      vidT: { BootstrapT },
+      vidD: { BootstrapD },
       techs: "Javascript, React, CSS, RESTFUL API, Mongoose, Express, NodeJS",
     },
     {
@@ -43,9 +47,9 @@ export default function ProjectSection() {
       text: "A marketplace where students can connect with tutors, sign up on their available dates and leave reviews.",
       git: "https://github.com/onionsalot/codingtutor",
       link: "https://codingtutor.herokuapp.com/",
-      vidP: " ",
-      vidT: " ",
-      vidD: " ",
+      vidP: { TutorP },
+      vidT: { TutorT },
+      vidD: { TutorD },
       techs: "Python, HTML, React, Django, Postgresql, CSS, RESTFUL API",
     },
     {
@@ -53,9 +57,9 @@ export default function ProjectSection() {
       text: "A heavily customizable, native android app featuring a plethora of new sources.",
       git: "https://github.com/onionsalot/NewsReader",
       link: "https://github.com/onionsalot/NewsReader",
-      vidP: " ",
-      vidT: " ",
-      vidD: " ",
+      vidP: { NewsP },
+      vidT: { NewsT },
+      vidD: { NewsD },
       techs: "Java, RESTFUL API, SQLite",
     },
   ];
@@ -81,16 +85,6 @@ export default function ProjectSection() {
       </div>
 
       <main>
-        {/* <div className="top-row">
-          {projectList1.map((project, idx)=> 
-            <ProjectItem idx={idx} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} name={Object.keys(project)[0]} video={Object.values(project)[0]} hover={hover} />
-          )}
-        </div>
-        <div className="bottom-row">
-          {projectList2.map((project, idx)=> 
-          <ProjectItem idx={idx} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} name={Object.keys(project)[0]} video={Object.values(project)[0]} hover={hover} />
-          )}
-        </div> */}
         <div className="left" id="display">
         <div>
           {phoneClass === "phone" ? (<button className="selected" onClick={handleClick} id="phone">
