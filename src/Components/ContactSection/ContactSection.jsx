@@ -62,7 +62,7 @@ export default function ContactSection() {
             <form onSubmit={handleSubmit}>
               <div className="row">
                 <div className="col-left">
-                  <label for="name" className="main-text">Name: </label>
+                  <label className="main-text">Name: </label>
                 </div>
                 <div className="col-right">
                   <input
@@ -77,7 +77,7 @@ export default function ContactSection() {
               </div>
               <div className="row">
                 <div className="col-left">
-                  <label for="email">Email: </label>
+                  <label>Email: </label>
                 </div>
                 <div className="col-right">
                   <input
@@ -92,7 +92,7 @@ export default function ContactSection() {
               </div>
               <div className="row">
                 <div className="col-left">
-                  <label for="message">Message: </label>
+                  <label>Message: </label>
                 </div>
                 <div className="col-right">
                   <textarea

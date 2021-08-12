@@ -1,6 +1,5 @@
 import "./ProjectItem.scss";
 import { useEffect, useState } from "react";
-import {useHistory} from 'react-router-dom';
 import { Collapse } from "react-collapse";
 
 export default function ProjectItem({
@@ -21,7 +20,7 @@ export default function ProjectItem({
     if (clicked !== idx) {
       setShow(false)
     }
-  },[clicked])
+  },[clicked, idx])
 
   function handleClicked(e) {
     setClicked(idx)

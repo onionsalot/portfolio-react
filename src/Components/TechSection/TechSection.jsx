@@ -56,7 +56,7 @@ export default function TechSection() {
         <div className="right">
           <div className="section-border-l">
             {stack.map((e, idx) => (
-              <StackItems idx={idx} stackItem={e} setHoverItem={setHoverItem}/>
+              <StackItems key={idx} stackItem={e} setHoverItem={setHoverItem}/>
             ))}
             
             <div className="more"><p className="main-text">...and if I don't know it, I'm willing to learn it!</p></div>

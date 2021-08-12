@@ -111,6 +111,7 @@ export default function ProjectSection() {
         <div className="right">
           {projectList.map((e, idx) => (
             <ProjectItem
+              key={idx}
               idx={idx}
               content={e}
               clicked={clicked}

@@ -12,7 +12,6 @@ export default function PhilosophyItem({
 
   function onMouseOver(e) {
     setHoverItem(name);
-    console.log(img)
   }
   function onMouseLeave(e) {
     setHoverItem("");

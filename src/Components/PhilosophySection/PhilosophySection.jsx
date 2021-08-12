@@ -37,7 +37,7 @@ export default function PhilosophySection() {
 
       <main>
           {cardObj.map((e, idx) => (
-            <PhilosophyItem idx={idx} content={e} setHoverItem={setHoverItem} hoverItem={hoverItem}/>
+            <PhilosophyItem key={idx} content={e} setHoverItem={setHoverItem} hoverItem={hoverItem}/>
           ))}
       </main>
     </div>
