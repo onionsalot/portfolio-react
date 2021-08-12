@@ -12,13 +12,13 @@ export default function PhilosophySection() {
 
   const cardObj = [
     { name : "Mobile-first",
-      text : "As the world moves forward, so do we. There are currently 3.8billion (48%) of people in the world with a smartphone and building without them in mind is a mistake!",
+      text : "As the world moves forward, so do we. There are currently 3.8 billion (48%) of people in the world with a smartphone and building without them in mind is a mistake!",
       img : Mobile},
       { name : "Responsive",
-      text : "Dogs come in all colors, shapes (mostly dog shapes), and sizes, as do internet-browsers! My design should be consistent, coherent, and immersive across all screen sizes, across all Internet browsers, and across all wristwatches...maybe.",
+      text : "Dogs come in all colors, shapes (mostly dog shapes), and sizes, as do Internet Browsers! My design should be consistent, coherent, and immersive across all screen sizes, across all Internet browsers, and across all wristwatches...maybe.",
     img : Responsive},
     { name : "Secure",
-      text : "Data is expensive, and stolen data is even more expensive. I make sure to never leave a stone unturned, whether it be a cryptographic approach to data handling, or a simple complier warning.",
+      text : "Data is expensive, and stolen data is even more expensive. I make sure to never leave a stone unturned, whether it be a cryptographic approach to data handling or a simple complier warning.",
     img : Secure},
     { name : "Consistent and DRY",
       text : "Moving out of the basement means working with real people. They need to know what you're writing, and YOU need to know what you're writing a month from then. Every line I write, I make sure that it is consistent and DRY, so I can keep consistency and not repeat myself. Oops.",
