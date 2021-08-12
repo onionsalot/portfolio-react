@@ -17,7 +17,6 @@
         height: 900px;
     }
 
-    // overflow-x: hidden;
     main {
         display        : flex;
         flex-direction : row;
@@ -76,16 +75,7 @@
         background-size  : contain;
         background-repeat: no-repeat;
 
-        // .pfp {
-        //     // height: 200px;
-        //     width     : 100%;
-        //     /* or any custom size */
-        //     height    : 100%;
-        //     max-height: 100%;
-        //     max-width : 100%;
-        //     object-fit: contain;
 
-        // }
 
         @media screen and (max-width: $width-lg) {
             flex-shrink: 1;

@@ -1,19 +1,4 @@
-import { useEffect, useState } from "react";
 import "./AboutSection.scss";
-import IconCss from "../../images/icons/css.png";
-import IconDj from "../../images/icons/dj.png";
-import IconGit from "../../images/icons/git.png";
-import IconHtml from "../../images/icons/html.png";
-import IconJs from "../../images/icons/js.png";
-import IconMongo from "../../images/icons/mongo.png";
-import IconNodejs from "../../images/icons/nodejs.png";
-import IconPostgresql from "../../images/icons/postgresql.png";
-import IconPython from "../../images/icons/python.png";
-import IconReact from "../../images/icons/react.png";
-import IconSass from "../../images/icons/sass.png";
-import StackItems from "../StackItems/StackItems";
-import me1 from "../../images/me1.png";
-import arrow from "../../images/arrow.png";
 import linkedin from "../../images/linkedin.png";
 import github from "../../images/github.png";
 import twitter from "../../images/twitter.png";
@@ -64,9 +49,7 @@ export default function AboutSection() {
           </div>
         </div>
         <div className="pfp-area">
-          {/* <div className="arrow">
-            <img src={arrow} alt="" loading="lazy" />
-          </div> */}
+   
 
         </div>
 

@@ -1,6 +1,5 @@
 import "./NavBar.scss";
 import { useEffect, useState } from "react";
-import ScrollAnimation from 'react-animate-on-scroll';
 
 export default function NavBar() {
     const [toggle, setToggle] = useState(false);
@@ -44,13 +43,10 @@ return(
     <div className="NavBar">
 
         <nav className={navExtend}>
-        {/* <ScrollAnimation offset="200" animateIn="fadeIn">
-        TrongNguyen
-</ScrollAnimation> */}
+
 
             <div className={nameToggle ? "logo show-logo" : "logo"}>Trong Nguyen</div>
             
-            {/* <div className={sideClass} onTouchStart={()=>{setToggle(!toggle)}} onMouseDown={()=>{setToggle(!toggle)}} > */}
             <div className={sideClass} >
                 <div className="empty-box" onWheel={()=>{setToggle(false)}} onTouchStart={()=>{setToggle(false)}} onMouseDown={()=>{setToggle(false)}}/>
 

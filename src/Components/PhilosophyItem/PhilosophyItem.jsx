@@ -30,7 +30,6 @@ export default function PhilosophyItem({
       </div>
       <div className="card-body main-text">
         <div className="top-hide"> <img src={img} alt="" /></div>
-        {/* {hoverItem === name ? <p>{text}</p> : <img src={img} alt="" />} */}
         {text}
         <div className="bot-hide"> <img src={img} alt="" /></div>
       </div>

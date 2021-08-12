@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import ProjectItem from "../ProjectItem/ProjectItem";
 import PhoneDisplay from "../PhoneDisplay/PhoneDisplay";
 import "./ProjectSection.scss";
@@ -21,14 +21,6 @@ import TutorD from "../../videos/tutorD.mp4";
 export default function ProjectSection() {
   const [clicked, setClicked] = useState("");
   const [phoneClass, setPhoneClass] = useState("phone");
-  // const projectList1 = [
-  //   { "project1": project1},
-  //   { "project2": project2},
-  // ]
-  // const projectList2 = [
-  //   { "project3": project3},
-  //   { "project4": project4},
-  // ]
   const projectList = [
     {
       title: "Match Two",
@@ -93,16 +85,6 @@ export default function ProjectSection() {
       </div>
 
       <main>
-        {/* <div className="top-row">
-          {projectList1.map((project, idx)=> 
-            <ProjectItem idx={idx} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} name={Object.keys(project)[0]} video={Object.values(project)[0]} hover={hover} />
-          )}
-        </div>
-        <div className="bottom-row">
-          {projectList2.map((project, idx)=> 
-          <ProjectItem idx={idx} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} name={Object.keys(project)[0]} video={Object.values(project)[0]} hover={hover} />
-          )}
-        </div> */}
         <div className="left" id="display">
         <div>
           {phoneClass === "phone" ? (<button className="selected" onClick={handleClick} id="phone">
