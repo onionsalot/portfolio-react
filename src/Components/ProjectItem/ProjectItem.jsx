@@ -59,7 +59,7 @@ export default function ProjectItem({
   function handleClicked(e) {
     setClicked(idx)
     setShow(true);
-    document.getElementById('display').scrollIntoView();
+    document.getElementById('project').scrollIntoView();
   }
 
   return (

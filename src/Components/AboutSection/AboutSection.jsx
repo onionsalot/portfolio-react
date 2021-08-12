@@ -141,7 +141,7 @@ export default function AboutSection() {
 
             </p>
             <p>
-            <span className="highlighted-text">Full Name</span>: Trong T. Nguyen<br/>
+            <span className="highlighted-text">Full Name</span>: Trong T. Nguyen <span style={{"font-size":"15px", "font-style":"italic"}}>(pronounced 'win' hence the domain!)</span><br/>
             <span className="highlighted-text">Email</span>: Trong.nguyen1008@gmail.com<br/>
             <span className="highlighted-text">Education</span>: &nbsp;General Assembly&nbsp; / &nbsp;Bachelor of Computer Science &nbsp; / &nbsp;Associate's Degree (IT)
             </p>

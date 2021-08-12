@@ -54,21 +54,21 @@ return(
             <div className={sideClass} >
                 <div className="empty-box" onWheel={()=>{setToggle(false)}} onTouchStart={()=>{setToggle(false)}} onMouseDown={()=>{setToggle(false)}}/>
 
-                <ul className={linkClass} >
+                <ul className={linkClass} onWheel={()=>{setToggle(false)}} onTouchStart={()=>{setToggle(false)}} >
                     <li>
-                        <a href="#about" alt="" onClick={()=>{setToggle(!toggle)}}>About</a>
+                        <a href="#about" alt="" onClick={()=>{setToggle(false)}}>About</a>
                     </li>
                     <li>
-                        <a href="#project" alt="" onClick={()=>{setToggle(!toggle)}}>Projects</a>
+                        <a href="#project" alt="" onClick={()=>{setToggle(false)}}>Projects</a>
                     </li>
                     <li>
-                        <a href="#tech" alt="" onClick={()=>{setToggle(!toggle)}}>Skills</a>
+                        <a href="#tech" alt="" onClick={()=>{setToggle(false)}}>Skills</a>
                     </li>
                     <li>
-                        <a href="#philosophy" alt="" onClick={()=>{setToggle(!toggle)}}>Philosophy</a>
+                        <a href="#philosophy" alt="" onClick={()=>{setToggle(false)}}>Philosophy</a>
                     </li>
                     <li>
-                        <a href="#contact" alt="" onClick={()=>{setToggle(!toggle)}}>Contact</a>
+                        <a href="#contact" alt="" onClick={()=>{setToggle(false)}}>Contact</a>
                     </li>
                     <li>
                         <a href="https://docs.google.com/document/d/1S8aMJ3WoTIo6sUAvhkNf_9uvzYKVeWI1WqVsm5E8re0/edit?usp=sharing" target="_blank" rel="noreferrer" alt="" onClick={()=>{setToggle(!toggle)}}>Resume</a>

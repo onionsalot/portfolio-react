@@ -19,7 +19,6 @@ background: rgb(2,0,36);
 background: linear-gradient(90deg, rgba(2,0,36,0) 42%, rgba(7,52,83,0.8379726890756303) 47%);
 background-size: 200% 200%;
 background-position: 45% 100% ;
-
   width: 100%;
 // position: absolute;
 overflow-x: hidden;
@@ -38,7 +37,8 @@ nav.extend {
     -moz-animation:    gradientFill .6s ease forwards; /* Fx 5+ */
     -o-animation:      gradientFill .6s ease forwards; /* Opera 12+ */
     animation:         gradientFill .6s ease forwards; /* IE 10+, Fx 29+ */
-    // background: rgba(7,52,83,0.7);
+    // -webkit-backdrop-filter: blur(3px);
+    // backdrop-filter: blur(3px);
 }
 .logo.show-logo {
     -webkit-animation: nameAppear .6s ease forwards; /* Safari 4+ */
@@ -94,6 +94,7 @@ nav.extend {
     color:white;
     pointer-events: auto;
     font-weight: bold;
+    margin: 0 2px;
 }
 
 .nav-links li{
@@ -139,7 +140,7 @@ nav.extend {
         opacity: 0;
         // transform: translateX(100%);
         transition: opacity 0.5s ease-in;
-        -webkit-backdrop-filter: blur(2px);
+        -webkit-backdrop-filter: blur(3px);
         backdrop-filter: blur(3px);
         pointer-events: none;
 
@@ -181,6 +182,8 @@ nav.extend {
         margin: 0 auto;
         width: 100%;
         height: 100px;
+        padding: 20px;
+
     }
 
     .burger{
