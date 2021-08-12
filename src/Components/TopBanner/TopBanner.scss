@@ -69,6 +69,9 @@
       border-radius: 20px;
       margin       : 0 auto;
       position     : relative;
+      margin       : 0 auto;
+      left         : 0;
+      right        : 0;
 
       .wheel {
         // border       : 5px solid white;
@@ -87,13 +90,16 @@
     .arrow-1,
     .arrow-2,
     .arrow-3 {
-      position                   : absolute;
-      transform                  : translate(60%, 0%);
-      -webkit-animation          : fade 1s infinite;
-      -moz-animation             : fade 1s infinite;
-      animation                  : fade 1s infinite;
-      -webkit-animation-direction: alternate;
-      animation-direction        : alternate;
+      position                      : absolute;
+      // transform                  : translate(60%, 0%);
+      margin                        : 0 auto;
+      left                          : 2px;
+      right                         : 0;
+      -webkit-animation             : fade 1s infinite;
+      -moz-animation                : fade 1s infinite;
+      animation                     : fade 1s infinite;
+      -webkit-animation-direction   : alternate;
+      animation-direction           : alternate;
     }
 
     .arrow-1 {

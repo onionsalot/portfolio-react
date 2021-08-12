@@ -19,101 +19,6 @@ import github from "../../images/github.png";
 import twitter from "../../images/twitter.png";
 
 export default function AboutSection() {
-  const [parallaxDataTop, setParallaxDataTop] = useState([]);
-  const [parallaxDataBot, setParallaxDataBot] = useState([]);
-  //   const [distance, setDistance] = useState((convertVWToPx("100vw") * 0.8) / 5);
-  const [iconTop] = useState([
-    { IconCss: IconCss },
-    { IconDj: IconDj },
-    { IconGit: IconGit },
-    { IconHtml: IconHtml },
-    { IconJs: IconJs },
-    { IconMongo: IconMongo },
-  ]);
-  const [iconBot] = useState([
-    { IconNodejs: IconNodejs },
-    { IconPostgresql: IconPostgresql },
-    { IconPython: IconPython },
-    { IconReact: IconReact },
-    { IconSass: IconSass },
-  ]);
-  //   function convertVWToPx(value) {
-  //     // eslint-disable-next-line no-useless-escape
-  //     var parts = value.match(/([0-9\.]+)(vh|vw)/);
-  //     var q = Number(parts[1]);
-  //     var side =
-  //       window[["innerHeight", "innerWidth"][["vh", "vw"].indexOf(parts[2])]];
-  //     return side * (q / 100);
-  //   }
-
-  // console.log((convertVWToPx('100vw')*0.8/5))
-
-  //   useEffect(() => {
-  //     const data = [];
-  //     for (let i = 0; i < 5; i++) {
-  //       data.push([
-  //         {
-  //           start: ".parallax-top",
-  //           end: ".halfpoint",
-  //           properties: [
-  //             {
-  //               startValue: i * distance + 100,
-  //               endValue: i * distance,
-  //               property: "translateX",
-  //             },
-  //           ],
-  //         },
-  //         {
-  //           start: ".parallax-top",
-  //           end: ".halfpoint",
-  //           properties: [
-  //             {
-  //               startValue: 0,
-  //               endValue: 0.9,
-  //               property: "opacity",
-  //             },
-  //           ],
-  //         },
-  //       ]);
-  //     }
-  //     const data1 = [];
-  //     for (let i = 0; i < 5; i++) {
-  //       data1.push([
-  //         {
-  //           start: ".halfpoint",
-  //           end: ".endpoint",
-  //           properties: [
-  //             {
-  //               startValue: i * distance - 100,
-  //               endValue: i * distance,
-  //               property: "translateX",
-  //             },
-  //           ],
-  //         },
-  //         {
-  //           start: ".halfpoint",
-  //           end: ".endpoint",
-  //           properties: [
-  //             {
-  //               startValue: 0,
-  //               endValue: 0.9,
-  //               property: "opacity",
-  //             },
-  //           ],
-  //         },
-  //       ]);
-  //     }
-  //     setParallaxDataTop(data);
-  //     setParallaxDataBot(data1);
-  //     // console.log(parallaxData)
-  //   }, [distance]);
-
-  //   window.onresize = function () {
-  //     const newDistance = (convertVWToPx("100vw") * 0.8) / 5;
-  //     if (newDistance !== distance) {
-  //       setDistance(newDistance);
-  //     }
-  //   };
 
   return (
     <div className="AboutSection" id="about">
@@ -146,7 +51,6 @@ export default function AboutSection() {
             <span className="highlighted-text">Education</span>: &nbsp;General Assembly&nbsp; / &nbsp;Bachelor of Computer Science &nbsp; / &nbsp;Associate's Degree (IT)
             </p>
             <div className="contact-info">
-              {/* <button>Contact me!</button>  */}
               <div>
               <a className="link_button" href="#contact">Contact me!</a>
               </div>
