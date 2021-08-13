@@ -34,7 +34,7 @@ export default function TopBanner() {
   return (
     <div className="TopBanner">
       <div className="inside-animation">
-        <video loop muted autoPlay src={video} className="animation" />
+        <video loop muted autoPlay playsInline src={video} className="animation" />
         
         <div className="opening-text">
           Hi, I'm Trong! <br /> I'm...&nbsp;

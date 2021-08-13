@@ -25,7 +25,7 @@ export default function PhoneDisplay({ phoneClass, clicked }) {
               <div className="main-text">Click on a project to preview.</div>
             </div>
           )}
-          <video loop muted autoPlay src={vid}/>
+          <video loop muted playsInline autoPlay src={vid}/>
         </div>
       </div>
     </>
