@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.a8ab37c1.chunk.css",
-    "main.js": "/static/js/main.ee25808d.chunk.js",
-    "main.js.map": "/static/js/main.ee25808d.chunk.js.map",
+    "main.css": "/static/css/main.ae888dcd.chunk.css",
+    "main.js": "/static/js/main.cd578424.chunk.js",
+    "main.js.map": "/static/js/main.cd578424.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.4fa033c1.js",
     "runtime-main.js.map": "/static/js/runtime-main.4fa033c1.js.map",
     "static/js/2.a2778cf5.chunk.js": "/static/js/2.a2778cf5.chunk.js",
     "static/js/2.a2778cf5.chunk.js.map": "/static/js/2.a2778cf5.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.a8ab37c1.chunk.css.map": "/static/css/main.a8ab37c1.chunk.css.map",
+    "static/css/main.ae888dcd.chunk.css.map": "/static/css/main.ae888dcd.chunk.css.map",
     "static/js/2.a2778cf5.chunk.js.LICENSE.txt": "/static/js/2.a2778cf5.chunk.js.LICENSE.txt",
     "static/media/TrongNCleo.7c356034.mp4": "/static/media/TrongNCleo.7c356034.mp4",
     "static/media/TechSection.scss": "/static/media/vscode.7c34fbd1.png",
@@ -16,6 +16,7 @@
     "static/media/bootstrapP.c4729def.mp4": "/static/media/bootstrapP.c4729def.mp4",
     "static/media/bootstrapT.2eeed68b.mp4": "/static/media/bootstrapT.2eeed68b.mp4",
     "static/media/dry.63cd2264.png": "/static/media/dry.63cd2264.png",
+    "static/media/email.3895374f.png": "/static/media/email.3895374f.png",
     "static/media/NavBar.scss": "/static/media/kgsecondchancessketch-kpap-webfont.db241816.woff2",
     "static/media/matchD.913bcfe3.mp4": "/static/media/matchD.913bcfe3.mp4",
     "static/media/matchP.1bae7881.mp4": "/static/media/matchP.1bae7881.mp4",
@@ -34,7 +35,7 @@
   "entrypoints": [
     "static/js/runtime-main.4fa033c1.js",
     "static/js/2.a2778cf5.chunk.js",
-    "static/css/main.a8ab37c1.chunk.css",
-    "static/js/main.ee25808d.chunk.js"
+    "static/css/main.ae888dcd.chunk.css",
+    "static/js/main.cd578424.chunk.js"
   ]
 }
