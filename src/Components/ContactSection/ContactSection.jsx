@@ -1,6 +1,10 @@
 import "./ContactSection.scss";
 import { useState } from "react";
 import { send } from "emailjs-com";
+import Github from "../../images/github.png"
+import LinkedIn from "../../images/linkedin.png"
+import Twitter from "../../images/twitter.png"
+import Email from "../../images/email.png"
 
 export default function ContactSection() {
   const [form, setForm] = useState({
@@ -50,10 +54,21 @@ export default function ContactSection() {
             <p className="main-text">Here are a couple of links to my corner of the interwebs;</p>
             <br />
             <br />
-            <p className="main-text"> <a href="https://github.com/onionsalot" target="_blank" rel="noreferrer"> Github</a></p>
-            <p className="main-text"><a href="https://www.linkedin.com/in/trong-nguyen1008/" target="_blank" rel="noreferrer">LinkedIn</a></p>
-            <p className="main-text"><a href="https://twitter.com/onionsalot" target="_blank" rel="noreferrer"> Twitter</a></p>
-            <p className="main-text"><a href="mailto:trong.nguyen1008@gmail.com?subject=Hello, Trong">Email</a></p>
+            <div className="socials-section">
+              <div className="left">
+                <div><a className="main-text"href="https://github.com/onionsalot" target="_blank" rel="noreferrer"> <img src={Github} alt=""/></a></div>
+                <div><a className="main-text" href="https://www.linkedin.com/in/trong-nguyen1008/" target="_blank" rel="noreferrer"> <img src={LinkedIn} alt=""/></a></div>
+                <div><a className="main-text" href="https://twitter.com/onionsalot" target="_blank" rel="noreferrer"> <img src={Twitter} alt=""/></a></div>
+                <div><a className="main-text" href="mailto:trong.nguyen1008@gmail.com?subject=Hello, Trong"> <img src={Email} alt=""/></a></div>
+              </div>
+              <div className="right">
+                <div><a className="main-text"href="https://github.com/onionsalot" target="_blank" rel="noreferrer"> Github</a></div>
+                <div><a className="main-text" href="https://www.linkedin.com/in/trong-nguyen1008/" target="_blank" rel="noreferrer">LinkedIn</a></div>
+                <div><a className="main-text" href="https://twitter.com/onionsalot" target="_blank" rel="noreferrer"> Twitter</a></div>
+                <div><a className="main-text" href="mailto:trong.nguyen1008@gmail.com?subject=Hello, Trong">Email</a></div>
+              </div>
+            </div>
+
             <br />
           </div>
           <div className="right">

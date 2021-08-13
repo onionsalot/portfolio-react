@@ -39,10 +39,44 @@
         overflow-wrap: break-word;
         padding       : 10px 10px;
         background-color: $dark-blue-content;
-
-        a {
-            color: $dark-orange;
+        .socials-section {
+            display: flex;
+            flex-direction: row;
+            .left {
+                display: flex;
+                flex-direction: column;
+                text-align: right;
+                padding: 10px;
+                img {
+                    width: 30px;
+                }
+                div {
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                }
+                a {
+                    color: $dark-orange;
+                }
+            }
+            .right {
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                padding: 10px 10px 10px 0px;
+                div {
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                }
+                a {
+                    color: $dark-orange;
+                }
+            }
         }
+        
     }
 
     .right {

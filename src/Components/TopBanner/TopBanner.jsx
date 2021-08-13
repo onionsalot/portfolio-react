@@ -35,7 +35,10 @@ export default function TopBanner() {
     <div className="TopBanner">
       <div className="inside-animation">
         <video loop muted autoPlay playsInline src={video} className="animation" />
-        
+        <div className="loader">
+          <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+          Loading Banner...
+        </div>
         <div className="opening-text">
           Hi, I'm Trong! <br /> I'm...&nbsp;
           <TypeOut
