@@ -252,6 +252,36 @@ button:focus {
 }
 
 
+@media screen and (max-width: $width-lg) {
+    .logo {
+        font-size: $logo-size-md;
+    }
+
+    .intro-text {
+        font-size: $intro-size - 8px;
+    }
+
+    .sub-text {
+        font-size: $sub-size - 3px;
+    }
+
+    .main-text {
+        font-size: $main-size - 1px;
+    }
+
+    .project-bottom {
+        font-size: $main-size - 5px;
+
+        .multi {
+            font-size: $main-size - 7px;
+        }
+    }
+
+    .tech-bottom {
+        font-size: $sub-size - 3px;
+    }
+}
+
 @media screen and (max-width: $width-md) {
     .logo {
         font-size: $logo-size-md;

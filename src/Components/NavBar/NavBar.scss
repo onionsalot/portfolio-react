@@ -21,7 +21,7 @@ nav {
     background-position: 45% 100%;
     width              : 100%;
     overflow-x         : hidden;
-    overflow-y         : auto;
+    overflow-y         : hidden;
     pointer-events     : auto;
     transition         : .5s all ease-in-out;
 }
@@ -114,7 +114,7 @@ color         : white;
 }
 
 .nav-links a:hover {
-    border-bottom: 2px solid $dark-orange;
+    border-bottom: 5px solid $dark-orange;
 }
 
 .nav-links li {
