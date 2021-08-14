@@ -81,6 +81,13 @@
     }
 
 
+    @media screen and (max-width: $width-lg) {
+        width : 50%;
+        height: auto;
+        // margin: 2px 10px;
+
+    }
+
     @media screen and (max-width: $width-md) {
         width : auto;
         height: auto;

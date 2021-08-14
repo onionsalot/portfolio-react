@@ -97,6 +97,13 @@
         }
     }
 
+    @media screen and (max-width: $width-lg) {
+        .card {
+            width    : 48%;
+            margin   : 5px;
+        }
+    }
+
     @media screen and (max-width: $width-md) {
         .card {
             width    : 48%;

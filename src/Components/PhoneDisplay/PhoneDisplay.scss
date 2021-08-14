@@ -138,6 +138,22 @@
 
 
 
+@media screen and (max-width: $width-lg) {
+
+    .phone.desktop {
+        // 16:9 preserved
+        width : 448px; // 16*28
+        height: 252px; // 9*22
+
+        .content {
+            // 16:9 preserved
+            width : 448px; // 16*28
+            height: 252px; // 9*22
+        }
+    }
+
+}
+
 @media screen and (max-width: $width-md) {
     .phone {
         // 16:9 preserved
