@@ -30,11 +30,11 @@ export default function NavBar() {
       }, []);
       const handleScroll = () => {
         const position = window.pageYOffset;
-        if (position > 200) {
+        if (position > 150) {
             setNavExtend("extend");
             setNameToggle(true);
         }
-        if (position < 201) {
+        if (position < 151) {
             setNavExtend("");
             setNameToggle(false);
         }

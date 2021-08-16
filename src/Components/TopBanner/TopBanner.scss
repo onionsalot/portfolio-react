@@ -334,16 +334,16 @@
 
 
 
-@media screen and (max-width: $width-sm) {
+@media screen and (max-width: $width-md) {
   .TopBanner {
     height: 100vh;
   }
 
   .inside-animation {
     .animation {
-      height    : 80vh;
+      height    : 100vh;
       min-height: 50%;
-      transform : translate(-43%, 50px);
+      transform : translate(-47%, 50px);
 
     }
 
@@ -353,6 +353,17 @@
 
     .mouse-container {
       bottom: 20%;
+    }
+  }
+}
+
+@media screen and (max-width: $width-sm) {
+  .inside-animation {
+    .animation {
+      height    : 80vh;
+      min-height: 50%;
+      transform : translate(-43%, 50px);
+
     }
   }
 }
