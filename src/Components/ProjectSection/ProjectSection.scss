@@ -19,7 +19,8 @@
         vertical-align : middle;
         justify-content: space-between;
         height         : 100%;
-        margin         : 0 3%;
+        margin         : 0 15%;
+
         
             .left {
                 height: 100%;
@@ -37,7 +38,13 @@
  
             }
 
-    
+        @media screen and (max-width: $width-xlg) {
+            margin         : 0 3%;
+            flex-direction: row;
+        }
+        @media screen and (max-width: $width-lg) {
+            flex-direction: row;
+        }
         @media screen and (max-width: $width-md) {
             flex-direction: row;
         }

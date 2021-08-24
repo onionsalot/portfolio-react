@@ -10,10 +10,10 @@
     margin          : 0 auto;
     position        : relative;
     background-color: $dark-blue;
+    // align-items: center;
 
 
-
-    @media screen and (max-width: $width-sm) {
+    @media screen and (max-width: $width-md) {
         height: 900px;
     }
 
@@ -23,9 +23,15 @@
         vertical-align : middle;
         justify-content: space-between;
         height         : 100%;
-        margin         : 0 3%;
+        margin         : 0 7% 0 20%;
+
+        @media screen and (max-width: $width-xlg) {
+            margin         : 0 5% 0 8%;
+            flex-direction: row;
+        }
 
         @media screen and (max-width: $width-lg) {
+            margin         : 0 3%;
             flex-direction: row;
         }
 

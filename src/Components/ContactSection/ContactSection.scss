@@ -16,7 +16,7 @@
         flex-direction     : row;
         vertical-align     : middle;
         height             : 100%;
-        margin             : 20px 0 0 0;
+        margin             : 20px 6% 0 6%;
         justify-content    : center;
     }
 
@@ -115,6 +115,13 @@
             float : right;
             height: auto;
             width : 200px;
+        }
+
+    }
+
+    @media screen and (max-width: $width-xlg) {
+        main{
+            margin             : 20px 0 0 0;
         }
 
     }
